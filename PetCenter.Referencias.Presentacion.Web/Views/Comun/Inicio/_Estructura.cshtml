@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Titulo = "..::PetCenter::Referencias::.."; 
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Titulo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- edge: indica al internet explorer que utiliza el "modo compatibilidad de documento" mas alto posible -->
+    <!--[if lt IE 10]>
+        <html class="ie">
+    <![endif]-->
+    @*<-- CSS HEAD -->*@
+    @Styles.Render("~/css/bootstrap")
+    @Styles.Render("~/css/sitio")
+    @Styles.Render("~/css/vistas")
+    @*<-- JS HEAD -->*@
+    @Scripts.Render("~/js/jquery")
+    @Scripts.Render("~/js/boostrap")
+
+    <!--[if lt IE 7]>
+    <![endif]-->
+    <!--[if lt IE 9]>
+
+
+    <![endif]-->
+    <!--[if lt IE 8]>
+        <link href="~/Resources/Bootstrap/css/bootstrapIE.css" rel="stylesheet">
+        <script src="~/Resources/Sitio/js/json.compatibleIE.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+        <script src="~/Resources/Sitio/js/html5.compatibleIE.js" type="text/javascript"></script>
+        <script src="~/Resources/Sitio/js/funciones.compatibleIE.js" type="text/javascript"></script>
+        <script src="~/Resources/Sitio/js/ajaxFileUploadIE.js" type="text/javascript"></script>
+        <script src="~/Resources/Bootstrap/js/bootstrap.respondIE.js" type="text/javascript"></script>
+    <![endif]-->
+
+
+</head>
+<body>
+
+    @*<-- Campos ocultos GLOBALES -->*@
+    @Html.Hidden("urlBase", Url.Content("~/"))
+        @*@Html.Hidden("urlSustento", Url.Action("EditorSustento", "Base"))
+        @Html.Hidden("urlCarga", Url.Action("CargaTemporalArchivo", "Base"))
+        @Html.Hidden("urlCargaEsp", Url.Action("CargaTemporalArchivoEspecial", "Base"))*@
+        @Html.AntiForgeryToken()
+
+    <div id="wait"></div>
+    <div id="waitImg">
+        <img src="~/Resources/Sitio/imgs/wait30x30.gif" />
+    </div>
+
+    @*<-- HEAD -->*@
+    <header>
+        <div class="container">
+            @Html.Partial("_EstructuraHead")
+        </div>
+    </header>
+
+    @*<-- BODY -->*@
+    <div id="asistencia-body" class="container container-padding">
+        <div class="row">
+            @Html.Partial("_EstructuraSide")
+            <div class="col-md-9" id="site-body">
+                <div id="asistencia-title-main" class="row text-left asistencia-title-main tituloHead">
+                    <p class="text-center asistencia-point">
+                        <button type="button" class="btn btn-default btn-xs col-sm-2 hide" id="site-menu-a" onclick="sitiojs.animarMenu();">
+                            @*btn-info*@
+                            Menu&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-down"></span>
+                        </button>
+                        <a title="Menú" class="asistencia-show16x16 asistencia-width-20 hide" onclick="sitiojs.animarMenu();" id="site-menu-a">Menú</a>
+                    </p>
+                    <p id="asistencia-title-string" class="col-sm-11 text-left">
+                        @{
+                            if (!string.IsNullOrEmpty(@ViewBag.TituloSeccion))
+                            {
+                                <span class="tituloSeccion">@ViewBag.TituloSeccion</span>
+                                <span class="tituloOpcion">@ViewBag.TituloMenu</span>
+                            }
+                        }
+
+                                           
+                    </p>
+                </div>
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    @*<-- FOOT -->*@
+    <footer>
+        <div class="container navbar-fixed-bottom">
+            @Html.Partial("_EstructuraFoot")
+        </div>
+    </footer>
+    @*<-- HIIDDE GLOBALES -->*@
+
+    @*<-- JS FOOT -->*@
+    @Scripts.Render("~/js/sitio")
+    @Scripts.Render("~/js/vistas")
+
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function () {
+            sitiojs.iniciar();
+        });
+    </script>
+</body>
+
+</html>

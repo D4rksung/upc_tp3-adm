@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Transversal", "4 Transversal", "{C90694F4-B93E-49CC-A043-42232C9CBB7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Infraestructura", "3 Infraestructura", "{A1063FAC-143B-4F76-A73E-8A179EF09479}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Dominio", "2 Dominio", "{CDE8C364-A0B8-4AB4-B0C7-C625B18D3D80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Presentacion", "1 Presentacion", "{816DD0F7-0320-4CC0-9966-3FA5B6C9AEC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCenter.Referencias.Inyeccion", "PetCenter.Referencias.Inyeccion\PetCenter.Referencias.Inyeccion.csproj", "{BD443DAD-BF36-4BF9-AF2C-F03037408891}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCenter.Referencias.Log", "PetCenter.Referencias.Log\PetCenter.Referencias.Log.csproj", "{C99C5292-5DF3-4A9D-8D4D-9E8DD2D790BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCenter.Referencias.Transversal", "PetCenter.Referencias.Transversal\PetCenter.Referencias.Transversal.csproj", "{88EA187C-93AF-4A3F-B487-0D895ADF29BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCenter.Referencias.Infraestructura.Data", "PetCenter.Referencias.Infraestructura.Data\PetCenter.Referencias.Infraestructura.Data.csproj", "{D89B729A-DE07-49F8-A30B-79E6CF5EAAE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCenter.Referencias.Dominio.Administracion", "PetCenter.Referencias.Dominio.Administracion\PetCenter.Referencias.Dominio.Administracion.csproj", "{E43C1433-BE6F-4FEE-B817-9915575EE6BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCenter.Referencias.Dominio.Logica", "PetCenter.Referencias.Dominio.Logica\PetCenter.Referencias.Dominio.Logica.csproj", "{7C7D9645-8EFC-4D4C-AB6B-8D5C709848FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCenter.Referencias.Dominio.Servicio", "PetCenter.Referencias.Dominio.Servicio\PetCenter.Referencias.Dominio.Servicio.csproj", "{B4E95150-CA60-4104-845F-D921E3E769EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCenter.Referencias.Presentacion.Web", "PetCenter.Referencias.Presentacion.Web\PetCenter.Referencias.Presentacion.Web.csproj", "{8DA2C889-BDEB-442C-B3C2-159BCF3DFC99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD443DAD-BF36-4BF9-AF2C-F03037408891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD443DAD-BF36-4BF9-AF2C-F03037408891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD443DAD-BF36-4BF9-AF2C-F03037408891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD443DAD-BF36-4BF9-AF2C-F03037408891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C99C5292-5DF3-4A9D-8D4D-9E8DD2D790BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C99C5292-5DF3-4A9D-8D4D-9E8DD2D790BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C99C5292-5DF3-4A9D-8D4D-9E8DD2D790BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C99C5292-5DF3-4A9D-8D4D-9E8DD2D790BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88EA187C-93AF-4A3F-B487-0D895ADF29BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88EA187C-93AF-4A3F-B487-0D895ADF29BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88EA187C-93AF-4A3F-B487-0D895ADF29BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88EA187C-93AF-4A3F-B487-0D895ADF29BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89B729A-DE07-49F8-A30B-79E6CF5EAAE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89B729A-DE07-49F8-A30B-79E6CF5EAAE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89B729A-DE07-49F8-A30B-79E6CF5EAAE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89B729A-DE07-49F8-A30B-79E6CF5EAAE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E43C1433-BE6F-4FEE-B817-9915575EE6BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E43C1433-BE6F-4FEE-B817-9915575EE6BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E43C1433-BE6F-4FEE-B817-9915575EE6BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E43C1433-BE6F-4FEE-B817-9915575EE6BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C7D9645-8EFC-4D4C-AB6B-8D5C709848FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7D9645-8EFC-4D4C-AB6B-8D5C709848FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7D9645-8EFC-4D4C-AB6B-8D5C709848FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7D9645-8EFC-4D4C-AB6B-8D5C709848FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E95150-CA60-4104-845F-D921E3E769EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E95150-CA60-4104-845F-D921E3E769EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E95150-CA60-4104-845F-D921E3E769EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E95150-CA60-4104-845F-D921E3E769EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA2C889-BDEB-442C-B3C2-159BCF3DFC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA2C889-BDEB-442C-B3C2-159BCF3DFC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA2C889-BDEB-442C-B3C2-159BCF3DFC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA2C889-BDEB-442C-B3C2-159BCF3DFC99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BD443DAD-BF36-4BF9-AF2C-F03037408891} = {C90694F4-B93E-49CC-A043-42232C9CBB7D}
+		{C99C5292-5DF3-4A9D-8D4D-9E8DD2D790BB} = {C90694F4-B93E-49CC-A043-42232C9CBB7D}
+		{88EA187C-93AF-4A3F-B487-0D895ADF29BF} = {C90694F4-B93E-49CC-A043-42232C9CBB7D}
+		{D89B729A-DE07-49F8-A30B-79E6CF5EAAE9} = {A1063FAC-143B-4F76-A73E-8A179EF09479}
+		{E43C1433-BE6F-4FEE-B817-9915575EE6BE} = {CDE8C364-A0B8-4AB4-B0C7-C625B18D3D80}
+		{7C7D9645-8EFC-4D4C-AB6B-8D5C709848FF} = {CDE8C364-A0B8-4AB4-B0C7-C625B18D3D80}
+		{B4E95150-CA60-4104-845F-D921E3E769EB} = {CDE8C364-A0B8-4AB4-B0C7-C625B18D3D80}
+		{8DA2C889-BDEB-442C-B3C2-159BCF3DFC99} = {816DD0F7-0320-4CC0-9966-3FA5B6C9AEC2}
+	EndGlobalSection
+EndGlobal

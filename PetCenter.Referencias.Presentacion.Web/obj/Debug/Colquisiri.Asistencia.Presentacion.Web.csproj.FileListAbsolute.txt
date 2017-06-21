@@ -1,0 +1,15 @@
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.csprojResolveAssemblyReference.cache
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.Aplicacion.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.Botones.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.ContentType.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.EstadoProceso.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.Formatos.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.General.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.Iconos.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.Mensajes.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.NombreArchivo.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.Orden.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.Paginacion.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.Procesos.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.Resources.TipoListaSituacion.resources
+C:\Users\Julio\Documents\Software Factory\ast\Colquisiri.Asistencia.Presentacion.Web\obj\Debug\Colquisiri.Asistencia.Presentacion.Web.csproj.GenerateResource.Cache

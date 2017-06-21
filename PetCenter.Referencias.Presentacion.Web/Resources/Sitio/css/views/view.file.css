@@ -1,0 +1,61 @@
+﻿.noie .btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+    .noie .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 999px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        background: red;
+        cursor: inherit;
+        display: block;
+    }
+
+.noie .asistencia-file-det {
+    margin-top: 4px;
+}
+
+/** PARA MOSTRAR EL CAMPO ARCHIVO **/
+.noie .asistencia-container .asistencia-archivo {
+    width: 100%;
+}
+
+    .noie .asistencia-container .asistencia-archivo .left {
+        text-align: left;
+        width: 50%;
+    }
+
+    .noie .asistencia-container .asistencia-archivo .right {
+        text-align: right;
+        width: 50%;
+    }
+
+.noie .asistencia-file-in,
+.noie .none-group {
+    visibility: hidden;
+    display: none;
+}
+
+.ie .btn-file,
+.ie .asistencia-file-det,
+.ie .asistencia-file-text {
+    visibility: hidden;
+    display: none;
+}
+
+.ie .asistencia-file-in,
+.ie .none-group {
+    visibility: visible;
+    width: 100%;
+}
+
+div[name^="opt-file"] {
+    display: none;
+}

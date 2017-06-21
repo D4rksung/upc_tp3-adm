@@ -1,0 +1,111 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Helpers
+@{
+//var usuario = AdministradorSesion.Usuario;
+}
+<div class="col-md-3 site-menu" id="site-menu">
+
+    @*<div class="text-left asistencia-point span-Usuario">
+            <div class="glyphicon glyphicon-user">
+            </div>
+
+            <span class="span-Usuario">
+                @{
+                    if (@usuario != null)
+                    {
+                        @usuario.pr_DescLogin
+                    }
+                }
+            </span>
+
+        </div>*@
+
+    @*<div class="text-center asistencia-point asistencia-min-height-30 logoColquisiri">
+            <a href="#">
+                <img src="~/Resources/Sitio/imgs/LogotipoColquisiri.jpg" width="80" height="80" />
+            </a>
+        </div>*@
+
+    <div class="text-center asistencia-point asistencia-min-height-30">
+        <button type="button" class="btn btn-default btn-xs col-sm-12" onclick="sitiojs.animarMenu();">
+            Menu&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up"></span>
+        </button>
+    </div>
+
+    <div class="panel-group" id="accordion">
+        @{
+            @*<div class="panel-headModulo">
+                    <span class="panel-tituloModulo">ERP - Asistencia</span>
+                </div>*@
+
+            @*REGISTROS Y PROCESOS*@
+            <div class="panel panel-default">
+                <div class="panel-heading panel-headSeccion">
+                    <h3 class="panel-title panel-tituloSeccion">
+                        <a data-toggle="collapse" data-parent="#accordion" class="asistencia-menu glyphicon glyphicon-triangle-right" href="#menu_1">Registro de convenios de referencia</a>
+                    </h3>
+                </div>
+                <div id="menu_1" class="panel-collapse collapse">
+                    <div class="panel-body navigationMenu">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li>@Html.ActionLink("Registro de Solicitudes de Afiliación", "Index", "Solicitud")</li>
+                            <li><a href="#">Evaluar solicitudes de afiliación</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            @*CONSULTAS Y REPORTES*@
+            <div class="panel panel-default">
+                <div class="panel-heading panel-headSeccion">
+                    <h3 class="panel-title panel-tituloSeccion">
+                        <a data-toggle="collapse" data-parent="#accordion" class="asistencia-menu glyphicon glyphicon-triangle-right" href="#menu_2">Gestión de Referencias</a>
+                    </h3>
+                </div>
+                <div id="menu_2" class="panel-collapse collapse">
+                    <div class="panel-body navigationMenu">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Registro de solicitudes de referencia</a></li>
+                            <li><a href="#">Aprobación de solicitudes de referencia</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+                    @*CONFIGURACIONES*@
+                    <div class="panel panel-default">
+                        <div class="panel-heading panel-headSeccion">
+                            <h3 class="panel-title panel-tituloSeccion">
+                                <a data-toggle="collapse" data-parent="#accordion" class="asistencia-menu glyphicon glyphicon-triangle-right" href="#menu_3">Control de Referencias</a>
+                            </h3>
+                        </div>
+                        <div id="menu_3" class="panel-collapse collapse">
+                            <div class="panel-body navigationMenu">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="#">Reporte comparativos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*MAESTROS*@
+                    <div class="panel panel-default">
+                        <div class="panel-heading panel-headSeccion">
+                            <h3 class="panel-title panel-tituloSeccion">
+                                <a data-toggle="collapse" data-parent="#accordion" class="asistencia-menu glyphicon glyphicon-triangle-right" href="#menu_4">Seguridad</a>
+                            </h3>
+                        </div>
+                        <div id="menu_4" class="panel-collapse collapse">
+                            <div class="panel-body navigationMenu">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="#">Reporte de usuarios</a></li>
+                                    <li><a href="#">Reporte de accesos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        }
+        <div class="panel-heading">
+        </div>
+    </div>
+</div>
+

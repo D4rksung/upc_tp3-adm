@@ -1,0 +1,52 @@
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.csprojResolveAssemblyReference.cache
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.Recursos.Operadores.resources
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.Recursos.MensajesData.resources
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.csproj.GenerateResource.Cache
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.dll.config
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.pdb
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Dominio.Logica.pdb
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.xml
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\es\EntityFramework.resources.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.dll.config
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Dominio.Logica.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\es\EntityFramework.resources.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.csprojResolveAssemblyReference.cache
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.Recursos.Operadores.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.Recursos.MensajesData.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.csproj.GenerateResource.Cache
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.dll.config
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Dominio.Logica.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll.config
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\es\EntityFramework.resources.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.csprojResolveAssemblyReference.cache
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.Recursos.Operadores.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.Recursos.MensajesData.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.csproj.GenerateResource.Cache
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.pdb

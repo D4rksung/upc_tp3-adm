@@ -1,0 +1,43 @@
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\PetCenter.Referencias.Transversal.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\PetCenter.Referencias.Transversal.pdb
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\AutoMapper.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\AutoMapper.xml
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.EstadoRegistro.resources
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.Formatos.resources
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.Generales.resources
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.KeyCache.resources
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.MensajesError.resources
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.SituacionRegistro.resources
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.TipoListaSituacion.resources
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.csproj.GenerateResource.Cache
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\PetCenter.Referencias.Transversal.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\PetCenter.Referencias.Transversal.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\AutoMapper.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\AutoMapper.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.EstadoRegistro.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.Formatos.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.Generales.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.KeyCache.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.MensajesError.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.SituacionRegistro.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.TipoListaSituacion.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.csproj.GenerateResource.Cache
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\PetCenter.Referencias.Transversal.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\PetCenter.Referencias.Transversal.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\AutoMapper.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\bin\Debug\AutoMapper.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.csprojResolveAssemblyReference.cache
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.EstadoRegistro.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.Formatos.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.Generales.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.KeyCache.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.MensajesError.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.SituacionRegistro.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.TipoListaSituacion.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.csproj.GenerateResource.Cache
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.pdb

@@ -1,0 +1,102 @@
+﻿body {
+    margin: 0px;
+    overflow: hidden;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: rgb(51, 51, 51);
+}
+
+.asistencia-reportview {
+    overflow: auto;
+}
+
+#Rpt_View_ctl05,
+#Rpt_View_ctl05_ctl04_ctl00_Menu,
+#Rpt_View_AsyncWait,
+#Rpt_View_AsyncWait_Wait,
+#ParameterTable_Rpt_View_ctl04,
+#Rpt_View_ToggleParam {
+    background-color: #fff !important;
+    background-image: none !important;
+}
+
+#Rpt_View_ctl04_ctl00:hover {
+    background-color: rgb(13, 122, 115);
+    border-color: rgb(11, 107, 100);
+}
+
+#Rpt_View_ctl04_ctl00 {
+    color: #fff;
+    background-color: #12A59F;
+    border-color: #109992;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-appearance: button;
+    text-transform: none;
+    box-sizing: border-box;
+    text-indent: 0px;
+    text-shadow: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+    font: -webkit-small-control;
+}
+
+
+input[type="text"][id^="Rpt_View_ctl04_"][disabled] {
+    cursor: not-allowed;
+    background-color: rgb(238, 238, 238) !important;
+}
+
+input[type="text"][id^="Rpt_View_ctl04_"] {
+    height: 20px;
+    font-size: 10px;
+    line-height: 1.42857;
+    color: rgb(85, 85, 85);
+    vertical-align: middle;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+#Rpt_View_ctl09 {
+    overflow: inherit !important;
+}
+
+/*****/
+.hh2 {
+    color: rgb(167, 15, 64);
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+/*****/
+
+.back {
+    font-size: 14px;
+    font-family: sans-serif;
+    cursor:pointer;
+    color: rgb(18, 165, 159);
+    text-decoration:underline;
+}

@@ -1,0 +1,85 @@
+﻿/* ESTILOS PERSONLIZASO PARA GRILLAS */
+.asistencia-table-grid {
+}
+
+    .asistencia-table-grid thead a {
+        /*color: #333;*/
+        color: #ffffff;
+    }
+
+    .asistencia-table-grid tbody a {
+        cursor: pointer;
+    }
+
+    .asistencia-table-grid th, .asistencia-table-grid td {
+        text-align: center;
+    }
+     
+    .asistencia-table-grid , .asistencia-column-center {
+        text-align: center;
+        font-family: Arial;
+        font-size: 10px;
+        color: black;
+    }
+
+    .asistencia-table-grid .asistencia-column-righ {
+        text-align: right;
+        padding-right: 5px;
+        font-family: Arial;
+        font-size: 10px;
+        color: black;
+    }
+
+    .asistencia-table-grid .asistencia-column-left {
+        text-align: left;
+        padding-left: 5px;
+        font-family: Arial;
+        font-size: 10px;
+        color: black;
+    }
+
+    .asistencia-table-grid .asistencia-head {
+        background-color: rgba(229, 229, 229, 1);  /*#12A59F*/
+        /*color: #ffffff;*/
+        color:rgba(134, 134, 148, 1);
+
+        /*
+        color: #333;
+        background-color: #d9edf7;
+        */
+    }
+        /*
+        .asistencia-table-grid .asistencia-head a {
+            color: #ffffff;
+        }
+        */
+
+.pagination > .asistencia-active > a,
+.pagination > .asistencia-active > a:hover,
+.pagination > .asistencia-active > a:focus {
+    z-index: 2;
+    color: #333;
+    cursor: default;
+    background-color: #d9edf7;
+    border-color: #428bca;
+}
+
+.asistencia-max-height {
+    margin: 0px 0px;
+}
+
+.asistencia-foot-page {
+    color: rgb(153, 153, 153);
+}
+
+.asistencia-grid-scroll {
+    overflow: auto; 
+    top: 48px; 
+    height: 165px;
+}
+
+ .asistencia-chk-scroll {
+    overflow: auto; 
+    top: 48px;    
+    height: 300px;     
+}

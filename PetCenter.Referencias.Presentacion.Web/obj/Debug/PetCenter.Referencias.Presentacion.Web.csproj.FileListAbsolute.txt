@@ -1,0 +1,211 @@
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.csprojResolveAssemblyReference.cache
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Aplicacion.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Botones.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.ContentType.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.EstadoProceso.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Formatos.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.General.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Iconos.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Mensajes.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.NombreArchivo.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Orden.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Paginacion.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Procesos.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.TipoListaSituacion.resources
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.csproj.GenerateResource.Cache
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\csc.exe
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\vbc.exe
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\VBCSCompiler.exe
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Presentacion.Web.dll.config
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Presentacion.Web.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Presentacion.Web.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Antlr3.Runtime.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\itextsharp.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.DependencyCollector.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.Web.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.WindowsServer.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.ApplicationInsights.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Newtonsoft.Json.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Administracion.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Servicio.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Transversal.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Net.Http.Formatting.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Helpers.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Http.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Http.WebHost.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Mvc.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Optimization.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Razor.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.Deployment.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.Razor.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\WebGrease.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Logica.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\AutoMapper.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Inyeccion.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Practices.Unity.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Infraestructura.Data.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\EntityFramework.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Administracion.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Servicio.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Transversal.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Antlr3.Runtime.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\itextsharp.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.DependencyCollector.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.Web.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.WindowsServer.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.ApplicationInsights.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Newtonsoft.Json.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Net.Http.Formatting.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Http.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Http.WebHost.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Optimization.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Razor.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.Deployment.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.Razor.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Helpers.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Mvc.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Logica.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\AutoMapper.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Inyeccion.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Practices.Unity.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Infraestructura.Data.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\EntityFramework.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Optimization.resources.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Razor.resources.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Webpages.resources.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Helpers.resources.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Mvc.resources.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\EntityFramework.SqlServer.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\EntityFramework.SqlServer.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\csc.exe
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\System.Collections.Immutable.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\vbc.exe
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\VBCSCompiler.exe
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\roslyn\VBCSCompiler.exe.config
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Presentacion.Web.dll.config
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Presentacion.Web.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Presentacion.Web.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Antlr3.Runtime.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\EntityFramework.SqlServer.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\itextsharp.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.Agent.Intercept.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.DependencyCollector.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.Web.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.WindowsServer.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.ApplicationInsights.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Newtonsoft.Json.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Administracion.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Servicio.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Transversal.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Net.Http.Formatting.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Helpers.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Http.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Http.WebHost.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Mvc.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Optimization.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Razor.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.Deployment.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.Razor.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\WebGrease.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Logica.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\AutoMapper.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Inyeccion.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\EntityFramework.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Practices.Unity.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Infraestructura.Data.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Practices.ServiceLocation.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Administracion.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Servicio.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Transversal.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Antlr3.Runtime.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\EntityFramework.SqlServer.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\itextsharp.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.DependencyCollector.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.Web.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.AI.WindowsServer.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.ApplicationInsights.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Newtonsoft.Json.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Net.Http.Formatting.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Http.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Http.WebHost.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Optimization.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Razor.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.Deployment.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Webpages.Razor.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Helpers.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\System.Web.Mvc.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Logica.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Dominio.Logica.dll.config
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\AutoMapper.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Inyeccion.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Inyeccion.dll.config
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\EntityFramework.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Practices.Unity.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Infraestructura.Data.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\PetCenter.Referencias.Infraestructura.Data.dll.config
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\Microsoft.Practices.ServiceLocation.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Optimization.resources.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Razor.resources.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Webpages.resources.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Webpages.Deployment.resources.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Webpages.Razor.resources.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Helpers.resources.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\bin\es\System.Web.Mvc.resources.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.csprojResolveAssemblyReference.cache
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Aplicacion.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Botones.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.ContentType.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.EstadoProceso.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Formatos.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.General.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Iconos.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Mensajes.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.NombreArchivo.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Orden.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Paginacion.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.Procesos.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.Resources.TipoListaSituacion.resources
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.csproj.GenerateResource.Cache
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Presentacion.Web\obj\Debug\PetCenter.Referencias.Presentacion.Web.pdb

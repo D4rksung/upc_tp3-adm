@@ -1,0 +1,33 @@
+﻿@using System.Configuration;
+@using PetCenter.Referencias.Presentacion.Web.Helpers
+@{
+    //var usuario = AdministradorSesion.Usuario;
+    ViewBag.Inicio = "Pet Center";
+}
+
+@*<-- MENU -->*@
+<div id="asistencia-header" class="navbar navbar-default" role="navigation">
+    @*<-- HOME -->*@
+    <div class="navbar-header">
+               
+    </div>
+
+    <div class="collapse navbar-collapse" id="menu-head">
+        
+        @*<-- MENU -->*@          
+
+        @*<-- LOGIN -->*@
+        <ul class="nav navbar-nav navbar-right">
+            <li>                
+                <a class="asistencia-point" onclick="location.href='@Url.Action("Index", "Inicio")'">INICIO</a>
+            </li>            
+            @*<li id="liCerrarSesion"><a class="asistencia-point" onclick='sitiojs.cerrarsesion();'>Cerrar Sesión</a></li>*@
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {        
+        //sitiojs.cerrarsesion();
+    });
+</script>

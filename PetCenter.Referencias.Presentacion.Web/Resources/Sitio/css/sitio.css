@@ -1,0 +1,261 @@
+﻿/* GENERALES INPUT */
+input[readonly] {
+    background-color: rgb(247, 251, 244) !important;
+    cursor: text !important;
+}
+
+    input[readonly].asistencia-required {
+        background-color: #fdf7f7 !important;
+    }
+
+    input[readonly].asistencia-readOnly {
+        cursor: not-allowed !important;
+        background-color: rgb(238, 238, 238) !important;
+    }
+
+
+.asistencia-readOnly {
+    cursor: not-allowed !important;
+    background-color: rgb(238, 238, 238) !important;
+}
+
+/*ESTILOS DE USO COMUN*/
+.asistencia-width-10,
+a.asistencia-width-10 {
+    width: 15px !important;
+}
+
+.asistencia-width-20,
+a.asistencia-width-20 {
+    width: 24px;
+}
+
+.asistencia-left-5 {
+    margin-left: 5px;
+}
+
+.asistencia-right-5 {
+    margin-right: 5px;
+}
+
+.asistencia-width-40,
+a.asistencia-width-40 {
+    width: 44px !important;
+}
+
+.asistencia-right {
+    text-align: right;
+}
+
+.asistencia-point {
+    cursor: pointer;
+}
+
+    .asistencia-point a {
+        cursor: pointer;
+    }
+
+.asistencia-min-height-30 {
+    min-height: 30px;
+}
+
+
+/*ESTILOS DE REQUIRED*/
+
+:required {
+    background-color: #f7fbf4;
+}
+
+.asistencia-required {
+    background-color: #fdf7f7 !important;
+}
+
+/* PARA BOTONES */
+.btn-group-vertical > .btn + .btn {
+    margin-top: 3px;
+}
+
+/* GROUP */
+
+.asistencia-group {
+}
+
+.asistencia-responsive {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border: none;
+}
+
+/* POPUP */
+
+.asistencia-popup-footer {
+    margin-top: -25px;
+}
+
+.asistencia-label-simple {
+    font-weight: normal;
+}
+
+.modal-top {
+    z-index: 1050;
+}
+
+.modal-top-backdrop {
+    z-index: 1049;
+}
+
+/* ESTILOS REPORTES */
+.asistencia-report {
+    width: 100%;
+    height: 625px;
+    border: none; /* 1px solid;*/
+    overflow: hidden;
+}
+
+.asistencia-foto {
+    width: 150px;
+    height: 155px;
+    border: none;
+}
+
+/* ESTILOS ENCUESTAS */
+#tab-ep-mul {
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+    #tab-ep-mul .C02 {
+        text-align: right;
+        width: 10%;
+    }
+
+/* ESTILO BG TITLE */
+.bg-info {
+    background-color: #d9edf7;
+    padding: 15px;
+    margin: 0 0 10px;
+}
+
+.bg-warning {
+    background-color: #fcf8e3;
+    padding: 15px;
+    margin: 0 0 10px;
+}
+
+.bg-success {
+    background-color: #dff0d8;
+    padding: 15px;
+    margin: 0 0 10px;
+}
+
+/* ****** */
+
+.asistencia-requerido {
+    background-color: rgb(247, 251, 244) !important;
+}
+
+.asistencia-puntero {
+    cursor: pointer;
+}
+
+.asistencia-admitido {
+    background-image: url("../imgs/chk.png");
+    width: 110px;
+    height: 115px;
+}
+
+.asistencia-noAdmitido {
+    background-image: url("../imgs/x.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    width: 130px;
+    height: 90px;
+}
+
+.asistencia-logo {
+    background-image: url("../imgs/amag_login.png") !important;
+    background-position: center;
+    background-repeat:no-repeat;
+    width: 114px;
+    height: 100px;      
+}
+
+.asistencia-login {
+    background-image: url("../imgs/login.jpg");
+    background-position: center;
+    background-repeat:no-repeat;
+    width: 117px;
+    height: 170px;      
+}
+
+.asistencia-recibo-amag {
+    background-image: url("../imgs/Recibo_Amag.jpg");
+    background-position: center;
+    background-repeat:no-repeat;
+    width: 450px;
+    height: 300px;
+    text-align:center;
+}
+
+/** Preguntas encuestas**/
+
+.asistencia-respuesta {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+    .asistencia-respuesta label {
+        font-weight: normal;
+    }
+
+    .asistencia-respuesta input {
+        margin-right: 0px;
+        margin-left: 30px;
+    }
+
+/* ****** */
+
+/*Notificaciones*/
+.campana {
+    padding: 1px 9px 2px;
+    font-size: 12.025px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #ffffff;
+    background-color: #999999;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.campana-error {
+    background-color: #b94a48;
+}
+
+/** INI WAIT **/
+
+.ie div#wait {
+    background-color: rgb(0,0,0);
+    zoom: 1;
+    filter: alpha(opacity=5);
+}
+
+div#wait {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1000000;
+    background-color: rgba(0,0,0,0.05);
+}
+
+div#waitImg {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 999999;
+}
+
+/** FIN WAIT **/

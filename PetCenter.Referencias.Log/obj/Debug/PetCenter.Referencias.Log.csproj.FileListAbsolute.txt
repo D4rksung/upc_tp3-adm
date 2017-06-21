@@ -1,0 +1,8 @@
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Log\bin\Debug\PetCenter.Referencias.Log.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Log\bin\Debug\PetCenter.Referencias.Log.pdb
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Log\obj\Debug\PetCenter.Referencias.Log.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Log\obj\Debug\PetCenter.Referencias.Log.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Log\bin\Debug\PetCenter.Referencias.Log.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Log\bin\Debug\PetCenter.Referencias.Log.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Log\obj\Debug\PetCenter.Referencias.Log.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Log\obj\Debug\PetCenter.Referencias.Log.pdb

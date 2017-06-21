@@ -1,0 +1,89 @@
+﻿/**** ICON 16x16 ****/
+/**** ICON 16x16 ****/
+/**** ICON 16x16 ****/
+[class^="icon-Asistencia16-"], [class*="icon-Asistencia16-"] {
+    width: 16px;
+    height: 16px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    text-decoration: none !important;
+    text-indent: -9999px !important;
+    outline: medium none;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+
+/*OJJJOOO Release*/
+/*En DESA "../imgs/" */
+/*En QC "../Resources/Sitio/imgs/" */
+/* MENSAJES */
+
+.icon-Asistencia16-msg-advertencia {background-image: url("../imgs/advertencia16x16.png");}
+.icon-Asistencia16-msg-ok {background-image: url("../imgs/ok16x16.png");}
+.icon-Asistencia16-msg-alerta {background-image: url("../imgs/alerta16x16.png");}
+.icon-Asistencia16-msg-error {background-image: url("../imgs/error16x16.png");}
+.icon-Asistencia16-msg-info {background-image: url("../imgs/info16x16.png");}
+.icon-Asistencia16-msg-peligro {background-image: url("../imgs/peligro16x16.png");}
+
+/* ACCIONES */
+.icon-Asistencia16-acc-actividad {background-image: url("../imgs/actividad16x16.png");}
+.icon-Asistencia16-acc-modificar {background-image: url("../imgs/modificar16x16.png");}
+.icon-Asistencia16-acc-eliminar {background-image: url("../imgs/down16x16.png");}
+.icon-Asistencia16-acc-cambiarEstado {background-image: url("../imgs/lista16x16.png");}
+.icon-Asistencia16-acc-ver {background-image: url("../imgs/buscar16x16.png");}
+.icon-Asistencia16-acc-actividad {background-image: url("../imgs/actividad16x16.png");}
+.icon-Asistencia16-acc-view {background-image: url("../imgs/view16x16.png"); margin-right:2px;}
+.icon-Asistencia16-acc-edit {background-image: url("../imgs/edit16x16.png"); margin-right:2px;}
+.icon-Asistencia16-acc-delete {background-image: url("../imgs/delete16x16.png"); margin-right:0px;}
+.icon-Asistencia16-acc-menu {background-image: url("../imgs/menu-naviga.png"); margin-right:0px;}
+.icon-Asistencia16-acc-play {background-image: url("../imgs/navitor_separator.png"); margin-right:0px;}
+.icon-Asistencia16-acc-cerrado {background-image: url("../imgs/padlock-3-16.png"); margin-right:0px;}
+.icon-Asistencia16-acc-abierto {background-image: url("../imgs/padlock-4-16.png"); margin-right:0px;}
+
+/* OTROS */
+.icon-Asistencia16-doc-app {background-image: url("../imgs/doc-app16x16.png");}
+.icon-Asistencia16-doc-excel {background-image: url("../imgs/doc-excel16x16.png");}
+.icon-Asistencia16-doc-img {background-image: url("../imgs/doc-img16x16.png");}
+.icon-Asistencia16-doc-pdf {background-image: url("../imgs/doc-pdf16x16.png");}
+.icon-Asistencia16-doc-word {background-image: url("../imgs/doc-word16x16.png");}
+.icon-Asistencia16-doc-zip {background-image: url("../imgs/doc-zip16x16.png");}
+
+/**** ICON 32x32 ****/
+/**** ICON 32x32 ****/
+/**** ICON 32x32 ****/
+
+[class^="icon-Asistencia32-"], [class*=" icon-Asistencia32-"] {
+    width: 32px;
+    height: 32px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    text-decoration: none !important;
+    text-indent: -9999px !important;
+    outline: medium none;
+    display: inline-block;
+    border: none;
+}
+
+.icon-Asistencia32-acc-refrescar {background-image: url("../imgs/refrescar32x32.png");}
+.icon-Asistencia32-acc-back {background-image: url("../imgs/back32x32.png");}
+.icon-Asistencia32-acc-previous {background-image: url("../imgs/previous32x32.png"); float:right;}
+
+.icon-Asistencia32-acc-add {background-image: url("../imgs/add32x32.png"); background-color: transparent;}
+.icon-Asistencia32-acc-edit {background-image: url("../imgs/edit32x32.png"); background-color: transparent;}
+.icon-Asistencia32-acc-excel {background-image: url("../imgs/excel32x32.png"); background-color: transparent;}
+.icon-Asistencia32-acc-cancel {background-image: url("../imgs/cancel32x32.png"); background-color: transparent;}
+.icon-Asistencia32-acc-search {background-image: url("../imgs/search32x32.png"); background-color: transparent;}
+.icon-Asistencia32-acc-save {background-image: url("../imgs/save32x32.png"); background-color: transparent;}
+.icon-Asistencia32-acc-calendar {background-image: url("../imgs/calendar32x32.png"); background-color: transparent;}
+
+/*a.asistencia-show16x16,
+span.asistencia-show16x16 {
+    background-image: url("../imgs/down16x16.png");
+
+}
+a.asistencia-hide16x16,
+span.asistencia-hide16x16 {
+    background-image: url("../imgs/up16x16.png");
+
+}*/

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BD_ReferenciaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Banco">
+    <Key>
+      <PropertyRef Name="IdBanco" />
+    </Key>
+    <Property Name="IdBanco" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Moneda">
+    <Key>
+      <PropertyRef Name="IdMoneda" />
+    </Key>
+    <Property Name="IdMoneda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud">
+    <Key>
+      <PropertyRef Name="IdSolicitud" />
+    </Key>
+    <Property Name="IdSolicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FechaSolicitud" Type="datetime" />
+    <Property Name="NroRuc" Type="varchar" MaxLength="20" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" />
+    <Property Name="Referencia" Type="varchar" MaxLength="200" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="200" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" />
+    <Property Name="Web" Type="varchar" MaxLength="100" />
+    <Property Name="IdTipoDocumento" Type="int" Nullable="false" />
+    <Property Name="NroDocumento" Type="varchar" MaxLength="20" />
+    <Property Name="NombresCompletos" Type="varchar" MaxLength="200" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="TelefonoRep" Type="varchar" MaxLength="20" />
+    <Property Name="IdBanco" Type="int" Nullable="false" />
+    <Property Name="IdMoneda" Type="int" Nullable="false" />
+    <Property Name="Monto" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NroReferencia" Type="varchar" MaxLength="20" />
+    <Property Name="FechaVencimiento" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="IdTipoDocumento" />
+    </Key>
+    <Property Name="IdTipoDocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Solicitud_Banco">
+    <End Role="Banco" Type="Self.Banco" Multiplicity="1" />
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="IdBanco" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="IdBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Moneda">
+    <End Role="Moneda" Type="Self.Moneda" Multiplicity="1" />
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moneda">
+        <PropertyRef Name="IdMoneda" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="IdMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_TipoDocumento">
+    <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="1" />
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="IdTipoDocumento" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="IdTipoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BD_ReferenciaModelStoreContainer">
+    <EntitySet Name="Banco" EntityType="Self.Banco" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Moneda" EntityType="Self.Moneda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Solicitud" EntityType="Self.Solicitud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoDocumento" EntityType="Self.TipoDocumento" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Solicitud_Banco" Association="Self.FK_Solicitud_Banco">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Moneda" Association="Self.FK_Solicitud_Moneda">
+      <End Role="Moneda" EntitySet="Moneda" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_TipoDocumento" Association="Self.FK_Solicitud_TipoDocumento">
+      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

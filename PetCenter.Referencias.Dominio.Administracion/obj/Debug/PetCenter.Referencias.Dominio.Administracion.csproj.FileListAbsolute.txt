@@ -1,0 +1,34 @@
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Administracion.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Administracion.pdb
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\AutoMapper.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Transversal.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Logica.pdb
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Transversal.pdb
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\AutoMapper.xml
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\obj\Debug\PetCenter.Referencias.Dominio.Administracion.csprojResolveAssemblyReference.cache
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\obj\Debug\PetCenter.Referencias.Dominio.Administracion.dll
+C:\Jherrera\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\obj\Debug\PetCenter.Referencias.Dominio.Administracion.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Administracion.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Administracion.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\AutoMapper.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Transversal.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Logica.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Transversal.pdb
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\AutoMapper.xml
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\obj\Debug\PetCenter.Referencias.Dominio.Administracion.csprojResolveAssemblyReference.cache
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\obj\Debug\PetCenter.Referencias.Dominio.Administracion.dll
+C:\Desarrollo\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\obj\Debug\PetCenter.Referencias.Dominio.Administracion.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Administracion.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Administracion.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\AutoMapper.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Transversal.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Logica.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll.config
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\PetCenter.Referencias.Transversal.pdb
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\bin\Debug\AutoMapper.xml
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\obj\Debug\PetCenter.Referencias.Dominio.Administracion.csprojResolveAssemblyReference.cache
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\obj\Debug\PetCenter.Referencias.Dominio.Administracion.dll
+D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Dominio.Administracion\obj\Debug\PetCenter.Referencias.Dominio.Administracion.pdb

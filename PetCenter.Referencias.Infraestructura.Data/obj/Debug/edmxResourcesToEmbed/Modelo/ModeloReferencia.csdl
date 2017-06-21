@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BD_ReferenciaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Banco">
+    <Key>
+      <PropertyRef Name="IdBanco" />
+    </Key>
+    <Property Name="IdBanco" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Solicitud" Relationship="Self.FK_Solicitud_Banco" FromRole="Banco" ToRole="Solicitud" />
+  </EntityType>
+  <EntityType Name="Moneda">
+    <Key>
+      <PropertyRef Name="IdMoneda" />
+    </Key>
+    <Property Name="IdMoneda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Solicitud" Relationship="Self.FK_Solicitud_Moneda" FromRole="Moneda" ToRole="Solicitud" />
+  </EntityType>
+  <EntityType Name="Solicitud">
+    <Key>
+      <PropertyRef Name="IdSolicitud" />
+    </Key>
+    <Property Name="IdSolicitud" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaSolicitud" Type="DateTime" Precision="3" />
+    <Property Name="NroRuc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Referencia" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RazonSocial" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Web" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IdTipoDocumento" Type="Int32" Nullable="false" />
+    <Property Name="NroDocumento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NombresCompletos" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TelefonoRep" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IdBanco" Type="Int32" Nullable="false" />
+    <Property Name="IdMoneda" Type="Int32" Nullable="false" />
+    <Property Name="Monto" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NroReferencia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FechaVencimiento" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Banco" Relationship="Self.FK_Solicitud_Banco" FromRole="Solicitud" ToRole="Banco" />
+    <NavigationProperty Name="Moneda" Relationship="Self.FK_Solicitud_Moneda" FromRole="Solicitud" ToRole="Moneda" />
+    <NavigationProperty Name="TipoDocumento" Relationship="Self.FK_Solicitud_TipoDocumento" FromRole="Solicitud" ToRole="TipoDocumento" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="IdTipoDocumento" />
+    </Key>
+    <Property Name="IdTipoDocumento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Solicitud" Relationship="Self.FK_Solicitud_TipoDocumento" FromRole="TipoDocumento" ToRole="Solicitud" />
+  </EntityType>
+  <Association Name="FK_Solicitud_Banco">
+    <End Role="Banco" Type="Self.Banco" Multiplicity="1" />
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="IdBanco" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="IdBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Moneda">
+    <End Role="Moneda" Type="Self.Moneda" Multiplicity="1" />
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moneda">
+        <PropertyRef Name="IdMoneda" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="IdMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_TipoDocumento">
+    <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="1" />
+    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="IdTipoDocumento" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="IdTipoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BD_ReferenciaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Banco" EntityType="Self.Banco" />
+    <EntitySet Name="Moneda" EntityType="Self.Moneda" />
+    <EntitySet Name="Solicitud" EntityType="Self.Solicitud" />
+    <EntitySet Name="TipoDocumento" EntityType="Self.TipoDocumento" />
+    <AssociationSet Name="FK_Solicitud_Banco" Association="Self.FK_Solicitud_Banco">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Moneda" Association="Self.FK_Solicitud_Moneda">
+      <End Role="Moneda" EntitySet="Moneda" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_TipoDocumento" Association="Self.FK_Solicitud_TipoDocumento">
+      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
