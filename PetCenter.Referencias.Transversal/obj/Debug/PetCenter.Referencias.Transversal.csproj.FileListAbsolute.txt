@@ -41,3 +41,18 @@ D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Trans
 D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.csproj.GenerateResource.Cache
 D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.dll
 D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.pdb
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\bin\Debug\PetCenter.Referencias.Transversal.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\bin\Debug\PetCenter.Referencias.Transversal.pdb
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\bin\Debug\AutoMapper.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\bin\Debug\AutoMapper.xml
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.EstadoRegistro.resources
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.Formatos.resources
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.Generales.resources
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.KeyCache.resources
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.MensajesError.resources
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.SituacionRegistro.resources
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.Recursos.TipoListaSituacion.resources
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.csproj.GenerateResource.Cache
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.pdb
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Transversal\obj\Debug\PetCenter.Referencias.Transversal.csprojResolveAssemblyReference.cache

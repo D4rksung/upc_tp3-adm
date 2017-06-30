@@ -1,0 +1,41 @@
+﻿
+@using PetCenter.Referencias.Presentacion.Web.Models.Otros.Mascota
+@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@using PetCenter.Referencias.Dominio.Administracion.DTOs.Maestros.Mascota
+
+@model PetCenter.Referencias.Presentacion.Web.Models.Comun.Buscador.BuscadorPaginadoModel<MascotaDto>
+@{  
+    var grid = new WebGrid
+    (
+        rowsPerPage: Model.Grid.TamanioPagina,
+        canSort: Model.Grid.TotalPagina > 0,
+        ajaxUpdateContainerId: "grid-det"
+    );
+    grid.Bind(Model.Grid.ElementosPagina, autoSortAndPage: false, rowCount: Model.Grid.TotalPagina);
+}
+<fieldset>
+    <legend />
+    <div id="grid-det">
+        @grid.Table(
+                  fillEmptyRows: false,
+                  headerStyle: "asistencia-head",
+                  tableStyle: "table table-striped table-bordered table-condensed asistencia-table-grid",
+                  columns: new[]
+                  {
+                      grid.Column("IdMascota", "Id", style:"asistencia-column-left"),
+                      grid.Column("NombreMascota", "Nombre", style:"asistencia-column-left"),
+                      grid.Column("NombreRaza", "Raza", style:"asistencia-column-left"),
+                      grid.Column("NombreEspecie", "Especie", style:"asistencia-column-left"),
+                      grid.Column("FechaNacimiento", "F.Nac.", format: p=>p.FechaNacimiento.ToShortDateString()),
+                      grid.Column("", "Opciones",@<text>
+            <a class="asistencia-width-20 glyphicon glyphicon-ok" title="Seleccionar" onclick="mascotajs.selectKeyMascota('@item.IdMascota','@item.NombreMascota','@item.NombreEspecie','@item.NombreRaza','@item.FechaNacimiento.ToShortDateString()')" />
+                    </text>)
+                  })
+
+        <div class="text-center" id="grid-det-foot">
+            @grid.PagerList(mode: WebGridPagerModes.All)
+        </div>
+
+    </div>
+</fieldset>

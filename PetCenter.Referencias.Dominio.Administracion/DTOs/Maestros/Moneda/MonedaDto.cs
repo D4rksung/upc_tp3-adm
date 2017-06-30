@@ -3,6 +3,6 @@
     public class MonedaDto
     {
         public int IdMoneda { get; set; }
-        public string Descripcion { get; set; }
+        public string DesMoneda { get; set; }
     }
 }

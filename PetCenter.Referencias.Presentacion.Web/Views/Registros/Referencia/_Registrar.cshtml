@@ -1,0 +1,86 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Referencia.ReferenciaEditorModelo
+
+@{   
+    ViewBag.TituloMenu = "Gestionar Referencia";
+    Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
+}
+
+@using (Html.BeginSecureForm("Registrar", "Referencia", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "formReferencia" }))
+{
+
+    //Mensajes
+    @Html.Partial("_Mensajes", Model)
+
+    //Mensajes
+    @Html.Partial("_MensajesTodos", Model)
+
+    @Html.HiddenFor(m => m.Convenio.NroConvenio);
+    @Html.HiddenFor(m => m.Referencia.FechaSolicitudRef);
+    @Html.HiddenFor(m => m.Convenio.IdCliente);
+    @Html.HiddenFor(m => m.Referencia.NroSolicitudRef);
+
+    <fieldset class="fieldset-filter-principal">
+        <br />
+        <div class="form-group asistencia-group">
+            <div class="asistencia-group">
+                @Html.Label("Fecha Solicitud: ", new { @class = "col-sm-2 control-label form-label text-left" })
+                <div class="col-sm-2">
+                    @Html.TextBoxFor(m => m.Referencia.FechaSolicitudRef, Model.Referencia.FechaSolicitudRef.Value.ToString(Formatos.FechaCorta), new { @class = "form-control asistencia-fecha-corta", @placeholder = "Fecha", @disabled = "" })
+                </div>
+            </div>
+
+            <div class="asistencia-group text-right">
+                <div class="col-sm-8">
+                    @Html.TextBoxFor(m => m.Convenio.RazonSocial, new { @class = "form-control control-label form-label text-right", @disabled = "" })
+                </div>
+
+            </div>
+
+        </div>
+
+        <ul id="tabReferencia" class="nav nav-tabs">
+            <li class="active">
+                <a href="#divDatosMascotas">Datos de Mascota</a>
+            </li>
+            <li id="li-datos-referencia">
+                <a href="#divDatosReferencia">Datos de la Referencia</a>
+            </li>
+            <li>
+                <a href="#divDatosAtencion">Datos de la Atención de Servicio</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="divDatosMascotas" class="tab-pane active">
+                <div class="table-responsive">
+                    @Html.Partial("_DatosMascota")
+                </div>
+            </div>
+            <div id="divDatosReferencia" class="tab-pane fade">
+                <div class="table-responsive">
+                    @Html.Partial("_DatosReferencia")
+                </div>
+            </div>
+            <div id="divDatosAtencion" class="tab-pane fade">
+                <div class="table-responsive">
+                    @Html.Partial("_DatosAtencion")
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+
+    
+}
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        referenciajs.configurarTabs();
+        referenciajs.grabar();
+        //referenciajs.iniciar();
+        //referenciajs.validacionesBuscarConvenio();
+    });
+</script>

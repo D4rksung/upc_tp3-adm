@@ -61,11 +61,56 @@ namespace PetCenter.Referencias.Presentacion.Web.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Ocurrió un error en: {0} - {1}, favor de revisar Log..
+        ///   Busca una cadena traducida similar a Se registró la atención..
+        /// </summary>
+        public static string AtencionRegistrada {
+            get {
+                return ResourceManager.GetString("AtencionRegistrada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Se generó el número de ContraReferencia: {0}.
+        /// </summary>
+        public static string ContraReferenciaRegistrada {
+            get {
+                return ResourceManager.GetString("ContraReferenciaRegistrada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No se encontró convenio..
+        /// </summary>
+        public static string ConvenioNoEncontrado {
+            get {
+                return ResourceManager.GetString("ConvenioNoEncontrado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Se generó el número de convenio: {0} con fecha {1}..
+        /// </summary>
+        public static string ConvenioRegistrado {
+            get {
+                return ResourceManager.GetString("ConvenioRegistrado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ocurrió un error en: {0}..
         /// </summary>
         public static string ErrorGenerico {
             get {
                 return ResourceManager.GetString("ErrorGenerico", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Se generó el número de Liquidación: {0}.
+        /// </summary>
+        public static string LiquidacionRegistrada {
+            get {
+                return ResourceManager.GetString("LiquidacionRegistrada", resourceCulture);
             }
         }
         
@@ -79,11 +124,47 @@ namespace PetCenter.Referencias.Presentacion.Web.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Su Solicitud de Atención de Referencia ha sido grabada con el Nro: {0}..
+        /// </summary>
+        public static string ReferenciaRegistrada {
+            get {
+                return ResourceManager.GetString("ReferenciaRegistrada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ya existe el RUC ingresado..
+        /// </summary>
+        public static string RucExiste {
+            get {
+                return ResourceManager.GetString("RucExiste", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a No se pudo grabar la solicitud..
         /// </summary>
         public static string SolicitudError {
             get {
                 return ResourceManager.GetString("SolicitudError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Se modificó el número de solicitud: {0}.
+        /// </summary>
+        public static string SolicitudModificada {
+            get {
+                return ResourceManager.GetString("SolicitudModificada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La solicitud {0} ha sido rechazada..
+        /// </summary>
+        public static string SolicitudRechazada {
+            get {
+                return ResourceManager.GetString("SolicitudRechazada", resourceCulture);
             }
         }
         

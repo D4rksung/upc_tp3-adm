@@ -1,0 +1,49 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Liquidacion.LiquidacionPaginadoModelo
+@{
+    var grid = new WebGrid
+    (
+        rowsPerPage: Model.Grid.TamanioPagina,
+        canSort: Model.Grid.TotalPagina > 0
+    );
+    grid.Bind(Model.Grid.ElementosPagina, autoSortAndPage: false, rowCount: Model.Grid.TotalPagina);
+}
+<fieldset>
+
+    <div class="asistencia-right asistencia-point">
+
+    </div>
+
+    @grid.Table(
+                    fillEmptyRows: false,
+                    headerStyle: "asistencia-head",
+                    tableStyle: "table table-striped table-bordered table-condensed asistencia-table-grid",
+                    columns: new[]
+                    {
+                            grid.Column("IdCliente", "IdCliente", style:"asistencia-column-center"),
+                            grid.Column("RazonSocial", "RazonSocial", style:"asistencia-column-left"),
+                            grid.Column("NroAtenciones", "NroAtenciones", style:"asistencia-column-center"),
+                            grid.Column("ValorBruto", "ValorBruto", style:"asistencia-column-right"),
+                            grid.Column("Descuento", "Descuento", style:"asistencia-column-right"),
+                            grid.Column("ValorNeto", "ValorNeto", style:"asistencia-column-right"),
+                            grid.Column("NroLiquidacion", "NroLiquidacion", style:"asistencia-column-center"),
+                            grid.Column("", "Opciones",@<text>
+
+
+        @{
+           if(item.NroLiquidacion == 0)
+           {
+                <a class="icon-Asistencia16-acc-liquidar" title="Liquidar" href="@Url.Action("Detalle","Liquidacion",new{idCliente=item.IdCliente, idReferencia = item.NroSolicitudRef})" />
+           }
+           else {
+                <a class="icon-Asistencia16-acc-view" title="Ver" href="@Url.Action("Detalle","Liquidacion",new{idCliente=item.IdCliente, idReferencia = item.NroSolicitudRef})" />
+           }
+        }
+                            </text>)
+                })
+    <div class="text-center">
+        @grid.PagerList(mode: WebGridPagerModes.All)
+    </div>
+
+</fieldset>

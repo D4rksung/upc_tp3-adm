@@ -1,0 +1,69 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@model PetCenter.Referencias.Presentacion.Web.Models.Comun.ReferenciaServicio.ReferenciaServicioEditorModelo
+@using (Html.BeginSecureForm("BuscadorIndex", "ReferenciaServicio", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "formReferenciaServicio" }))
+{
+    <fieldset>
+        <legend class="text-muted h4">Seleccionar Servicio</legend>
+        <div class="form-group asistencia-group">
+
+            <div class="asistencia-group">
+                @Html.Label("Servicio: ", new { @class = "col-sm-2 control-label form-label text-left" })
+                <div class="col-sm-4">
+                    @{
+                        var ConvenioServicios = new SelectList(@ViewBag.ConvenioServicios, "IdServicio", "NombreServicio");
+                    }
+                    @Html.DropDownListFor(m => m.ReferenciaConvenioServicio.IdServicio, ConvenioServicios, "Seleccione", new { @class = "form-control", @required = "" })
+                    @Html.HiddenFor(m => m.ReferenciaConvenioServicio.NroConvenio)
+                </div>
+            </div>
+            <div class="asistencia-group">
+                @Html.Label("Dscto: ", new { @class = "col-sm-2 control-label form-label text-left" })
+                <div class="col-sm-3">
+                    @Html.TextBoxFor(m => m.ConvenioServicio.FactorDcto, new { @class = "form-control asistencia-requerido text-right", @placeholder = "Dscto", @disabled = "" })
+                </div>
+            </div>
+        </div>
+        <div class="form-group asistencia-group">
+
+            <div class="asistencia-group">
+                @Html.Label("Tarifa Base: ", new { @class = "col-sm-2 control-label form-label text-left" })
+                <div class="col-sm-3">
+                    @Html.TextBoxFor(m => m.ConvenioServicio.TarifaBase, new { @class = "form-control asistencia-requerido text-right", @placeholder = "Tarifa Base", @disabled = "" })
+                </div>
+            </div>
+            <div class="asistencia-group">
+                @Html.Label("Tarifa Real: ", new { @class = "col-sm-3 control-label form-label text-left" })
+                <div class="col-sm-3">
+                    @Html.TextBoxFor(m => m.ConvenioServicio.TarifaReal, new { @class = "form-control asistencia-requerido text-right", @placeholder = "Tarifa Real", @disabled = "" })
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group asistencia-group">
+            @Html.Label("Cantidad: ", new { @class = "col-sm-2 control-label form-label text-left" })
+            <div class="col-sm-3">
+                @Html.TextBoxFor(m => m.ReferenciaConvenioServicio.Cantidad, new { @class = "form-control asistencia-requerido text-right", @placeholder = "Cantidad", @required = "", @maxlenght = 3 })
+            </div>
+        </div>
+
+        <div class="form-group asistencia-group">
+            @Html.Label("Observaciones: ", new { @class = "col-sm-2 control-label form-label text-left" })
+            <div class="col-sm-9">
+                @Html.TextAreaFor(m => m.ReferenciaConvenioServicio.Observaciones, new { @class = "form-control asistencia-requerido", @placeholder = "Observaciones", @required = "", @maxlenght = 200 })
+            </div>
+        </div>
+
+    </fieldset>
+                        }
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+
+        referenciajs.iniciar();
+        referenciajs.validacionesBuscarConvenioServicio();
+        referenciajs.seleccioneConvenioServicio();
+        //referenciajs.calculaReal();
+    });
+</script>

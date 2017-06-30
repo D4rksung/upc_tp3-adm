@@ -1,51 +1,280 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="BD_ReferenciaModelStoreContainer" CdmEntityContainer="BD_ReferenciaEntities">
-    <EntitySetMapping Name="Banco">
-      <EntityTypeMapping TypeName="BD_ReferenciaModel.Banco">
-        <MappingFragment StoreEntitySet="Banco">
-          <ScalarProperty Name="IdBanco" ColumnName="IdBanco" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+    <EntitySetMapping Name="GCP_Cliente">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCP_Cliente">
+        <MappingFragment StoreEntitySet="GCP_Cliente">
+          <ScalarProperty Name="AutorizaUsoDatos" ColumnName="AutorizaUsoDatos" />
+          <ScalarProperty Name="EmailCliente" ColumnName="EmailCliente" />
+          <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Moneda">
-      <EntityTypeMapping TypeName="BD_ReferenciaModel.Moneda">
-        <MappingFragment StoreEntitySet="Moneda">
+    <EntitySetMapping Name="GCP_Especie">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCP_Especie">
+        <MappingFragment StoreEntitySet="GCP_Especie">
+          <ScalarProperty Name="NombreEspecie" ColumnName="NombreEspecie" />
+          <ScalarProperty Name="IdEspecie" ColumnName="IdEspecie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCP_Mascota">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCP_Mascota">
+        <MappingFragment StoreEntitySet="GCP_Mascota">
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Tamaño" ColumnName="Tamaño" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="NombreMascota" ColumnName="NombreMascota" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="IdEspecie" ColumnName="IdEspecie" />
+          <ScalarProperty Name="IdRaza" ColumnName="IdRaza" />
+          <ScalarProperty Name="IdMascota" ColumnName="IdMascota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCP_PersonaJuridica">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCP_PersonaJuridica">
+        <MappingFragment StoreEntitySet="GCP_PersonaJuridica">
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="RUC" ColumnName="RUC" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCP_PersonaNatural">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCP_PersonaNatural">
+        <MappingFragment StoreEntitySet="GCP_PersonaNatural">
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="ApeMat" ColumnName="ApeMat" />
+          <ScalarProperty Name="ApePat" ColumnName="ApePat" />
+          <ScalarProperty Name="NroDoc" ColumnName="NroDoc" />
+          <ScalarProperty Name="TpoDoc" ColumnName="TpoDoc" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCP_Raza">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCP_Raza">
+        <MappingFragment StoreEntitySet="GCP_Raza">
+          <ScalarProperty Name="NombreRaza" ColumnName="NombreRaza" />
+          <ScalarProperty Name="IdEspecie" ColumnName="IdEspecie" />
+          <ScalarProperty Name="IdRaza" ColumnName="IdRaza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCR_Atenciones">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_Atenciones">
+        <MappingFragment StoreEntitySet="GCR_Atenciones">
+          <ScalarProperty Name="FechaAtencion" ColumnName="FechaAtencion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="ResultadoObjeto" ColumnName="ResultadoObjeto" />
+          <ScalarProperty Name="ResultadoTitulo" ColumnName="ResultadoTitulo" />
+          <ScalarProperty Name="Resultado" ColumnName="Resultado" />
+          <ScalarProperty Name="NroLiquidacion" ColumnName="NroLiquidacion" />
+          <ScalarProperty Name="ValorNeto" ColumnName="ValorNeto" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="ValorBruto" ColumnName="ValorBruto" />
+          <ScalarProperty Name="TarifaBase" ColumnName="TarifaBase" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="NroConvenio" ColumnName="NroConvenio" />
+          <ScalarProperty Name="IdServicio" ColumnName="IdServicio" />
+          <ScalarProperty Name="NroSolicitudRef" ColumnName="NroSolicitudRef" />
+          <ScalarProperty Name="IdAtencion" ColumnName="IdAtencion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCR_Convenio">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_Convenio">
+        <MappingFragment StoreEntitySet="GCR_Convenio">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="ImporteConvenio" ColumnName="ImporteConvenio" />
+          <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="FechaConvenio" ColumnName="FechaConvenio" />
+          <ScalarProperty Name="NroSolicitud" ColumnName="NroSolicitud" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="NroConvenio" ColumnName="NroConvenio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCR_ConvenioServicio">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_ConvenioServicio">
+        <MappingFragment StoreEntitySet="GCR_ConvenioServicio">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TarifaReal" ColumnName="TarifaReal" />
+          <ScalarProperty Name="FactorDcto" ColumnName="FactorDcto" />
+          <ScalarProperty Name="TarifaBase" ColumnName="TarifaBase" />
+          <ScalarProperty Name="NroConvenio" ColumnName="NroConvenio" />
+          <ScalarProperty Name="IdServicio" ColumnName="IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCR_DocumentoRechazo">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_DocumentoRechazo">
+        <MappingFragment StoreEntitySet="GCR_DocumentoRechazo">
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="FechaRechazo" ColumnName="FechaRechazo" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="NroSolicitud" ColumnName="NroSolicitud" />
+          <ScalarProperty Name="NroDocumento" ColumnName="NroDocumento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCR_Liquidaciones">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_Liquidaciones">
+        <MappingFragment StoreEntitySet="GCR_Liquidaciones">
+          <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
+          <ScalarProperty Name="ValorImpuesto" ColumnName="ValorImpuesto" />
+          <ScalarProperty Name="ValorNeto" ColumnName="ValorNeto" />
+          <ScalarProperty Name="ValorDctoComercial" ColumnName="ValorDctoComercial" />
+          <ScalarProperty Name="ValorBruto" ColumnName="ValorBruto" />
+          <ScalarProperty Name="FechaLiquidacion" ColumnName="FechaLiquidacion" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="NroLiquidacion" ColumnName="NroLiquidacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCR_RepresentanteClinica">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_RepresentanteClinica">
+        <MappingFragment StoreEntitySet="GCR_RepresentanteClinica">
+          <ScalarProperty Name="CorreoRep" ColumnName="CorreoRep" />
+          <ScalarProperty Name="TelefonoRep" ColumnName="TelefonoRep" />
+          <ScalarProperty Name="NombresRep" ColumnName="NombresRep" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="NroDocRep" ColumnName="NroDocRep" />
+          <ScalarProperty Name="TpoDocRep" ColumnName="TpoDocRep" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCR_Solicitud_Convenio">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_Solicitud_Convenio">
+        <MappingFragment StoreEntitySet="GCR_Solicitud_Convenio">
+          <ScalarProperty Name="DocCentralObjeto" ColumnName="DocCentralObjeto" />
+          <ScalarProperty Name="DocCentralTitulo" ColumnName="DocCentralTitulo" />
+          <ScalarProperty Name="DocLicenciaObjeto" ColumnName="DocLicenciaObjeto" />
+          <ScalarProperty Name="DocLicenciaTitulo" ColumnName="DocLicenciaTitulo" />
+          <ScalarProperty Name="DocSunatObjeto" ColumnName="DocSunatObjeto" />
+          <ScalarProperty Name="DocSunatTitulo" ColumnName="DocSunatTitulo" />
+          <ScalarProperty Name="DocColegiaturaObjeto" ColumnName="DocColegiaturaObjeto" />
+          <ScalarProperty Name="DocColegiaturaTitulo" ColumnName="DocColegiaturaTitulo" />
+          <ScalarProperty Name="DocReciboObjeto" ColumnName="DocReciboObjeto" />
+          <ScalarProperty Name="DocReciboTitulo" ColumnName="DocReciboTitulo" />
+          <ScalarProperty Name="ImporteGarantia" ColumnName="ImporteGarantia" />
           <ScalarProperty Name="IdMoneda" ColumnName="IdMoneda" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Solicitud">
-      <EntityTypeMapping TypeName="BD_ReferenciaModel.Solicitud">
-        <MappingFragment StoreEntitySet="Solicitud">
-          <ScalarProperty Name="IdSolicitud" ColumnName="IdSolicitud" />
-          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
-          <ScalarProperty Name="NroRuc" ColumnName="NroRuc" />
-          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="IdBanco" ColumnName="IdBanco" />
+          <ScalarProperty Name="FechaVencimientoG" ColumnName="FechaVencimientoG" />
+          <ScalarProperty Name="Nrogarantia" ColumnName="Nrogarantia" />
+          <ScalarProperty Name="CorreoRep" ColumnName="CorreoRep" />
+          <ScalarProperty Name="TelefonoRep" ColumnName="TelefonoRep" />
+          <ScalarProperty Name="NombreRep" ColumnName="NombreRep" />
+          <ScalarProperty Name="NroDocRep" ColumnName="NroDocRep" />
+          <ScalarProperty Name="TpoDocRep" ColumnName="TpoDocRep" />
+          <ScalarProperty Name="Web" ColumnName="Web" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
           <ScalarProperty Name="Referencia" ColumnName="Referencia" />
           <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
-          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
-          <ScalarProperty Name="Web" ColumnName="Web" />
-          <ScalarProperty Name="IdTipoDocumento" ColumnName="IdTipoDocumento" />
-          <ScalarProperty Name="NroDocumento" ColumnName="NroDocumento" />
-          <ScalarProperty Name="NombresCompletos" ColumnName="NombresCompletos" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="TelefonoRep" ColumnName="TelefonoRep" />
-          <ScalarProperty Name="IdBanco" ColumnName="IdBanco" />
-          <ScalarProperty Name="IdMoneda" ColumnName="IdMoneda" />
-          <ScalarProperty Name="Monto" ColumnName="Monto" />
-          <ScalarProperty Name="NroReferencia" ColumnName="NroReferencia" />
-          <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="NroRUC" ColumnName="NroRUC" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+          <ScalarProperty Name="NroSolicitud" ColumnName="NroSolicitud" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TipoDocumento">
-      <EntityTypeMapping TypeName="BD_ReferenciaModel.TipoDocumento">
-        <MappingFragment StoreEntitySet="TipoDocumento">
-          <ScalarProperty Name="IdTipoDocumento" ColumnName="IdTipoDocumento" />
+    <EntitySetMapping Name="GCR_SolicitudRef">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_SolicitudRef">
+        <MappingFragment StoreEntitySet="GCR_SolicitudRef">
+          <ScalarProperty Name="NombreRefiere" ColumnName="NombreRefiere" />
+          <ScalarProperty Name="ExamenAuxiliar" ColumnName="ExamenAuxiliar" />
+          <ScalarProperty Name="ExamenFisico" ColumnName="ExamenFisico" />
+          <ScalarProperty Name="Anamnesis" ColumnName="Anamnesis" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaTraslado" ColumnName="FechaTraslado" />
+          <ScalarProperty Name="Diagnostico" ColumnName="Diagnostico" />
+          <ScalarProperty Name="FechaSolicitudRef" ColumnName="FechaSolicitudRef" />
+          <ScalarProperty Name="IdMascota" ColumnName="IdMascota" />
+          <ScalarProperty Name="NroConvenio" ColumnName="NroConvenio" />
+          <ScalarProperty Name="NroSolicitudRef" ColumnName="NroSolicitudRef" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCR_SolicitudRef_Servicio">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_SolicitudRef_Servicio">
+        <MappingFragment StoreEntitySet="GCR_SolicitudRef_Servicio">
+          <ScalarProperty Name="ValorNeto" ColumnName="ValorNeto" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="ValorBruto" ColumnName="ValorBruto" />
+          <ScalarProperty Name="TarifaBase" ColumnName="TarifaBase" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="NroConvenio" ColumnName="NroConvenio" />
+          <ScalarProperty Name="IdServicio" ColumnName="IdServicio" />
+          <ScalarProperty Name="NroSolicitudRef" ColumnName="NroSolicitudRef" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GG_Banco">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GG_Banco">
+        <MappingFragment StoreEntitySet="GG_Banco">
+          <ScalarProperty Name="NomBanco" ColumnName="NomBanco" />
+          <ScalarProperty Name="IdBanco" ColumnName="IdBanco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GG_Moneda">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GG_Moneda">
+        <MappingFragment StoreEntitySet="GG_Moneda">
+          <ScalarProperty Name="DesMoneda" ColumnName="DesMoneda" />
+          <ScalarProperty Name="IdMoneda" ColumnName="IdMoneda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GG_Servicio">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GG_Servicio">
+        <MappingFragment StoreEntitySet="GG_Servicio">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TarifaBase" ColumnName="TarifaBase" />
+          <ScalarProperty Name="DescripcionServicio" ColumnName="DescripcionServicio" />
+          <ScalarProperty Name="NombreServicio" ColumnName="NombreServicio" />
+          <ScalarProperty Name="IdServicio" ColumnName="IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRC_ConvenioDescuento">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GRC_ConvenioDescuento">
+        <MappingFragment StoreEntitySet="GRC_ConvenioDescuento">
+          <ScalarProperty Name="FactorDcto" ColumnName="FactorDcto" />
+          <ScalarProperty Name="Maximo" ColumnName="Maximo" />
+          <ScalarProperty Name="Minimo" ColumnName="Minimo" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="NroConvenio" ColumnName="NroConvenio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCR_ContraReferencia">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_ContraReferencia">
+        <MappingFragment StoreEntitySet="GCR_ContraReferencia">
+          <ScalarProperty Name="Resultados" ColumnName="Resultados" />
+          <ScalarProperty Name="IdVeterinario" ColumnName="IdVeterinario" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="FechaEntrega" ColumnName="FechaEntrega" />
+          <ScalarProperty Name="FechaCierre" ColumnName="FechaCierre" />
+          <ScalarProperty Name="NroSolicitudRef" ColumnName="NroSolicitudRef" />
+          <ScalarProperty Name="NroContraReferencia" ColumnName="NroContraReferencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GCR_Veterinario">
+      <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_Veterinario">
+        <MappingFragment StoreEntitySet="GCR_Veterinario">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="NomVeterinario" ColumnName="NomVeterinario" />
+          <ScalarProperty Name="IdVeterinario" ColumnName="IdVeterinario" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

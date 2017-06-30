@@ -1,0 +1,34 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Referencia.ReferenciaEditorModelo
+
+@using (Html.BeginSecureForm("ObtenerConvenio", "Referencia", FormMethod.Get, new { @class = "form-horizontal", role = "form", id = "formBuscaConvenio" }))
+{
+    //Mensajes
+    @Html.Partial("_Mensajes", Model)
+
+    <fieldset class="fieldset-filter">
+        <legend class="text-muted h5">Convenio</legend>
+
+        <div class="form-group asistencia-group">
+            <div class="asistencia-group">
+                @Html.Label("Ingrese Nro de Convenio: ", new { @class = "col-sm-2 control-label form-label text-left" })
+                <div class="col-sm-3">
+                    @Html.TextBoxFor(m => m.Convenio.NroConvenio, new { @class = "form-control asistencia-requerido", @placeholder = "Nro Convenio", @required = "", @maxlength = 5 })
+                </div>
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-primary buscar">@Botones.BtnBuscar</button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+}
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        referenciajs.iniciar();
+        referenciajs.validacionesBuscarConvenio();
+    });
+</script>

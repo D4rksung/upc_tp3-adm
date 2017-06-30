@@ -5,13 +5,50 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="7701cb19e63a4619ac9e738f0b4839a9" Name="Diagram1" ZoomLevel="73">
-        <EntityTypeShape EntityType="BD_ReferenciaModel.Banco" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_ReferenciaModel.Moneda" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_ReferenciaModel.Solicitud" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="BD_ReferenciaModel.TipoDocumento" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
-        <AssociationConnector Association="BD_ReferenciaModel.FK_Solicitud_Banco" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_ReferenciaModel.FK_Solicitud_Moneda" ManuallyRouted="false" />
-        <AssociationConnector Association="BD_ReferenciaModel.FK_Solicitud_TipoDocumento" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCP_Cliente" Width="1.5" PointX="3" PointY="11.25" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCP_Especie" Width="1.5" PointX="3.75" PointY="3.875" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCP_Mascota" Width="1.5" PointX="8.25" PointY="11" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCP_PersonaJuridica" Width="1.5" PointX="0.75" PointY="13.25" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCP_PersonaNatural" Width="1.5" PointX="5.25" PointY="17.75" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCP_Raza" Width="1.5" PointX="6" PointY="3.625" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCR_Atenciones" Width="1.5" PointX="15" PointY="14.625" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCR_Convenio" Width="1.5" PointX="5.25" PointY="10.875" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCR_ConvenioServicio" Width="1.5" PointX="7.5" PointY="7.25" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCR_DocumentoRechazo" Width="1.5" PointX="5.25" PointY="25.5" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCR_Liquidaciones" Width="1.5" PointX="5.25" PointY="20.875" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCR_RepresentanteClinica" Width="1.5" PointX="3" PointY="16.625" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCR_Solicitud_Convenio" Width="1.5" PointX="3" PointY="20" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCR_SolicitudRef" Width="1.5" PointX="10.5" PointY="10.75" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCR_SolicitudRef_Servicio" Width="1.5" PointX="12.75" PointY="9.25" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GG_Banco" Width="1.5" PointX="0.75" PointY="24" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GG_Moneda" Width="1.5" PointX="0.75" PointY="21.625" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GG_Servicio" Width="1.5" PointX="5.25" PointY="7.5" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GRC_ConvenioDescuento" Width="1.5" PointX="7.5" PointY="16" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCP_Cliente_GCP_PersonaJuridica" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCP_Mascota_GCP_Cliente" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCP_PersonaNatural_GCP_Cliente" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_Convenio_GCP_Cliente" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_Liquidaciones_GCP_Cliente" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCP_Raza_GCP_Especie" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCP_Mascota_GCP_Raza" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_SolicitudRef_GCP_Mascota" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_RepresentanteClinica_GCP_PersonaJuridica" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_Atenciones_GCR_Liquidaciones" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_Atenciones_GCR_SolicitudRef_Servicio" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_Convenio_GCR_Solicitud_Convenio" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_ConvenioServicio_GCR_Convenio" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_SolicitudRef_GCR_Convenio" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GRC_ConvenioDescuento_GCR_Convenio" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_ConvenioServicio_GG_Servicio" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_SolicitudRef_Servicio_GCR_ConvenioServicio" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_DocumentoRechazo_GCR_Solicitud_Convenio" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_Solicitud_Convenio_GG_Banco" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_Solicitud_Convenio_GG_Moneda" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_SolicitudRef_Servicio_GCR_SolicitudRef" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCR_ContraReferencia" Width="1.5" PointX="12.75" PointY="13.375" />
+        <EntityTypeShape EntityType="BD_ReferenciaModel.GCR_Veterinario" Width="1.5" PointX="10.5" PointY="15.75" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_ContraReferencia_GCR_SolicitudRef1" />
+        <AssociationConnector Association="BD_ReferenciaModel.FK_GCR_ContraReferencia_GCR_Veterinario" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

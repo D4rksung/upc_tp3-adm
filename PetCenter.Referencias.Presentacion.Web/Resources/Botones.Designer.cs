@@ -97,6 +97,15 @@ namespace PetCenter.Referencias.Presentacion.Web.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Continuar.
+        /// </summary>
+        public static string BtnContinuar {
+            get {
+                return ResourceManager.GetString("BtnContinuar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Exportar.
         /// </summary>
         public static string BtnExportar {
@@ -142,11 +151,29 @@ namespace PetCenter.Referencias.Presentacion.Web.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Rechazar.
+        /// </summary>
+        public static string BtnRechazar {
+            get {
+                return ResourceManager.GetString("BtnRechazar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Regresar.
         /// </summary>
         public static string BtnRegresar {
             get {
                 return ResourceManager.GetString("BtnRegresar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Salir.
+        /// </summary>
+        public static string BtnSalir {
+            get {
+                return ResourceManager.GetString("BtnSalir", resourceCulture);
             }
         }
     }

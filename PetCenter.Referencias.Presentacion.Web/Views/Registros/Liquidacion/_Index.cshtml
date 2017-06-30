@@ -1,0 +1,63 @@
+﻿
+@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Liquidacion.LiquidacionPaginadoModelo
+@{
+    ViewBag.TituloMenu = "Gestionar Liquidaciones por Convenio";
+    Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
+}
+
+@using (Html.BeginSecureForm("Index", "Liquidacion", FormMethod.Get, new { @class = "form-horizontal", role = "form", id = "formAtencion" }))
+{
+
+
+    //Mensajes
+    @Html.Partial("_Mensajes", Model)
+
+
+    <fieldset class="fieldset-filter">
+        <div class="asistencia-left-5 asistencia-point">
+            <div class="form-group">
+
+
+                @Html.Label("Periodo: ", new { @class = "col-sm-2 control-label form-label text-left" })
+                <div class="col-sm-3">
+                    @{
+                        var Periodos = new SelectList(@ViewBag.Periodos, "Valor", "Texto");
+                    }
+                    @Html.DropDownListFor(m => m.Filtro.Atencion.Anio, Periodos, "Seleccione", new { @class = "form-control", @required = "" })
+                </div>
+
+
+                @Html.Label("Mes: ", new { @class = "col-sm-2 control-label form-label text-left" })
+                <div class="col-sm-3">
+                    @{
+                        var Meses = new SelectList(@ViewBag.Meses, "Valor", "Texto");
+                    }
+                    @Html.DropDownListFor(m => m.Filtro.Atencion.Mes, Meses, "Seleccione", new { @class = "form-control", @required = "" })
+                </div>
+
+
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="form-group">
+        <div class="col-sm-12 text-center">
+            <button type="submit" class="btn btn-primary buscar">@Botones.BtnBuscar</button>
+            <button type="button" class="btn btn-primary" onclick="helperjs.setGetUrl('@Url.Action("Index", "Liquidacion")');">@Botones.BtnLimpiar</button>
+        </div>
+    </div>
+
+                        //Resultado paginado
+                        <div class="table-responsive">
+                            @Html.Partial("_Grid")
+                        </div>
+                        }
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+
+    });
+</script>

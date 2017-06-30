@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Maestros.TipoDocumento
 {
-    public interface ITipoDocumentoServicio
-    {
-        IEnumerable<TipoDocumentoDto> Listar();
-    }
+    //public interface ITipoDocumentoServicio
+    //{
+    //    IEnumerable<TipoDocumentoDto> Listar();
+    //}
 }

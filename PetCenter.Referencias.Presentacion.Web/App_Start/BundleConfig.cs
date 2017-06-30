@@ -40,10 +40,17 @@ namespace PetCenter.Referencias.Presentacion.Web.App_Start
             bundles.Add(new ScriptBundle("~/js/vistas").Include(
                           //JS VISTAS
                           "~/Resources/Sitio/js/views/helper.js",
+                          "~/Resources/Sitio/js/views/view.archivo.js",
                           "~/Resources/Sitio/js/views/helper.file.js",
                           "~/Resources/Sitio/js/views/helper.grid.js",
                           "~/Resources/Sitio/js/views/helper.extender.js",
-                          "~/Resources/Sitio/js/views/view.solicitud.js"
+                          "~/Resources/Sitio/js/views/view.solicitud.js",
+                          "~/Resources/Sitio/js/views/view.evaluacion.js",
+                          "~/Resources/Sitio/js/views/view.convenio.js",
+                          "~/Resources/Sitio/js/views/view.referencia.js",
+                          "~/Resources/Sitio/js/views/view.mascota.js",
+                          "~/Resources/Sitio/js/views/view.atencion.js",
+                          "~/Resources/Sitio/js/views/view.contrareferencia.js"
                           ));
 
             bundles.Add(new StyleImagePathBundle("~/css/bootstrap").Include(

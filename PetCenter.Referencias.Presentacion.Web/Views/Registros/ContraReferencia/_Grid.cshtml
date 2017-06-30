@@ -1,0 +1,47 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.ContraReferencia.ContraReferenciaPaginadoModelo
+@{
+    var grid = new WebGrid
+    (
+        rowsPerPage: Model.Grid.TamanioPagina,
+        canSort: Model.Grid.TotalPagina > 0
+    );
+    grid.Bind(Model.Grid.ElementosPagina, autoSortAndPage: false, rowCount: Model.Grid.TotalPagina);
+}
+<fieldset>
+
+    <div class="asistencia-right asistencia-point">
+
+    </div>
+
+    @grid.Table(
+                    fillEmptyRows: false,
+                    headerStyle: "asistencia-head",
+                    tableStyle: "table table-striped table-bordered table-condensed asistencia-table-grid",
+                    columns: new[]
+                    {
+                            grid.Column("NroSolicitudRefFormato", "Nro Ref.", style:"asistencia-column-center"),
+                            grid.Column("FechaSolicitudRef", "Fecha Solicitud", format: p=> p.FechaSolicitudRef.ToShortDateString()),
+                            grid.Column("NroRuc", "RUC", style:"asistencia-column-left"),
+                            grid.Column("RazonSocial", "Razón Social", style:"asistencia-column-left"),
+                            grid.Column("NombreMascota", "Mascota", style:"asistencia-column-left"),
+                            grid.Column("", "Opciones",@<text>
+
+                                @{
+                                    if(item.ContraReferida)
+                                    {
+                                        <a class="icon-Asistencia16-acc-view" title="Ver" href="@Url.Action("Mostrar","ContraReferencia",new{idReferencia=item.NroSolicitudRef})" />
+                                    }
+                                    else {
+                                        <a class="icon-Asistencia16-acc-liquidar" title="Detalle" href="@Url.Action("Detalle","ContraReferencia",new{idReferencia=item.NroSolicitudRef})" />
+                                    }
+                                }
+
+                            </text>)
+                })
+    <div class="text-center">
+        @grid.PagerList(mode: WebGridPagerModes.All)
+    </div>
+
+</fieldset>

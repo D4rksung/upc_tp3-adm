@@ -64,7 +64,77 @@
     <Compile Include="Base\ICriterio.cs" />
     <Compile Include="Base\IRepositorio.cs" />
     <Compile Include="Base\IUnidadDeTrabajo.cs" />
-    <Compile Include="Entidades\Banco.cs">
+    <Compile Include="Criterios\Maestros\Cliente\ClienteIdCriterio.cs" />
+    <Compile Include="Criterios\Maestros\Mascota\MascotaBuscadorCriterio.cs" />
+    <Compile Include="Criterios\Maestros\PersonaJuridica\PersonaJuridicaIdCriterio.cs" />
+    <Compile Include="Criterios\Maestros\PersonaJuridica\PersonaJuridicaRucCriterio.cs" />
+    <Compile Include="Criterios\Registros\Atencion\AtencionBuscadorCriterio.cs" />
+    <Compile Include="Criterios\Registros\Atencion\AtencionIdCriterio.cs" />
+    <Compile Include="Criterios\Registros\ReferenciaConvenioServicio\ReferenciaConvenioServicioIdsCriterio.cs" />
+    <Compile Include="Criterios\Registros\Referencia\ReferenciaBuscadorCriterio.cs" />
+    <Compile Include="Criterios\Registros\Solicitud\SolicitudBuscadorCriterio.cs" />
+    <Compile Include="Criterios\Registros\Solicitud\SolicitudIdCriterio.cs" />
+    <Compile Include="Entidades\GCP_Cliente.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCP_Especie.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCP_Mascota.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCP_PersonaJuridica.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCP_PersonaNatural.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCP_Raza.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCR_Atenciones.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCR_ContraReferencia.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCR_Convenio.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCR_ConvenioServicio.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCR_DocumentoRechazo.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCR_Liquidaciones.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCR_RepresentanteClinica.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCR_SolicitudRef.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCR_SolicitudRef_Servicio.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCR_Solicitud_Convenio.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GCR_Veterinario.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GG_Banco.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GG_Moneda.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GG_Servicio.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\GRC_ConvenioDescuento.cs">
       <DependentUpon>ModeloReferencias.tt</DependentUpon>
     </Compile>
     <Compile Include="Entidades\ModeloReferencias.cs">
@@ -72,15 +142,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModeloReferencias.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entidades\Moneda.cs">
-      <DependentUpon>ModeloReferencias.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entidades\Solicitud.cs">
-      <DependentUpon>ModeloReferencias.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entidades\TipoDocumento.cs">
-      <DependentUpon>ModeloReferencias.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Entidades\Registros\ConvenioLogica.cs" />
+    <Compile Include="Entidades\Registros\DocumentoRechazoLogica.cs" />
+    <Compile Include="Entidades\Registros\ReferenciaLogica.cs" />
+    <Compile Include="Entidades\Registros\SolicitudLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursos\MensajeNegocio.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -88,18 +153,49 @@
       <DependentUpon>MensajeNegocio.resx</DependentUpon>
     </Compile>
     <Compile Include="Repositorio\Maestros\Banco\IBancoRepositorio.cs" />
+    <Compile Include="Repositorio\Maestros\Mascota\IMascotaRepositorio.cs" />
     <Compile Include="Repositorio\Maestros\Moneda\IMonedaRepositorio.cs" />
+    <Compile Include="Repositorio\Maestros\Servicio\IServicioRepositorio.cs" />
     <Compile Include="Repositorio\Maestros\TipoDocumento\ITipoDocumentoRepositorio.cs" />
+    <Compile Include="Repositorio\Maestros\Veterinario\IVeterinarioRepositorio.cs" />
+    <Compile Include="Repositorio\Registros\IAtencionRepositorio.cs" />
+    <Compile Include="Repositorio\Registros\IClienteRepositorio.cs" />
+    <Compile Include="Repositorio\Registros\IContraReferenciaRepositorio.cs" />
+    <Compile Include="Repositorio\Registros\IConvenioDescuentoRepositorio.cs" />
+    <Compile Include="Repositorio\Registros\IConvenioRepositorio.cs" />
+    <Compile Include="Repositorio\Registros\IConvenioServicioRepositorio.cs" />
+    <Compile Include="Repositorio\Registros\IDocumentoRechazoRepositorio.cs" />
+    <Compile Include="Repositorio\Registros\ILiquidacionRepositorio.cs" />
+    <Compile Include="Repositorio\Registros\IPersonaJuridicaRepositorio.cs" />
+    <Compile Include="Repositorio\Registros\IReferenciaConvenioServicioRepositorio.cs" />
+    <Compile Include="Repositorio\Registros\IReferenciaRepositorio.cs" />
     <Compile Include="Repositorio\Registros\ISolicitudRepositorio.cs" />
     <Compile Include="VOBs\General\PaginadoVob.cs" />
     <Compile Include="VOBs\Maestros\Banco\BancoVob.cs" />
+    <Compile Include="VOBs\Maestros\Mascota\MascotaVob.cs" />
     <Compile Include="VOBs\Maestros\Moneda\MonedaVob.cs" />
+    <Compile Include="VOBs\Maestros\Servicio\ServicioVob.cs" />
     <Compile Include="VOBs\Maestros\TipoDocumento\TipoDocumentoVob.cs" />
+    <Compile Include="VOBs\Maestros\Veterinario\VeterinarioVob.cs" />
+    <Compile Include="VOBs\Registros\Atencion\AtencionTotalMesVob.cs" />
+    <Compile Include="VOBs\Registros\Atencion\AtencionVob.cs" />
+    <Compile Include="VOBs\Registros\Atencion\ServiciosPorAtencionVob.cs" />
+    <Compile Include="VOBs\Registros\Cliente\ClienteVob.cs" />
+    <Compile Include="VOBs\Registros\ContraReferencia\ContraReferenciaVob.cs" />
+    <Compile Include="VOBs\Registros\ConvenioDescuento\ConvenioDescuentoVob.cs" />
+    <Compile Include="VOBs\Registros\ConvenioServicio\ConvenioServicioVob.cs" />
+    <Compile Include="VOBs\Registros\Convenio\ConvenioVob.cs" />
+    <Compile Include="VOBs\Registros\DocumentoRechazo\DocumentoRechazoVob.cs" />
+    <Compile Include="VOBs\Registros\Liquidacion\LiquidacionTotalConvenioVob.cs" />
+    <Compile Include="VOBs\Registros\Liquidacion\LiquidacionVob.cs" />
+    <Compile Include="VOBs\Registros\PersonaJuridica\PersonaJuridicaVob.cs" />
+    <Compile Include="VOBs\Registros\ReferenciaConvenioServicio\ReferenciaConvenioServicioVob.cs" />
+    <Compile Include="VOBs\Registros\Referencia\EspeciesCantidadVob.cs" />
+    <Compile Include="VOBs\Registros\Referencia\RazasCantidadVob.cs" />
+    <Compile Include="VOBs\Registros\Referencia\ReferenciaVob.cs" />
     <Compile Include="VOBs\Registros\Solicitud\SolicitudVob.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Criterios\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Recursos\MensajeNegocio.resx">
       <Generator>ResXFileCodeGenerator</Generator>

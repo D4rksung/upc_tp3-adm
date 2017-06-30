@@ -1,0 +1,33 @@
+﻿
+@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Solicitud.SolicitudPaginadoModelo
+@{
+//ViewBag.TituloSeccion = "Registro de convenios de referencia";
+//ViewBag.TituloMenu = "Consulta de Solicitudes de Afiliación";
+//Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
+}
+
+@using (Html.BeginSecureForm("Index", "Solicitud", FormMethod.Get, new { @class = "form-horizontal", role = "form", id = "formSolicitud" }))
+{
+    <legend class="text-muted h5"></legend>
+
+    <div class="text-right">
+        @Html.Partial("_Toolbar")
+    </div>
+
+    //Mensajes
+    @Html.Partial("_Mensajes", Model)
+
+    //Resultado paginado
+    <div class="table-responsive">
+        @Html.Partial("_Grid")
+    </div>
+}
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        solicitudjs.ocultar();
+    });
+</script>

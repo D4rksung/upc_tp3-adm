@@ -1,101 +1,661 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="BD_ReferenciaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Banco">
+  <EntityType Name="GCP_Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="int" Nullable="false" />
+    <Property Name="NombreCliente" Type="varchar" MaxLength="200" />
+    <Property Name="EmailCliente" Type="varchar" MaxLength="50" />
+    <Property Name="AutorizaUsoDatos" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="GCP_Especie">
+    <Key>
+      <PropertyRef Name="IdEspecie" />
+    </Key>
+    <Property Name="IdEspecie" Type="int" Nullable="false" />
+    <Property Name="NombreEspecie" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="GCP_Mascota">
+    <Key>
+      <PropertyRef Name="IdMascota" />
+    </Key>
+    <Property Name="IdMascota" Type="int" Nullable="false" />
+    <Property Name="IdRaza" Type="int" />
+    <Property Name="IdEspecie" Type="int" />
+    <Property Name="IdCliente" Type="int" />
+    <Property Name="NombreMascota" Type="varchar" MaxLength="150" />
+    <Property Name="FechaNacimiento" Type="date" />
+    <Property Name="Tamaño" Type="varchar" MaxLength="50" />
+    <Property Name="Genero" Type="char" MaxLength="1" />
+    <Property Name="Peso" Type="numeric" Precision="6" Scale="2" />
+  </EntityType>
+  <EntityType Name="GCP_PersonaJuridica">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RUC" Type="char" MaxLength="11" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="GCP_PersonaNatural">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="int" Nullable="false" />
+    <Property Name="TpoDoc" Type="char" MaxLength="3" />
+    <Property Name="NroDoc" Type="char" MaxLength="3" />
+    <Property Name="ApePat" Type="varchar" MaxLength="100" />
+    <Property Name="ApeMat" Type="varchar" MaxLength="100" />
+    <Property Name="Nombres" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="GCP_Raza">
+    <Key>
+      <PropertyRef Name="IdRaza" />
+    </Key>
+    <Property Name="IdRaza" Type="int" Nullable="false" />
+    <Property Name="IdEspecie" Type="int" Nullable="false" />
+    <Property Name="NombreRaza" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="GCR_Atenciones">
+    <Key>
+      <PropertyRef Name="IdAtencion" />
+    </Key>
+    <Property Name="IdAtencion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NroSolicitudRef" Type="int" />
+    <Property Name="IdServicio" Type="int" />
+    <Property Name="NroConvenio" Type="int" />
+    <Property Name="Cantidad" Type="int" />
+    <Property Name="TarifaBase" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ValorBruto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Descuento" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ValorNeto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="NroLiquidacion" Type="int" />
+    <Property Name="Resultado" Type="nvarchar" MaxLength="400" />
+    <Property Name="ResultadoTitulo" Type="varchar" MaxLength="100" />
+    <Property Name="ResultadoObjeto" Type="varbinary(max)" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+    <Property Name="FechaAtencion" Type="date" />
+  </EntityType>
+  <EntityType Name="GCR_ContraReferencia">
+    <Key>
+      <PropertyRef Name="NroContraReferencia" />
+    </Key>
+    <Property Name="NroContraReferencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NroSolicitudRef" Type="int" />
+    <Property Name="FechaCierre" Type="date" />
+    <Property Name="FechaEntrega" Type="date" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="250" />
+    <Property Name="IdVeterinario" Type="int" />
+    <Property Name="Resultados" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="GCR_Convenio">
+    <Key>
+      <PropertyRef Name="NroConvenio" />
+    </Key>
+    <Property Name="NroConvenio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCliente" Type="int" />
+    <Property Name="NroSolicitud" Type="int" />
+    <Property Name="FechaConvenio" Type="date" />
+    <Property Name="FechaVencimiento" Type="date" />
+    <Property Name="ImporteConvenio" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="Observacion" Type="varchar" MaxLength="200" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="GCR_ConvenioServicio">
+    <Key>
+      <PropertyRef Name="IdServicio" />
+      <PropertyRef Name="NroConvenio" />
+    </Key>
+    <Property Name="IdServicio" Type="int" Nullable="false" />
+    <Property Name="NroConvenio" Type="int" Nullable="false" />
+    <Property Name="TarifaBase" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="FactorDcto" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="TarifaReal" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="GCR_DocumentoRechazo">
+    <Key>
+      <PropertyRef Name="NroDocumento" />
+    </Key>
+    <Property Name="NroDocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NroSolicitud" Type="int" />
+    <Property Name="Motivo" Type="varchar" MaxLength="200" />
+    <Property Name="FechaRechazo" Type="date" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="GCR_Liquidaciones">
+    <Key>
+      <PropertyRef Name="NroLiquidacion" />
+    </Key>
+    <Property Name="NroLiquidacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Anio" Type="char" MaxLength="4" />
+    <Property Name="Mes" Type="char" MaxLength="2" />
+    <Property Name="IdCliente" Type="int" />
+    <Property Name="FechaLiquidacion" Type="date" />
+    <Property Name="ValorBruto" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="ValorDctoComercial" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="ValorNeto" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="ValorImpuesto" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="ValorTotal" Type="decimal" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="GCR_RepresentanteClinica">
+    <Key>
+      <PropertyRef Name="TpoDocRep" />
+      <PropertyRef Name="NroDocRep" />
+    </Key>
+    <Property Name="TpoDocRep" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="NroDocRep" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="IdCliente" Type="int" />
+    <Property Name="NombresRep" Type="varchar" MaxLength="100" />
+    <Property Name="TelefonoRep" Type="varchar" MaxLength="25" />
+    <Property Name="CorreoRep" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="GCR_Solicitud_Convenio">
+    <Key>
+      <PropertyRef Name="NroSolicitud" />
+    </Key>
+    <Property Name="NroSolicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FechaSolicitud" Type="date" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+    <Property Name="NroRUC" Type="varchar" MaxLength="11" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="200" />
+    <Property Name="Referencia" Type="varchar" MaxLength="200" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" />
+    <Property Name="Web" Type="varchar" MaxLength="100" />
+    <Property Name="TpoDocRep" Type="char" MaxLength="3" />
+    <Property Name="NroDocRep" Type="varchar" MaxLength="15" />
+    <Property Name="NombreRep" Type="varchar" MaxLength="200" />
+    <Property Name="TelefonoRep" Type="varchar" MaxLength="25" />
+    <Property Name="CorreoRep" Type="varchar" MaxLength="60" />
+    <Property Name="Nrogarantia" Type="varchar" MaxLength="25" />
+    <Property Name="FechaVencimientoG" Type="date" />
+    <Property Name="IdBanco" Type="int" />
+    <Property Name="IdMoneda" Type="int" />
+    <Property Name="ImporteGarantia" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="DocReciboTitulo" Type="varchar" MaxLength="100" />
+    <Property Name="DocReciboObjeto" Type="varbinary(max)" />
+    <Property Name="DocColegiaturaTitulo" Type="varchar" MaxLength="100" />
+    <Property Name="DocColegiaturaObjeto" Type="varbinary(max)" />
+    <Property Name="DocSunatTitulo" Type="varchar" MaxLength="100" />
+    <Property Name="DocSunatObjeto" Type="varbinary(max)" />
+    <Property Name="DocLicenciaTitulo" Type="varchar" MaxLength="100" />
+    <Property Name="DocLicenciaObjeto" Type="varbinary(max)" />
+    <Property Name="DocCentralTitulo" Type="varchar" MaxLength="100" />
+    <Property Name="DocCentralObjeto" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="GCR_SolicitudRef">
+    <Key>
+      <PropertyRef Name="NroSolicitudRef" />
+    </Key>
+    <Property Name="NroSolicitudRef" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NroConvenio" Type="int" />
+    <Property Name="IdMascota" Type="int" />
+    <Property Name="FechaSolicitudRef" Type="date" />
+    <Property Name="Diagnostico" Type="varchar" MaxLength="200" />
+    <Property Name="FechaTraslado" Type="date" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+    <Property Name="Anamnesis" Type="varchar" MaxLength="255" />
+    <Property Name="ExamenFisico" Type="varchar" MaxLength="255" />
+    <Property Name="ExamenAuxiliar" Type="varchar" MaxLength="255" />
+    <Property Name="NombreRefiere" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="GCR_SolicitudRef_Servicio">
+    <Key>
+      <PropertyRef Name="NroSolicitudRef" />
+      <PropertyRef Name="IdServicio" />
+      <PropertyRef Name="NroConvenio" />
+    </Key>
+    <Property Name="NroSolicitudRef" Type="int" Nullable="false" />
+    <Property Name="IdServicio" Type="int" Nullable="false" />
+    <Property Name="NroConvenio" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="200" />
+    <Property Name="TarifaBase" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ValorBruto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Descuento" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ValorNeto" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="GCR_Veterinario">
+    <Key>
+      <PropertyRef Name="IdVeterinario" />
+    </Key>
+    <Property Name="IdVeterinario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomVeterinario" Type="varchar" MaxLength="150" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="GG_Banco">
     <Key>
       <PropertyRef Name="IdBanco" />
     </Key>
-    <Property Name="IdBanco" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IdBanco" Type="int" Nullable="false" />
+    <Property Name="NomBanco" Type="varchar" MaxLength="100" />
   </EntityType>
-  <EntityType Name="Moneda">
+  <EntityType Name="GG_Moneda">
     <Key>
       <PropertyRef Name="IdMoneda" />
     </Key>
-    <Property Name="IdMoneda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Solicitud">
-    <Key>
-      <PropertyRef Name="IdSolicitud" />
-    </Key>
-    <Property Name="IdSolicitud" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FechaSolicitud" Type="datetime" />
-    <Property Name="NroRuc" Type="varchar" MaxLength="20" />
-    <Property Name="Direccion" Type="varchar" MaxLength="200" />
-    <Property Name="Referencia" Type="varchar" MaxLength="200" />
-    <Property Name="RazonSocial" Type="varchar" MaxLength="200" />
-    <Property Name="Telefono" Type="varchar" MaxLength="20" />
-    <Property Name="Web" Type="varchar" MaxLength="100" />
-    <Property Name="IdTipoDocumento" Type="int" Nullable="false" />
-    <Property Name="NroDocumento" Type="varchar" MaxLength="20" />
-    <Property Name="NombresCompletos" Type="varchar" MaxLength="200" />
-    <Property Name="Email" Type="varchar" MaxLength="200" />
-    <Property Name="TelefonoRep" Type="varchar" MaxLength="20" />
-    <Property Name="IdBanco" Type="int" Nullable="false" />
     <Property Name="IdMoneda" Type="int" Nullable="false" />
-    <Property Name="Monto" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="NroReferencia" Type="varchar" MaxLength="20" />
-    <Property Name="FechaVencimiento" Type="datetime" />
+    <Property Name="DesMoneda" Type="varchar" MaxLength="100" />
   </EntityType>
-  <EntityType Name="TipoDocumento">
+  <EntityType Name="GG_Servicio">
     <Key>
-      <PropertyRef Name="IdTipoDocumento" />
+      <PropertyRef Name="IdServicio" />
     </Key>
-    <Property Name="IdTipoDocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdServicio" Type="int" Nullable="false" />
+    <Property Name="NombreServicio" Type="varchar" MaxLength="200" />
+    <Property Name="DescripcionServicio" Type="varchar" MaxLength="400" />
+    <Property Name="TarifaBase" Type="decimal" Precision="16" Scale="2" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
   </EntityType>
-  <Association Name="FK_Solicitud_Banco">
-    <End Role="Banco" Type="Self.Banco" Multiplicity="1" />
-    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+  <EntityType Name="GRC_ConvenioDescuento">
+    <Key>
+      <PropertyRef Name="NroConvenio" />
+      <PropertyRef Name="Item" />
+    </Key>
+    <Property Name="NroConvenio" Type="int" Nullable="false" />
+    <Property Name="Item" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="150" />
+    <Property Name="Minimo" Type="int" />
+    <Property Name="Maximo" Type="int" />
+    <Property Name="FactorDcto" Type="decimal" Precision="4" Scale="2" />
+  </EntityType>
+  <Association Name="FK_GCP_Cliente_GCP_PersonaJuridica">
+    <End Role="GCP_PersonaJuridica" Type="Self.GCP_PersonaJuridica" Multiplicity="1" />
+    <End Role="GCP_Cliente" Type="Self.GCP_Cliente" Multiplicity="0..1" />
     <ReferentialConstraint>
-      <Principal Role="Banco">
+      <Principal Role="GCP_PersonaJuridica">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="GCP_Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCP_Mascota_GCP_Cliente">
+    <End Role="GCP_Cliente" Type="Self.GCP_Cliente" Multiplicity="0..1" />
+    <End Role="GCP_Mascota" Type="Self.GCP_Mascota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCP_Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="GCP_Mascota">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCP_Mascota_GCP_Raza">
+    <End Role="GCP_Raza" Type="Self.GCP_Raza" Multiplicity="0..1" />
+    <End Role="GCP_Mascota" Type="Self.GCP_Mascota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCP_Raza">
+        <PropertyRef Name="IdRaza" />
+      </Principal>
+      <Dependent Role="GCP_Mascota">
+        <PropertyRef Name="IdRaza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCP_PersonaNatural_GCP_Cliente">
+    <End Role="GCP_Cliente" Type="Self.GCP_Cliente" Multiplicity="1" />
+    <End Role="GCP_PersonaNatural" Type="Self.GCP_PersonaNatural" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="GCP_Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="GCP_PersonaNatural">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCP_Raza_GCP_Especie">
+    <End Role="GCP_Especie" Type="Self.GCP_Especie" Multiplicity="1" />
+    <End Role="GCP_Raza" Type="Self.GCP_Raza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCP_Especie">
+        <PropertyRef Name="IdEspecie" />
+      </Principal>
+      <Dependent Role="GCP_Raza">
+        <PropertyRef Name="IdEspecie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_Atenciones_GCR_Liquidaciones">
+    <End Role="GCR_Liquidaciones" Type="Self.GCR_Liquidaciones" Multiplicity="0..1" />
+    <End Role="GCR_Atenciones" Type="Self.GCR_Atenciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCR_Liquidaciones">
+        <PropertyRef Name="NroLiquidacion" />
+      </Principal>
+      <Dependent Role="GCR_Atenciones">
+        <PropertyRef Name="NroLiquidacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_Atenciones_GCR_SolicitudRef_Servicio">
+    <End Role="GCR_SolicitudRef_Servicio" Type="Self.GCR_SolicitudRef_Servicio" Multiplicity="0..1" />
+    <End Role="GCR_Atenciones" Type="Self.GCR_Atenciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCR_SolicitudRef_Servicio">
+        <PropertyRef Name="NroSolicitudRef" />
+        <PropertyRef Name="IdServicio" />
+        <PropertyRef Name="NroConvenio" />
+      </Principal>
+      <Dependent Role="GCR_Atenciones">
+        <PropertyRef Name="NroSolicitudRef" />
+        <PropertyRef Name="IdServicio" />
+        <PropertyRef Name="NroConvenio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_ContraReferencia_GCR_SolicitudRef1">
+    <End Role="GCR_SolicitudRef" Type="Self.GCR_SolicitudRef" Multiplicity="0..1" />
+    <End Role="GCR_ContraReferencia" Type="Self.GCR_ContraReferencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCR_SolicitudRef">
+        <PropertyRef Name="NroSolicitudRef" />
+      </Principal>
+      <Dependent Role="GCR_ContraReferencia">
+        <PropertyRef Name="NroSolicitudRef" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_ContraReferencia_GCR_Veterinario">
+    <End Role="GCR_Veterinario" Type="Self.GCR_Veterinario" Multiplicity="0..1" />
+    <End Role="GCR_ContraReferencia" Type="Self.GCR_ContraReferencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCR_Veterinario">
+        <PropertyRef Name="IdVeterinario" />
+      </Principal>
+      <Dependent Role="GCR_ContraReferencia">
+        <PropertyRef Name="IdVeterinario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_Convenio_GCP_Cliente">
+    <End Role="GCP_Cliente" Type="Self.GCP_Cliente" Multiplicity="0..1" />
+    <End Role="GCR_Convenio" Type="Self.GCR_Convenio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCP_Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="GCR_Convenio">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_Convenio_GCR_Solicitud_Convenio">
+    <End Role="GCR_Solicitud_Convenio" Type="Self.GCR_Solicitud_Convenio" Multiplicity="0..1" />
+    <End Role="GCR_Convenio" Type="Self.GCR_Convenio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCR_Solicitud_Convenio">
+        <PropertyRef Name="NroSolicitud" />
+      </Principal>
+      <Dependent Role="GCR_Convenio">
+        <PropertyRef Name="NroSolicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_ConvenioServicio_GCR_Convenio">
+    <End Role="GCR_Convenio" Type="Self.GCR_Convenio" Multiplicity="1" />
+    <End Role="GCR_ConvenioServicio" Type="Self.GCR_ConvenioServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCR_Convenio">
+        <PropertyRef Name="NroConvenio" />
+      </Principal>
+      <Dependent Role="GCR_ConvenioServicio">
+        <PropertyRef Name="NroConvenio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_ConvenioServicio_GG_Servicio">
+    <End Role="GG_Servicio" Type="Self.GG_Servicio" Multiplicity="1" />
+    <End Role="GCR_ConvenioServicio" Type="Self.GCR_ConvenioServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GG_Servicio">
+        <PropertyRef Name="IdServicio" />
+      </Principal>
+      <Dependent Role="GCR_ConvenioServicio">
+        <PropertyRef Name="IdServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_DocumentoRechazo_GCR_Solicitud_Convenio">
+    <End Role="GCR_Solicitud_Convenio" Type="Self.GCR_Solicitud_Convenio" Multiplicity="0..1" />
+    <End Role="GCR_DocumentoRechazo" Type="Self.GCR_DocumentoRechazo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCR_Solicitud_Convenio">
+        <PropertyRef Name="NroSolicitud" />
+      </Principal>
+      <Dependent Role="GCR_DocumentoRechazo">
+        <PropertyRef Name="NroSolicitud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_Liquidaciones_GCP_Cliente">
+    <End Role="GCP_Cliente" Type="Self.GCP_Cliente" Multiplicity="0..1" />
+    <End Role="GCR_Liquidaciones" Type="Self.GCR_Liquidaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCP_Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="GCR_Liquidaciones">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_RepresentanteClinica_GCP_PersonaJuridica">
+    <End Role="GCP_PersonaJuridica" Type="Self.GCP_PersonaJuridica" Multiplicity="0..1" />
+    <End Role="GCR_RepresentanteClinica" Type="Self.GCR_RepresentanteClinica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCP_PersonaJuridica">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="GCR_RepresentanteClinica">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_Solicitud_Convenio_GG_Banco">
+    <End Role="GG_Banco" Type="Self.GG_Banco" Multiplicity="0..1" />
+    <End Role="GCR_Solicitud_Convenio" Type="Self.GCR_Solicitud_Convenio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GG_Banco">
         <PropertyRef Name="IdBanco" />
       </Principal>
-      <Dependent Role="Solicitud">
+      <Dependent Role="GCR_Solicitud_Convenio">
         <PropertyRef Name="IdBanco" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Solicitud_Moneda">
-    <End Role="Moneda" Type="Self.Moneda" Multiplicity="1" />
-    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+  <Association Name="FK_GCR_Solicitud_Convenio_GG_Moneda">
+    <End Role="GG_Moneda" Type="Self.GG_Moneda" Multiplicity="0..1" />
+    <End Role="GCR_Solicitud_Convenio" Type="Self.GCR_Solicitud_Convenio" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Moneda">
+      <Principal Role="GG_Moneda">
         <PropertyRef Name="IdMoneda" />
       </Principal>
-      <Dependent Role="Solicitud">
+      <Dependent Role="GCR_Solicitud_Convenio">
         <PropertyRef Name="IdMoneda" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Solicitud_TipoDocumento">
-    <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="1" />
-    <End Role="Solicitud" Type="Self.Solicitud" Multiplicity="*" />
+  <Association Name="FK_GCR_SolicitudRef_GCP_Mascota">
+    <End Role="GCP_Mascota" Type="Self.GCP_Mascota" Multiplicity="0..1" />
+    <End Role="GCR_SolicitudRef" Type="Self.GCR_SolicitudRef" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="TipoDocumento">
-        <PropertyRef Name="IdTipoDocumento" />
+      <Principal Role="GCP_Mascota">
+        <PropertyRef Name="IdMascota" />
       </Principal>
-      <Dependent Role="Solicitud">
-        <PropertyRef Name="IdTipoDocumento" />
+      <Dependent Role="GCR_SolicitudRef">
+        <PropertyRef Name="IdMascota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_SolicitudRef_GCR_Convenio">
+    <End Role="GCR_Convenio" Type="Self.GCR_Convenio" Multiplicity="0..1" />
+    <End Role="GCR_SolicitudRef" Type="Self.GCR_SolicitudRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCR_Convenio">
+        <PropertyRef Name="NroConvenio" />
+      </Principal>
+      <Dependent Role="GCR_SolicitudRef">
+        <PropertyRef Name="NroConvenio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_SolicitudRef_Servicio_GCR_ConvenioServicio">
+    <End Role="GCR_ConvenioServicio" Type="Self.GCR_ConvenioServicio" Multiplicity="1" />
+    <End Role="GCR_SolicitudRef_Servicio" Type="Self.GCR_SolicitudRef_Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCR_ConvenioServicio">
+        <PropertyRef Name="IdServicio" />
+        <PropertyRef Name="NroConvenio" />
+      </Principal>
+      <Dependent Role="GCR_SolicitudRef_Servicio">
+        <PropertyRef Name="IdServicio" />
+        <PropertyRef Name="NroConvenio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GCR_SolicitudRef_Servicio_GCR_SolicitudRef">
+    <End Role="GCR_SolicitudRef" Type="Self.GCR_SolicitudRef" Multiplicity="1" />
+    <End Role="GCR_SolicitudRef_Servicio" Type="Self.GCR_SolicitudRef_Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCR_SolicitudRef">
+        <PropertyRef Name="NroSolicitudRef" />
+      </Principal>
+      <Dependent Role="GCR_SolicitudRef_Servicio">
+        <PropertyRef Name="NroSolicitudRef" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GRC_ConvenioDescuento_GCR_Convenio">
+    <End Role="GCR_Convenio" Type="Self.GCR_Convenio" Multiplicity="1" />
+    <End Role="GRC_ConvenioDescuento" Type="Self.GRC_ConvenioDescuento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GCR_Convenio">
+        <PropertyRef Name="NroConvenio" />
+      </Principal>
+      <Dependent Role="GRC_ConvenioDescuento">
+        <PropertyRef Name="NroConvenio" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="BD_ReferenciaModelStoreContainer">
-    <EntitySet Name="Banco" EntityType="Self.Banco" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Moneda" EntityType="Self.Moneda" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Solicitud" EntityType="Self.Solicitud" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="TipoDocumento" EntityType="Self.TipoDocumento" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Solicitud_Banco" Association="Self.FK_Solicitud_Banco">
-      <End Role="Banco" EntitySet="Banco" />
-      <End Role="Solicitud" EntitySet="Solicitud" />
+    <EntitySet Name="GCP_Cliente" EntityType="Self.GCP_Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCP_Especie" EntityType="Self.GCP_Especie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCP_Mascota" EntityType="Self.GCP_Mascota" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCP_PersonaJuridica" EntityType="Self.GCP_PersonaJuridica" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCP_PersonaNatural" EntityType="Self.GCP_PersonaNatural" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCP_Raza" EntityType="Self.GCP_Raza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCR_Atenciones" EntityType="Self.GCR_Atenciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCR_ContraReferencia" EntityType="Self.GCR_ContraReferencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCR_Convenio" EntityType="Self.GCR_Convenio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCR_ConvenioServicio" EntityType="Self.GCR_ConvenioServicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCR_DocumentoRechazo" EntityType="Self.GCR_DocumentoRechazo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCR_Liquidaciones" EntityType="Self.GCR_Liquidaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCR_RepresentanteClinica" EntityType="Self.GCR_RepresentanteClinica" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCR_Solicitud_Convenio" EntityType="Self.GCR_Solicitud_Convenio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCR_SolicitudRef" EntityType="Self.GCR_SolicitudRef" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCR_SolicitudRef_Servicio" EntityType="Self.GCR_SolicitudRef_Servicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GCR_Veterinario" EntityType="Self.GCR_Veterinario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GG_Banco" EntityType="Self.GG_Banco" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GG_Moneda" EntityType="Self.GG_Moneda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GG_Servicio" EntityType="Self.GG_Servicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GRC_ConvenioDescuento" EntityType="Self.GRC_ConvenioDescuento" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_GCP_Cliente_GCP_PersonaJuridica" Association="Self.FK_GCP_Cliente_GCP_PersonaJuridica">
+      <End Role="GCP_PersonaJuridica" EntitySet="GCP_PersonaJuridica" />
+      <End Role="GCP_Cliente" EntitySet="GCP_Cliente" />
     </AssociationSet>
-    <AssociationSet Name="FK_Solicitud_Moneda" Association="Self.FK_Solicitud_Moneda">
-      <End Role="Moneda" EntitySet="Moneda" />
-      <End Role="Solicitud" EntitySet="Solicitud" />
+    <AssociationSet Name="FK_GCP_Mascota_GCP_Cliente" Association="Self.FK_GCP_Mascota_GCP_Cliente">
+      <End Role="GCP_Cliente" EntitySet="GCP_Cliente" />
+      <End Role="GCP_Mascota" EntitySet="GCP_Mascota" />
     </AssociationSet>
-    <AssociationSet Name="FK_Solicitud_TipoDocumento" Association="Self.FK_Solicitud_TipoDocumento">
-      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
-      <End Role="Solicitud" EntitySet="Solicitud" />
+    <AssociationSet Name="FK_GCP_Mascota_GCP_Raza" Association="Self.FK_GCP_Mascota_GCP_Raza">
+      <End Role="GCP_Raza" EntitySet="GCP_Raza" />
+      <End Role="GCP_Mascota" EntitySet="GCP_Mascota" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCP_PersonaNatural_GCP_Cliente" Association="Self.FK_GCP_PersonaNatural_GCP_Cliente">
+      <End Role="GCP_Cliente" EntitySet="GCP_Cliente" />
+      <End Role="GCP_PersonaNatural" EntitySet="GCP_PersonaNatural" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCP_Raza_GCP_Especie" Association="Self.FK_GCP_Raza_GCP_Especie">
+      <End Role="GCP_Especie" EntitySet="GCP_Especie" />
+      <End Role="GCP_Raza" EntitySet="GCP_Raza" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_Atenciones_GCR_Liquidaciones" Association="Self.FK_GCR_Atenciones_GCR_Liquidaciones">
+      <End Role="GCR_Liquidaciones" EntitySet="GCR_Liquidaciones" />
+      <End Role="GCR_Atenciones" EntitySet="GCR_Atenciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_Atenciones_GCR_SolicitudRef_Servicio" Association="Self.FK_GCR_Atenciones_GCR_SolicitudRef_Servicio">
+      <End Role="GCR_SolicitudRef_Servicio" EntitySet="GCR_SolicitudRef_Servicio" />
+      <End Role="GCR_Atenciones" EntitySet="GCR_Atenciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_ContraReferencia_GCR_SolicitudRef1" Association="Self.FK_GCR_ContraReferencia_GCR_SolicitudRef1">
+      <End Role="GCR_SolicitudRef" EntitySet="GCR_SolicitudRef" />
+      <End Role="GCR_ContraReferencia" EntitySet="GCR_ContraReferencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_ContraReferencia_GCR_Veterinario" Association="Self.FK_GCR_ContraReferencia_GCR_Veterinario">
+      <End Role="GCR_Veterinario" EntitySet="GCR_Veterinario" />
+      <End Role="GCR_ContraReferencia" EntitySet="GCR_ContraReferencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_Convenio_GCP_Cliente" Association="Self.FK_GCR_Convenio_GCP_Cliente">
+      <End Role="GCP_Cliente" EntitySet="GCP_Cliente" />
+      <End Role="GCR_Convenio" EntitySet="GCR_Convenio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_Convenio_GCR_Solicitud_Convenio" Association="Self.FK_GCR_Convenio_GCR_Solicitud_Convenio">
+      <End Role="GCR_Solicitud_Convenio" EntitySet="GCR_Solicitud_Convenio" />
+      <End Role="GCR_Convenio" EntitySet="GCR_Convenio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_ConvenioServicio_GCR_Convenio" Association="Self.FK_GCR_ConvenioServicio_GCR_Convenio">
+      <End Role="GCR_Convenio" EntitySet="GCR_Convenio" />
+      <End Role="GCR_ConvenioServicio" EntitySet="GCR_ConvenioServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_ConvenioServicio_GG_Servicio" Association="Self.FK_GCR_ConvenioServicio_GG_Servicio">
+      <End Role="GG_Servicio" EntitySet="GG_Servicio" />
+      <End Role="GCR_ConvenioServicio" EntitySet="GCR_ConvenioServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_DocumentoRechazo_GCR_Solicitud_Convenio" Association="Self.FK_GCR_DocumentoRechazo_GCR_Solicitud_Convenio">
+      <End Role="GCR_Solicitud_Convenio" EntitySet="GCR_Solicitud_Convenio" />
+      <End Role="GCR_DocumentoRechazo" EntitySet="GCR_DocumentoRechazo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_Liquidaciones_GCP_Cliente" Association="Self.FK_GCR_Liquidaciones_GCP_Cliente">
+      <End Role="GCP_Cliente" EntitySet="GCP_Cliente" />
+      <End Role="GCR_Liquidaciones" EntitySet="GCR_Liquidaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_RepresentanteClinica_GCP_PersonaJuridica" Association="Self.FK_GCR_RepresentanteClinica_GCP_PersonaJuridica">
+      <End Role="GCP_PersonaJuridica" EntitySet="GCP_PersonaJuridica" />
+      <End Role="GCR_RepresentanteClinica" EntitySet="GCR_RepresentanteClinica" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_Solicitud_Convenio_GG_Banco" Association="Self.FK_GCR_Solicitud_Convenio_GG_Banco">
+      <End Role="GG_Banco" EntitySet="GG_Banco" />
+      <End Role="GCR_Solicitud_Convenio" EntitySet="GCR_Solicitud_Convenio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_Solicitud_Convenio_GG_Moneda" Association="Self.FK_GCR_Solicitud_Convenio_GG_Moneda">
+      <End Role="GG_Moneda" EntitySet="GG_Moneda" />
+      <End Role="GCR_Solicitud_Convenio" EntitySet="GCR_Solicitud_Convenio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_SolicitudRef_GCP_Mascota" Association="Self.FK_GCR_SolicitudRef_GCP_Mascota">
+      <End Role="GCP_Mascota" EntitySet="GCP_Mascota" />
+      <End Role="GCR_SolicitudRef" EntitySet="GCR_SolicitudRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_SolicitudRef_GCR_Convenio" Association="Self.FK_GCR_SolicitudRef_GCR_Convenio">
+      <End Role="GCR_Convenio" EntitySet="GCR_Convenio" />
+      <End Role="GCR_SolicitudRef" EntitySet="GCR_SolicitudRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_SolicitudRef_Servicio_GCR_ConvenioServicio" Association="Self.FK_GCR_SolicitudRef_Servicio_GCR_ConvenioServicio">
+      <End Role="GCR_ConvenioServicio" EntitySet="GCR_ConvenioServicio" />
+      <End Role="GCR_SolicitudRef_Servicio" EntitySet="GCR_SolicitudRef_Servicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GCR_SolicitudRef_Servicio_GCR_SolicitudRef" Association="Self.FK_GCR_SolicitudRef_Servicio_GCR_SolicitudRef">
+      <End Role="GCR_SolicitudRef" EntitySet="GCR_SolicitudRef" />
+      <End Role="GCR_SolicitudRef_Servicio" EntitySet="GCR_SolicitudRef_Servicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GRC_ConvenioDescuento_GCR_Convenio" Association="Self.FK_GRC_ConvenioDescuento_GCR_Convenio">
+      <End Role="GCR_Convenio" EntitySet="GCR_Convenio" />
+      <End Role="GRC_ConvenioDescuento" EntitySet="GRC_ConvenioDescuento" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -6,12 +6,12 @@
 
         solicitudjs.validaciones();
 
-        //$("#Guardar").on("click", solicitudjs.grabarSolicitud);
-        $("#Solicitud_NroRuc").numeric(false);
+        $("#Solicitud_NroRUC").numeric(false);
         $("#Solicitud_Telefono").numeric(false);
         $("#Solicitud_TelefonoRep").numeric(false);
-        $("#Solicitud_Monto").numeric('.');
+        $("#Solicitud_ImporteGarantia").numeric('.');
 
+        solicitudjs.ocultar();
     },
 
     validaciones: function () {
@@ -22,7 +22,7 @@
                     required: true,
                     date: true
                 },
-                'Solicitud.NroRuc': {
+                'Solicitud.NroRUC': {
                     required: true,
                     maxlength: 11,
                     noEspeciales: sitiojs.caracter_restringido_numero,
@@ -34,44 +34,44 @@
                 'Solicitud.Direccion': {
                     required: true
                 },
-                'Solicitud.IdTipoDocumento': {
+                'Solicitud.TpoDocRep': {
                     required: true
                 },
-                'Solicitud.NroDocumento': {
+                'Solicitud.NroDocRep': {
                     required: true,
                     noEspeciales: sitiojs.caracter_restringido_numero,
                 },
-                'Solicitud.NombresCompletos': {
+                'Solicitud.NombreRep': {
                     required: true
                 },
-                'Solicitud.Email': {
+                'Solicitud.CorreoRep': {
                     required: true,
                     noEspeciales: sitiojs.caracter_restringido_correo,
                     email: true
                 },
-                'Solicitud.IdBanco': {
-                    required: true
-                },
-                'Solicitud.IdMoneda': {
-                    required: true
-                },
-                'Solicitud.Monto': {
-                    required: true,
-                    numeroMayorCero: true
-                },
-                'Solicitud.FechaVencimiento': {
-                    required: true
-                },
-                'Solicitud.NroReferencia': {
-                    required: true
-                }
+                //'Solicitud.IdBanco': {
+                //    required: true
+                //},
+                //'Solicitud.IdMoneda': {
+                //    required: true
+                //},
+                //'Solicitud.ImporteGarantia': {
+                //    required: true,
+                //    numeroMayorCero: true
+                //},
+                //'Solicitud.FechaVencimientoG': {
+                //    required: true
+                //},
+                //'Solicitud.Nrogarantia': {
+                //    required: true
+                //}
             },
             messages: {
                 'Solicitud.FechaSolicitud': {
                     required: 'Ingrese Fecha Solicitud',
                     date: 'Fecha Solicitud incorrecta'
                 },
-                'Solicitud.NroRuc': {
+                'Solicitud.NroRUC': {
                     required: 'Ingrese Nro de Ruc',
                     maxlength: 'Ruc 11 dígitos',
                     noEspeciales: 'No ingrese caracteres especiales',
@@ -83,37 +83,37 @@
                 'Solicitud.Direccion': {
                     required: 'Ingrese Dirección'
                 },
-                'Solicitud.IdTipoDocumento': {
+                'Solicitud.TpoDocRep': {
                     required: 'Seleccione Tipo Documento'
                 },
-                'Solicitud.NroDocumento': {
+                'Solicitud.NroDocRep': {
                     required: 'Ingrese Nro Documento',
                     noEspeciales: 'No ingrese caracteres especiales',
                 },
-                'Solicitud.NombresCompletos': {
+                'Solicitud.NombreRep': {
                     required: 'Ingrese Apellidos y Nombres'
                 },
-                'Solicitud.Email': {
+                'Solicitud.CorreoRep': {
                     required: 'Ingrese Email',
                     noEspeciales: 'No ingrese caracteres especiales',
                     email: 'Correo electrónico incorrecto'
                 },
-                'Solicitud.IdBanco': {
-                    required: 'Ingrese Banco'
-                },
-                'Solicitud.IdMoneda': {
-                    required: 'Ingrese Moneda'
-                },
-                'Solicitud.Monto': {
-                    required: 'Ingrese Monto',
-                    numeroMayorCero: 'Monto tiene que ser mayor que cero'
-                },
-                'Solicitud.FechaVencimiento': {
-                    required: 'Ingrese Fecha de Vencimiento'
-                },
-                'Solicitud.NroReferencia': {
-                    required: 'Ingrese Nro de Referencia'
-                }
+                //'Solicitud.IdBanco': {
+                //    required: 'Ingrese Banco'
+                //},
+                //'Solicitud.IdMoneda': {
+                //    required: 'Ingrese Moneda'
+                //},
+                //'Solicitud.ImporteGarantia': {
+                //    required: 'Ingrese Monto',
+                //    numeroMayorCero: 'Monto tiene que ser mayor que cero'
+                //},
+                //'Solicitud.FechaVencimientoG': {
+                //    required: 'Ingrese Fecha de Vencimiento'
+                //},
+                //'Solicitud.Nrogarantia': {
+                //    required: 'Ingrese Nro de Referencia'
+                //}
             }
         });
     },
@@ -132,5 +132,34 @@
         //};
 
         //helperjs.confirmar(request);
+    },
+
+    ocultar: function () {
+        $('#site-menu').hide();
+        $('#liInicio').hide();
+        $('#liNotificaciones').hide();
+        $('#liCerrarSesion').hide();
+        $('#site-body').removeClass("col-md-9");
+        $('#site-body').addClass("col-md-12");
+        $("#asistencia-header").hide();
+        $('#asistencia-report-back').hide();
+        $('.footer').hide();
+    },
+
+    setearMaxLength: function () {
+        $("#Solicitud_TpoDocRep").change(function () {
+            var tipoDocumento = $(this).val();
+            var nroDocumento = $("#Solicitud_NroDocRep");
+            nroDocumento.val('');
+            if (tipoDocumento == 'RUC') {
+                nroDocumento.attr('maxlength', '11');
+            } else if (tipoDocumento == 'DNI') {
+                nroDocumento.attr('maxlength', '8');
+            } else if (tipoDocumento == 'CEX') {
+                nroDocumento.attr('maxlength', '9');
+            } else {
+                nroDocumento.attr('maxlength', '15');
+            }
+        });
     }
 }

@@ -6,28 +6,43 @@
 }
 
 @*<-- MENU -->*@
-<div id="asistencia-header" class="navbar navbar-default" role="navigation">
-    @*<-- HOME -->*@
-    <div class="navbar-header">
-               
+<nav class="navbar navbar-inverse" id="asistencia-header">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">PetCenter</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active" id="liinicio" runat="server"><a href="#">Inicio</a></li>
+                <li><a href="#">Gestión de Hospedaje</a></li>
+                <li><a href="#">Gestión de Vacunación y Desparasitación</a></li>
+                <li class="dropdown" id="liprogramacion" runat="server">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestión de Clínicas de Referencia<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Evaluar Solicitud Convenio", "Index", "Evaluacion")</li>
+                        <li>@Html.ActionLink("Gestionar Referencia", "Index", "Referencia")</li>
+                        <li>@Html.ActionLink("Gestionar Atención por Referencia", "Index", "Atencion")</li>
+                        <li>@Html.ActionLink("Gestionar Contrarreferencia", "Index", "ContraReferencia")</li>
+                        <li>@Html.ActionLink("Gestionar Liquidaciones por Convenios", "Index", "Liquidacion")</li>
+                        <li>@Html.ActionLink("Reportes", "Index", "Reportes")</li>                        
+                    </ul>
+                </li>
+                <li><a href="#">Sistema</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li onclick="location.href='@Url.Action("Portal", "Solicitud")'"><a href="#"><span class="glyphicon glyphicon-log-in"></span>Salir</a></li>
+            </ul>
+        </div>
     </div>
-
-    <div class="collapse navbar-collapse" id="menu-head">
-        
-        @*<-- MENU -->*@          
-
-        @*<-- LOGIN -->*@
-        <ul class="nav navbar-nav navbar-right">
-            <li>                
-                <a class="asistencia-point" onclick="location.href='@Url.Action("Index", "Inicio")'">INICIO</a>
-            </li>            
-            @*<li id="liCerrarSesion"><a class="asistencia-point" onclick='sitiojs.cerrarsesion();'>Cerrar Sesión</a></li>*@
-        </ul>
-    </div>
-</div>
+</nav>
 
 <script type="text/javascript">
-    $(document).ready(function () {        
+    $(document).ready(function () {
         //sitiojs.cerrarsesion();
     });
 </script>

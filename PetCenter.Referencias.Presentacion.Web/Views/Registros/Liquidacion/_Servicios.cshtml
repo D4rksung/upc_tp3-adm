@@ -1,0 +1,58 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Liquidacion.LiquidacionEditorModelo
+
+<fieldset class="fieldset-filter">
+    <legend class="text-muted h5">Servicios</legend>
+    <table class="table table-striped table-bordered table-condensed asistencia-table-grid" id="tab-servicios">
+        <thead>
+            <tr class="asistencia-head">
+                <th scope="col">Servicio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Descuento</th>
+                <th scope="col">Valor Neto</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model.ListaAtencion)
+                {
+                    <tr>
+                        <td class="asistencia-column-left">
+                            @item.NombreServicio
+                        </td>
+                        <td class="asistencia-column-center">@item.Cantidad</td>
+                        <td class="asistencia-column-righ">@item.ValorBruto</td>
+                        <td class="asistencia-column-righ">@item.Descuento</td>
+                        <td class="asistencia-column-righ">@item.ValorNeto</td>
+                    </tr>
+                }
+            }
+
+            <tr>
+                <td colspan="4" class="asistencia-column-righ"></td>
+                <td class="asistencia-column-righ">
+                    @Model.Liquidacion.ValorBruto
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="asistencia-column-righ">Descuento Comercial</td>
+                <td class="asistencia-column-righ">@Model.Liquidacion.ValorDctoComercial</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="asistencia-column-righ"></td>
+                <td class="asistencia-column-righ">@Model.Liquidacion.ValorNeto</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="asistencia-column-righ">IGV</td>
+                <td class="asistencia-column-righ">@Model.Liquidacion.ValorImpuesto</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="asistencia-column-righ">Valor Liquida</td>
+                <td class="asistencia-column-righ">@Model.Liquidacion.ValorTotal</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</fieldset>

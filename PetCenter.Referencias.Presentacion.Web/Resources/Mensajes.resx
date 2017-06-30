@@ -117,14 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AtencionRegistrada" xml:space="preserve">
+    <value>Se registró la atención.</value>
+  </data>
+  <data name="ContraReferenciaRegistrada" xml:space="preserve">
+    <value>Se generó el número de ContraReferencia: {0}</value>
+  </data>
+  <data name="ConvenioNoEncontrado" xml:space="preserve">
+    <value>No se encontró convenio.</value>
+  </data>
+  <data name="ConvenioRegistrado" xml:space="preserve">
+    <value>Se generó el número de convenio: {0} con fecha {1}.</value>
+  </data>
   <data name="ErrorGenerico" xml:space="preserve">
-    <value>Ocurrió un error en: {0} - {1}, favor de revisar Log.</value>
+    <value>Ocurrió un error en: {0}.</value>
+  </data>
+  <data name="LiquidacionRegistrada" xml:space="preserve">
+    <value>Se generó el número de Liquidación: {0}</value>
   </data>
   <data name="NoSeEncontroInformacion" xml:space="preserve">
     <value>No se encontró información para los criterios ingresados</value>
   </data>
+  <data name="ReferenciaRegistrada" xml:space="preserve">
+    <value>Su Solicitud de Atención de Referencia ha sido grabada con el Nro: {0}.</value>
+  </data>
+  <data name="RucExiste" xml:space="preserve">
+    <value>Ya existe el RUC ingresado.</value>
+  </data>
   <data name="SolicitudError" xml:space="preserve">
     <value>No se pudo grabar la solicitud.</value>
+  </data>
+  <data name="SolicitudModificada" xml:space="preserve">
+    <value>Se modificó el número de solicitud: {0}</value>
+  </data>
+  <data name="SolicitudRechazada" xml:space="preserve">
+    <value>La solicitud {0} ha sido rechazada.</value>
   </data>
   <data name="SolicitudRegistrada" xml:space="preserve">
     <value>Se generó el número de solicitud: {0}</value>

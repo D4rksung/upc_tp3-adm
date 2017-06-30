@@ -1,0 +1,27 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Convenio.ConvenioEditorModelo
+
+<fieldset>
+    <legend class="text-muted h5">Descuento por volumen</legend>
+    <br />
+    <div class="asistencia-right asistencia-point">
+        <a class="glyphicon glyphicon-plus-sign" title="@Botones.BtnAgregar" onclick="conveniojs.agregaDescuento();">
+        </a>
+        <a class="glyphicon glyphicon-minus-sign" title="@Botones.BtnQuitar" onclick="conveniojs.quitaDescuento();"></a>
+    </div>
+
+</fieldset>
+
+<table class="table table-striped table-bordered table-condensed asistencia-table-grid" id="tab-descuentos">
+    <thead>
+        <tr class="asistencia-head">
+            <th scope="col">Condición Comercial</th>
+            <th scope="col">Dsto.</th>
+            <th scope="col">Min.</th>
+            <th scope="col">Max.</th>
+            <th scope="col">Sel.</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>

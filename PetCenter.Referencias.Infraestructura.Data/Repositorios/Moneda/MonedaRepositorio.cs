@@ -8,7 +8,7 @@ using e = PetCenter.Referencias.Dominio.Logica.Entidades;
 
 namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Moneda
 {
-    public class MonedaRepositorio : Repositorio<e.Moneda>, IMonedaRepositorio
+    public class MonedaRepositorio : Repositorio<e.GG_Moneda>, IMonedaRepositorio
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -21,11 +21,11 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Moneda
         public IEnumerable<MonedaVob> Listar()
         {
             var set = ObtenerSet<IModeloReferenciaUnidadDeTrabajo>(this);
-            var consulta = (from m in set.Moneda
+            var consulta = (from m in set.GG_Moneda
                             select new MonedaVob
                             {
                                 IdMoneda = m.IdMoneda,
-                                Descripcion = m.Descripcion
+                                DesMoneda = m.DesMoneda
                             });
             return consulta.AsEnumerable();
         }

@@ -1,0 +1,153 @@
+﻿@{
+    ViewBag.TituloMenu = "Reportes";
+    Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
+}
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+<fieldset class="fieldset-filter">
+    <legend class="text-muted h5">Total Atenciones por Referencia valorizados</legend>
+    <div id="graficoTotalAtencion" style="height: 250px;"></div>
+</fieldset>
+
+<fieldset class="fieldset-filter">
+    <legend class="text-muted h5">Ranking Servicios</legend>
+    <div id="graficoServicios" style="height: 250px;"></div>
+</fieldset>
+
+<fieldset class="fieldset-filter">
+    <legend class="text-muted h5">Ranking Covenios</legend>
+    <div id="graficoConvenios" style="height: 250px;"></div>
+</fieldset>
+
+<fieldset class="fieldset-filter">
+    <legend class="text-muted h5">Especies</legend>
+    <div id="graficoEspecies" style="height: 250px;"></div>
+</fieldset>
+
+<fieldset class="fieldset-filter">
+    <legend class="text-muted h5">Razas de Perros</legend>
+    <div id="graficoRazaPerros" style="height: 250px;"></div>    
+</fieldset>
+
+<fieldset class="fieldset-filter">
+    <legend class="text-muted h5">Razas de Gatos</legend>
+    <div id="graficoRazaGatos" style="height: 250px;"></div>
+</fieldset>
+
+<br /><br /><br /><br />
+
+<script>
+
+    $(document).ready(function () {
+        $.get('@Url.Action("ObtenerTotalAtencionesPorMes")', function (result) {
+            Morris.Bar({
+                element: 'graficoTotalAtencion',
+                data: result,
+                xkey: 'NombreMes',
+                ykeys: ['Total', 'Cantidad'],
+                labels: ['Total', 'Cantidad'],
+                barColors: function (row, series, type) {
+                    if (row.label == "Abril") return "#AD1D28";
+                    else if (row.label == "Mayo") return "#DEBB27";
+                    else if (row.label == "Junio") return "#fec04c";
+                    else if (row.label == "Julio") return "#B78387";
+                    else if (row.label == "Agosto") return "#009952";
+                    else return "#fec04c";
+                }
+            });
+        });
+
+        $.get('@Url.Action("ObtenerServiciosReferencia")', function (result) {
+            var datos = [];
+            for (var i = 0; i < result.length; i++) {
+                datos.push({ label: result[i].NombreServicio, value: result[i].Cantidad })
+            }
+            Morris.Donut({
+                element: 'graficoServicios',
+                data: datos,
+                backgroundColor: '#ccc',
+                labelColor: '#0A7CF5',
+                colors: [
+                        '#009952',
+                        '#006E99',
+                        '#53A98C',
+                        '#B78387'
+                ],
+            });
+        });
+
+        $.get('@Url.Action("ObtenerTotalConvenio")', function (result) {
+            Morris.Bar({
+                element: 'graficoConvenios',
+                data: result,
+                xkey: 'NombreConvenio',
+                ykeys: ['Total'],
+                labels: ['Total'],
+                barColors: function (row, series, type) {
+                    if (row.label == "Clinica el perro loco") return "#AD1D28";
+                    else if (row.label == "Clinica Vet Santa Rosa") return "#DEBB27";
+                    else if (row.label == "VETERINARIA VAP") return "#7E84D8";
+                    else return "#009952";
+                }
+            });
+        });
+
+        $.get('@Url.Action("ObtenerEspecies")', function (result) {
+            var datos = [];
+            for (var i = 0; i < result.length; i++) {
+                datos.push({ label: result[i].NombreEspecie, value: result[i].Cantidad })
+            }
+            Morris.Donut({
+                element: 'graficoEspecies',
+                data: datos,
+                backgroundColor: '#ccc',
+                labelColor: '#0A7CF5',
+                colors: [
+                        '#0D1592',
+                        '#0D9284',
+                        '#063B36',
+                        '#500B27'
+                ],
+            });
+        });
+
+        $.get('@Url.Action("ObtenerRazasPerros")', function (result) {
+            Morris.Bar({
+                element: 'graficoRazaPerros',
+                data: result,
+                xkey: 'NombreRaza',
+                ykeys: ['Cantidad'],
+                labels: ['Cantidad'],
+                barColors: function (row, series, type) {
+                    if (row.label == "Pastor Aleman") return "#0A3BD0";
+                    else if (row.label == "Pequines") return "#66D00A";
+                    else return "#009952";
+                }
+            });
+        });
+
+
+        $.get('@Url.Action("ObtenerRazasGatos")', function (result) {
+            Morris.Bar({
+                element: 'graficoRazaGatos',
+                data: result,
+                xkey: 'NombreRaza',
+                ykeys: ['Cantidad'],
+                labels: ['Cantidad'],
+                barColors: function (row, series, type) {
+                    if (row.label == "Angora") return "#669CE2";
+                    else return "#009952";
+                }
+            });
+        });
+
+    });
+
+
+</script>
+

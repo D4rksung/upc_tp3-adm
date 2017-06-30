@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Titulo = "..::PetCenter::Referencias::.."; 
+    ViewBag.Titulo = "..::PetCenter::Referencias::..";
 }
 
 <!DOCTYPE html>
@@ -46,10 +46,10 @@
 
     @*<-- Campos ocultos GLOBALES -->*@
     @Html.Hidden("urlBase", Url.Content("~/"))
-        @*@Html.Hidden("urlSustento", Url.Action("EditorSustento", "Base"))
-        @Html.Hidden("urlCarga", Url.Action("CargaTemporalArchivo", "Base"))
-        @Html.Hidden("urlCargaEsp", Url.Action("CargaTemporalArchivoEspecial", "Base"))*@
-        @Html.AntiForgeryToken()
+    @*@Html.Hidden("urlSustento", Url.Action("EditorSustento", "Base"))*@
+    @Html.Hidden("urlCarga", Url.Action("CargaTemporalArchivo", "Base"))
+    @Html.Hidden("urlCargaEsp", Url.Action("CargaTemporalArchivoEspecial", "Base"))
+    @Html.AntiForgeryToken()
 
     <div id="wait"></div>
     <div id="waitImg">
@@ -66,8 +66,8 @@
     @*<-- BODY -->*@
     <div id="asistencia-body" class="container container-padding">
         <div class="row">
-            @Html.Partial("_EstructuraSide")
-            <div class="col-md-9" id="site-body">
+            @*@Html.Partial("_EstructuraSide")*@
+            <div class="col-md-12" id="site-body">
                 <div id="asistencia-title-main" class="row text-left asistencia-title-main tituloHead">
                     <p class="text-center asistencia-point">
                         <button type="button" class="btn btn-default btn-xs col-sm-2 hide" id="site-menu-a" onclick="sitiojs.animarMenu();">
@@ -76,16 +76,18 @@
                         </button>
                         <a title="Menú" class="asistencia-show16x16 asistencia-width-20 hide" onclick="sitiojs.animarMenu();" id="site-menu-a">Menú</a>
                     </p>
-                    <p id="asistencia-title-string" class="col-sm-11 text-left">
-                        @{
-                            if (!string.IsNullOrEmpty(@ViewBag.TituloSeccion))
-                            {
-                                <span class="tituloSeccion">@ViewBag.TituloSeccion</span>
-                                <span class="tituloOpcion">@ViewBag.TituloMenu</span>
-                            }
-                        }
+                    <p id="asistencia-title-string" class="lead col-sm-12 text-center">
+                        @*@{
+                                if (!string.IsNullOrEmpty(@ViewBag.TituloSeccion))
+                                {
+                                    <span class="tituloSeccion">@ViewBag.TituloSeccion</span>
+                                    <span class="tituloOpcion">@ViewBag.TituloMenu</span>
+                                }
+                            }*@
 
-                                           
+                        <strong id="web-title">@ViewBag.TituloMenu</strong>
+
+
                     </p>
                 </div>
                 @RenderBody()

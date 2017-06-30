@@ -8,7 +8,7 @@ using e = PetCenter.Referencias.Dominio.Logica.Entidades;
 
 namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Banco
 {
-    public class BancoRepositorio : Repositorio<e.Banco>, IBancoRepositorio
+    public class BancoRepositorio : Repositorio<e.GG_Banco>, IBancoRepositorio
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -21,11 +21,11 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Banco
         public IEnumerable<BancoVob> Listar()
         {
             var set = ObtenerSet<IModeloReferenciaUnidadDeTrabajo>(this);
-            var consulta = (from b in set.Banco
+            var consulta = (from b in set.GG_Banco
                             select new BancoVob
                             {
                                IdBanco = b.IdBanco,
-                               Descripcion = b.Descripcion
+                               NomBanco = b.NomBanco
                             });
             return consulta.AsEnumerable();
         }

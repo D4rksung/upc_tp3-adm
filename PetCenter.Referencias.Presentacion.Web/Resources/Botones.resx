@@ -129,6 +129,9 @@
   <data name="BtnConfiguradorHorario" xml:space="preserve">
     <value>Configurador Horario</value>
   </data>
+  <data name="BtnContinuar" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
   <data name="BtnExportar" xml:space="preserve">
     <value>Exportar</value>
   </data>
@@ -144,7 +147,13 @@
   <data name="BtnQuitar" xml:space="preserve">
     <value>Quitar</value>
   </data>
+  <data name="BtnRechazar" xml:space="preserve">
+    <value>Rechazar</value>
+  </data>
   <data name="BtnRegresar" xml:space="preserve">
     <value>Regresar</value>
+  </data>
+  <data name="BtnSalir" xml:space="preserve">
+    <value>Salir</value>
   </data>
 </root>

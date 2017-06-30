@@ -78,10 +78,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MensajesData.resx</DependentUpon>
     </Compile>
+    <Compile Include="Repositorios\Atencion\AtencionRepositorio.cs" />
     <Compile Include="Repositorios\Banco\BancoRepositorio.cs" />
+    <Compile Include="Repositorios\Cliente\ClienteRepositorio.cs" />
+    <Compile Include="Repositorios\ContraReferencia\ContraReferenciaRepositorio.cs" />
+    <Compile Include="Repositorios\ConvenioDescuento\ConvenioDescuentoRepositorio.cs" />
+    <Compile Include="Repositorios\ConvenioServicio\ConvenioServicioRepositorio.cs" />
+    <Compile Include="Repositorios\Convenio\ConvenioRepositorio.cs" />
+    <Compile Include="Repositorios\DocumentoRechazo\DocumentoRechazoRepositorio.cs" />
+    <Compile Include="Repositorios\Liquidacion\LiquidacionRepositorio.cs" />
+    <Compile Include="Repositorios\Mascota\MascotaRepositorio.cs" />
     <Compile Include="Repositorios\Moneda\MonedaRepositorio.cs" />
+    <Compile Include="Repositorios\PersonaJuridica\PersonaJuridicaRepositorio.cs" />
+    <Compile Include="Repositorios\ReferenciaConvenioServicio\ReferenciaConvenioServicioRepositorio.cs" />
+    <Compile Include="Repositorios\Referencia\ReferenciaRepositorio.cs" />
+    <Compile Include="Repositorios\Servicio\ServicioRepositorio.cs" />
     <Compile Include="Repositorios\Solicitud\SolicitudRepositorio.cs" />
     <Compile Include="Repositorios\TipoDocumento\TipoDocumentoRepositorio.cs" />
+    <Compile Include="Repositorios\Veterinario\VeterinarioRepositorio.cs" />
     <Compile Include="UnidadDeTrabajo\IModeloReferenciaUnidadDeTrabajo.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,6 +108,10 @@
     <ProjectReference Include="..\PetCenter.Referencias.Dominio.Logica\PetCenter.Referencias.Dominio.Logica.csproj">
       <Project>{7c7d9645-8efc-4d4c-ab6b-8d5c709848ff}</Project>
       <Name>PetCenter.Referencias.Dominio.Logica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PetCenter.Referencias.Transversal\PetCenter.Referencias.Transversal.csproj">
+      <Project>{88EA187C-93AF-4A3F-B487-0D895ADF29BF}</Project>
+      <Name>PetCenter.Referencias.Transversal</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

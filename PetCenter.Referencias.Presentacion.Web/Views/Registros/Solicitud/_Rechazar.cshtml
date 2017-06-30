@@ -1,0 +1,77 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Solicitud.SolicitudEditorModelo
+@{
+    ViewBag.TituloMenu = "Rechazar Solicitud";
+}
+@using (Html.BeginSecureForm("Rechazar", "Solicitud", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "formRechazar" }))
+{
+
+    @Html.HiddenFor(m => m.Solicitud.NroSolicitud);
+    @Html.HiddenFor(m => m.Solicitud.CorreoRep);
+
+    <fieldset class="fieldset-filter">
+        <fieldset class="fieldset-filter">
+            <legend class="text-muted h5">Datos de la Solicitud</legend>
+            <div class="form-group asistencia-group">
+
+                <div class="asistencia-group">
+                    @Html.Label("Nro Solicitud: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Solicitud.NroSolicitudFormato, new { @class = "form-control", @disabled = "" })
+                    </div>
+                </div>
+
+                <div class="asistencia-group">
+                    @Html.Label("Fecha Rechazo: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.DocumentoRechazo.FechaRechazo, Model.DocumentoRechazo.FechaRechazo.Value.ToString(Formatos.FechaCorta), new { @class = "form-control asistencia-fecha-corta", @required = "", @placerholder = "Fecha Rechazo" })
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group asistencia-group">
+                <div class="asistencia-group">
+                    @Html.Label("Nro de RUC: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Solicitud.NroRUC, new { @class = "form-control asistencia-requerido", @placeholder = "Nro RUC", @disabled = "", @maxlength = "11" })
+                    </div>
+                </div>
+
+                <div class="asistencia-group">
+                    @Html.Label("Razón Social: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-5">
+                        @Html.TextBoxFor(m => m.Solicitud.RazonSocial, new { @class = "form-control asistencia-requerido", @placeholder = "Razón Social", @disabled = "", @maxlength = "200" })
+                    </div>
+                </div>
+            </div>
+
+          
+        </fieldset>
+
+        <fieldset class="fieldset-filter">
+            <legend class="text-muted h5">Observaciones</legend>
+            <div class="asistencia-group">
+                @Html.Label("Observaciones: ", new { @class = "col-sm-2 control-label form-label" })
+                <div class="col-sm-10">
+                    @Html.TextAreaFor(m => m.DocumentoRechazo.Observaciones, new { @class = "form-control asistencia-requerido", @placeholder = "Observaciones", @required = "", @maxlength = "400" })
+                </div>
+            </div>
+        </fieldset>
+    </fieldset>
+}
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        $(".modal-dialog").css("width", "60%");
+        evaluacionjs.validacionesRechazar();
+        $("#DocumentoRechazo_FechaRechazo").datepicker({
+            format: 'dd/mm/yyyy',
+            autoclose: true,
+            language: "es",
+            todayHighlight: true,
+            todayBtn: "linked"
+        });
+    });
+</script>

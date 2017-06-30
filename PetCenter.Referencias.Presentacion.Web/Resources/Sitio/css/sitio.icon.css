@@ -40,6 +40,7 @@
 .icon-Asistencia16-acc-play {background-image: url("../imgs/navitor_separator.png"); margin-right:0px;}
 .icon-Asistencia16-acc-cerrado {background-image: url("../imgs/padlock-3-16.png"); margin-right:0px;}
 .icon-Asistencia16-acc-abierto {background-image: url("../imgs/padlock-4-16.png"); margin-right:0px;}
+.icon-Asistencia16-acc-liquidar {background-image: url("../imgs/ok-16.png"); margin-right:0px;}
 
 /* OTROS */
 .icon-Asistencia16-doc-app {background-image: url("../imgs/doc-app16x16.png");}
@@ -76,6 +77,7 @@
 .icon-Asistencia32-acc-search {background-image: url("../imgs/search32x32.png"); background-color: transparent;}
 .icon-Asistencia32-acc-save {background-image: url("../imgs/save32x32.png"); background-color: transparent;}
 .icon-Asistencia32-acc-calendar {background-image: url("../imgs/calendar32x32.png"); background-color: transparent;}
+.icon-Asistencia32-acc-addSol {background-image: url("../imgs/add-file-32.png"); background-color: transparent;}
 
 /*a.asistencia-show16x16,
 span.asistencia-show16x16 {

@@ -1,0 +1,98 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Convenio.ConvenioEditorModelo
+@{
+    ViewBag.TituloMenu = "Registrar Convenio";
+    Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
+}
+
+@using (Html.BeginSecureForm("Registrar", "Convenio", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "formConvenio" }))
+{
+
+    @Html.HiddenFor(m => m.Solicitud.NroSolicitud)
+    @Html.HiddenFor(m => m.Solicitud.CorreoRep);
+
+    //Mensajes
+    @Html.Partial("_Mensajes", Model)
+    @Html.Partial("_MensajesTodos", Model)
+
+    <fieldset class="fieldset-filter-principal">
+        <br />
+
+        <fieldset class="fieldset-filter">
+            <legend class="text-muted h5">Datos del Convenio</legend>
+            <div class="form-group asistencia-group">
+
+                <div class="form-group asistencia-group">
+
+                    <div class="asistencia-group">
+                        @Html.Label("Fecha Convenio: ", new { @class = "col-sm-2 control-label form-label" })
+                        <div class="col-sm-2">
+                            @Html.TextBoxFor(m => m.Convenio.FechaConvenio,
+                   Model.Convenio.FechaConvenio.Value.ToString(Formatos.FechaCorta),
+                   new { @class = "form-control asistencia-fecha-corta", @required = "", @placerholder = "Fecha Solicitud" })
+                        </div>
+                    </div>
+                    <div class="asistencia-group">
+                        @Html.Label("Fecha Vencimiento: ", new { @class = "col-sm-2 control-label form-label" })
+                        <div class="col-sm-2">
+                            @Html.TextBoxFor(m => m.Convenio.FechaVencimiento,
+                   Model.Convenio.FechaVencimiento.Value.ToString(Formatos.FechaCorta),
+                   new { @class = "form-control asistencia-fecha-corta", @required = "", @placerholder = "Fecha Vencimiento" })
+                        </div>
+                    </div>
+                    <div class="asistencia-group">
+                        @Html.Label("Linea de Crédito: ", new { @class = "col-sm-1 control-label form-label" })
+                        <div class="col-sm-2">
+                            @Html.TextBoxFor(m => m.Convenio.ImporteConvenio, new { @class = "form-control asistencia-requerido text-right", @placeholder = "Línea Crédito", @required = "" })
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="form-group asistencia-group">
+                    @Html.Label("Clínica referente: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(m => m.Solicitud.NroRUC, new { @class = "form-control asistencia-requerido", @placeholder = "Nro RUC", @disabled = "" })
+                    </div>
+
+                    <div class="col-sm-7">
+                        @Html.TextBoxFor(m => m.Solicitud.RazonSocial, new { @class = "form-control asistencia-requerido", @placeholder = "Razón Social", @disabled = "" })
+                    </div>
+
+                </div>
+
+                <div class="form-group asistencia-group">
+                    @Html.Label("Observación: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-9">
+                        @Html.TextBoxFor(m => m.Convenio.Observacion, new { @class = "form-control asistencia-requerido", @placeholder = "Observación", @required = "", @maxlenght = 100 })
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                @Html.Partial("_GridDetalle")
+            </div>
+
+            <br />
+
+            <div class="asistencia-group">
+                <div class="form-group">
+                    <div class="col-sm-12 text-center">
+                        <button class="btn btn-primary" type="button" id="Guardar">@Botones.BtnGuardar</button>
+                        <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("Index", "Evaluacion")'">@Botones.BtnCancelar</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </fieldset>
+}
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        conveniojs.iniciar();
+        conveniojs.validaciones();
+        conveniojs.grabar();
+    });
+</script>

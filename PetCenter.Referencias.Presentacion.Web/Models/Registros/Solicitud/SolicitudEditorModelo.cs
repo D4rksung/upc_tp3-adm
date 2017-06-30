@@ -1,4 +1,5 @@
-﻿using PetCenter.Referencias.Dominio.Administracion.DTOs.Registros.Solicitud;
+﻿using PetCenter.Referencias.Dominio.Administracion.DTOs.Registros.DocumentoRechazo;
+using PetCenter.Referencias.Dominio.Administracion.DTOs.Registros.Solicitud;
 using PetCenter.Referencias.Presentacion.Web.Models.Comun;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace PetCenter.Referencias.Presentacion.Web.Models.Registros.Solicitud
     {
         #region PROPIEDADES
         public SolicitudDto Solicitud { get; set; }
+        public DocumentoRechazoDto DocumentoRechazo { get; set; }
        
         #endregion
 
@@ -18,6 +20,7 @@ namespace PetCenter.Referencias.Presentacion.Web.Models.Registros.Solicitud
         public SolicitudEditorModelo()
         {
             Solicitud = new SolicitudDto();
+            DocumentoRechazo = new DocumentoRechazoDto();
         }
         #endregion
     }

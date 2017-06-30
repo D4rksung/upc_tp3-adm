@@ -5,7 +5,7 @@ using e = PetCenter.Referencias.Dominio.Logica.Entidades;
 
 namespace PetCenter.Referencias.Dominio.Logica.Repositorio.Maestros.Banco
 {
-    public interface IBancoRepositorio : IRepositorio<e.Banco>
+    public interface IBancoRepositorio : IRepositorio<e.GG_Banco>
     {
         IEnumerable<BancoVob> Listar();
     }

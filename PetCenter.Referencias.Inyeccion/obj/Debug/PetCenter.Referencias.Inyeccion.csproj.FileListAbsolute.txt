@@ -82,3 +82,65 @@ D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Inyec
 D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.csproj.GenerateResource.Cache
 D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.dll
 D:\UPC\TP3-Junio-2017\Codigo 1\PetCenter.Referencias\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.pdb
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Inyeccion.dll.config
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Inyeccion.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Inyeccion.pdb
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\EntityFramework.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Dominio.Administracion.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Infraestructura.Data.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Transversal.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\AutoMapper.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Dominio.Administracion.pdb
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Dominio.Logica.pdb
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Infraestructura.Data.pdb
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Transversal.pdb
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\EntityFramework.xml
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\bin\Debug\AutoMapper.xml
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.csprojResolveAssemblyReference.cache
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.Recursos.Mensajes.resources
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.csproj.GenerateResource.Cache
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.dll
+C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.pdb
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Inyeccion.dll.config
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Inyeccion.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Inyeccion.pdb
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\EntityFramework.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\EntityFramework.SqlServer.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Dominio.Administracion.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Infraestructura.Data.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Transversal.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\AutoMapper.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Dominio.Administracion.pdb
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Dominio.Logica.pdb
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Infraestructura.Data.pdb
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\PetCenter.Referencias.Transversal.pdb
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\EntityFramework.xml
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\EntityFramework.SqlServer.xml
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.xml
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\bin\Debug\AutoMapper.xml
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.csprojResolveAssemblyReference.cache
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.Recursos.Mensajes.resources
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.csproj.GenerateResource.Cache
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.dll
+D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Inyeccion\obj\Debug\PetCenter.Referencias.Inyeccion.pdb

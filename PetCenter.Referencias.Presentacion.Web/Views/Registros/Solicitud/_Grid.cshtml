@@ -1,0 +1,38 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Solicitud.SolicitudPaginadoModelo
+@{
+    var grid = new WebGrid
+    (
+        rowsPerPage: Model.Grid.TamanioPagina,
+        canSort: Model.Grid.TotalPagina > 0
+    );
+    grid.Bind(Model.Grid.ElementosPagina, autoSortAndPage: false, rowCount: Model.Grid.TotalPagina);
+}
+<fieldset>
+
+    <div class="asistencia-right asistencia-point">
+
+    </div>
+
+    @grid.Table(
+                    fillEmptyRows: false,
+                    headerStyle: "asistencia-head",
+                    tableStyle: "table table-striped table-bordered table-condensed asistencia-table-grid",
+                    columns: new[]
+                    {
+                            grid.Column("IdSolicitud", "Id", style:"asistencia-column-center"),
+                            grid.Column("FechaSolicitud", "Fecha Solicitud", format: p=> p.FechaSolicitud.ToShortDateString()),
+                            grid.Column("NroRuc", "RUC", style:"asistencia-column-left"),
+                            grid.Column("RazonSocial", "Razón Social", style:"asistencia-column-left"),
+                            grid.Column("", "Opciones",@<text>
+        <a class="icon-Asistencia16-acc-view" title="Ver" href="@Url.Action("Ver","Solicitud",new{idSolicitud=item.NroSolicitud})" />
+        <a class="icon-Asistencia16-acc-edit" title="Modificar" href="@Url.Action("Editar","Solicitud",new{idSolicitud=item.NroSolicitud})" />
+        @*<a class="icon-Asistencia16-acc-delete" title="Eliminar" onclick="areajs.eliminar('@Url.Action("Eliminar", "Area",new {CodCia = item.CodCia, CodArea=item.CodArea })')" />*@
+                            </text>)
+                })
+    <div class="text-center">
+        @grid.PagerList(mode: WebGridPagerModes.All)
+    </div>
+
+</fieldset>

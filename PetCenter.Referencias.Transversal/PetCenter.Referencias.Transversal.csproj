@@ -107,6 +107,7 @@
     <EmbeddedResource Include="Recursos\Generales.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Generales.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Recursos\KeyCache.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

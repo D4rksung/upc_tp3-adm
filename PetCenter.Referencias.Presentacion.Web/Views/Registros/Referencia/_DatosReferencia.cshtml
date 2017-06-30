@@ -1,0 +1,88 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Referencia.ReferenciaEditorModelo
+
+<fieldset class="fieldset-filter">
+
+    <div class="form-group asistencia-group">
+        @Html.Label("Anamnesis: ", new { @class = "col-sm-2 control-label form-label" })
+        <div class="col-sm-10">
+            @Html.TextAreaFor(m => m.Referencia.Anamnesis, new { @class = "form-control asistencia-requerido", @placeholder = "Anamnesis", @maxlength = "100" })
+        </div>
+    </div>
+
+    <div class="form-group asistencia-group">
+        @Html.Label("Examen Físico: ", new { @class = "col-sm-2 control-label form-label" })
+        <div class="col-sm-10">
+            @Html.TextAreaFor(m => m.Referencia.ExamenFisico, new { @class = "form-control asistencia-requerido", @placeholder = "Examen Fisico", @maxlength = "100" })
+        </div>
+    </div>
+
+    <div class="form-group asistencia-group">
+        @Html.Label("Examen Auxiliar: ", new { @class = "col-sm-2 control-label form-label" })
+        <div class="col-sm-10">
+            @Html.TextAreaFor(m => m.Referencia.ExamenAuxiliar, new { @class = "form-control asistencia-requerido", @placeholder = "Examen Auxiliar", @maxlength = "100" })
+        </div>
+    </div>
+
+    <div class="form-group asistencia-group">
+        @Html.Label("Diagnóstico: ", new { @class = "col-sm-2 control-label form-label" })
+        <div class="col-sm-10">
+            @Html.TextAreaFor(m => m.Referencia.Diagnostico, new { @class = "form-control asistencia-requerido", @placeholder = "Diagnóstico", @maxlength = "100" })
+        </div>
+    </div>
+
+    <div class="form-group asistencia-group">
+        @Html.Label("Tratamiento Realizado: ", new { @class = "col-sm-2 control-label form-label" })
+        <div class="col-sm-10">
+            @Html.TextAreaFor(m => m.Referencia.ExamenAuxiliar, new { @class = "form-control asistencia-requerido", @placeholder = "Tratamiento Realizado", @maxlength = "100" })
+        </div>
+    </div>
+
+    <div class="form-group asistencia-group">
+        @Html.Label("Personal que refiere: ", new { @class = "col-sm-2 control-label form-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(m => m.Referencia.NombreRefiere, new { @class = "form-control asistencia-requerido", @placeholder = "Nombre del Personal que refiere", @maxlength = "100" })
+        </div>
+    </div>
+
+    @*<div class="form-group asistencia-group">
+        @Html.Label("Condición: ", new { @class = "col-sm-2 control-label form-label" })
+        <div class="col-sm-10">
+           
+        </div>
+    </div>*@
+
+    <div class="form-group asistencia-group">
+        @*<div class="col-sm-8">
+            @Html.Label("Nombre del Personal que refiere: ", new { @class = "col-sm-4 control-label form-label" })
+        </div>*@
+
+        @*<div class="col-sm-4">
+            @Html.Label("Colegiatura: ", new { @class = "col-sm-4 control-label form-label" })
+        </div>*@
+
+    </div>
+
+    <div class="form-group asistencia-group">
+        @*<div class="col-sm-8">
+            @Html.TextBoxFor(m => m.Referencia.NombreRefiere, new { @class = "form-control asistencia-requerido", @placeholder = "Nombre del Personal que refiere", @maxlength = "100" })
+        </div>*@
+
+        @*<div class="col-sm-4">
+          @Html.TextBoxFor(m => m.Referencia.NombreRefiere, new { @class = "form-control asistencia-requerido", @placeholder = "Colegiatura", @maxlength = "20" })
+        </div>*@
+
+    </div>
+
+</fieldset>
+
+<br />
+<div class="asistencia-group">
+    <div class="col-sm-12 text-center">
+        @*<button type="button" id="btn-salir-2" class="btn btn-primary buscar">@Botones.BtnSalir</button>
+        <button type="button" id="btn-continuar-2" class="btn btn-primary buscar">@Botones.BtnContinuar</button>*@
+        @*<button type="button" class="btn btn-primary" onclick="helperjs.setGetUrl('@Url.Action("Index", "Evaluacion")');">@Botones.BtnLimpiar</button>*@
+    </div>
+</div>

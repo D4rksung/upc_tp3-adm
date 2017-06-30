@@ -1,0 +1,72 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.ContraReferencia.ContraReferenciaPaginadoModelo
+@{
+    ViewBag.TituloMenu = "Gestionar Contrarreferencia";
+    Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
+}
+
+@using (Html.BeginSecureForm("Index", "ContraReferencia", FormMethod.Get, new { @class = "form-horizontal", role = "form", id = "formAtencion" }))
+{
+    //Mensajes
+    @Html.Partial("_Mensajes", Model)
+
+    <fieldset class="fieldset-filter">
+        <legend class="text-muted h5">Búsqueda</legend>
+        <div class="asistencia-right asistencia-point">
+
+            <div class="form-group">
+                @Html.Label("Nro de Ref: ", new { @class = "col-sm-1 control-label" })
+                <div class="col-sm-2">
+                    @Html.TextBoxFor(m => m.Filtro.Referencia.NroSolicitudRef, new { @class = "form-control" })
+                </div>
+
+                @Html.Label("Ruc: ", new { @class = "col-sm-1 control-label" })
+                <div class="col-sm-2">
+                    @Html.TextBoxFor(m => m.Filtro.Referencia.NroRuc, new { @class = "form-control" })
+                </div>
+
+                @Html.Label("Razón Social: ", new { @class = "col-sm-2 control-label" })
+                <div class="col-sm-4">
+                    @Html.TextBoxFor(m => m.Filtro.Referencia.RazonSocial, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Fecha Inicio: ", new { @class = "col-sm-1 control-label" })
+                <div class="col-sm-2">
+                    @Html.TextBoxFor(m => m.Filtro.Referencia.FechaSolicitudInicio,
+                   Model.Filtro.Referencia.FechaSolicitudInicio == null ? string.Empty : Model.Filtro.Referencia.FechaSolicitudInicio.ToString(Formatos.FechaCorta)
+                   , new { @class = "form-control asistencia-fecha-corta" })
+                </div>
+                @Html.Label("Fecha Fin: ", new { @class = "col-sm-1 control-label" })
+                <div class="col-sm-2">
+                    @Html.TextBoxFor(m => m.Filtro.Referencia.FechaSolicitudFin,
+                   Model.Filtro.Referencia.FechaSolicitudFin == null ? string.Empty : Model.Filtro.Referencia.FechaSolicitudFin.ToString(Formatos.FechaCorta)
+                   , new { @class = "form-control asistencia-fecha-corta" })
+                </div>
+            </div>
+
+        </div>
+    </fieldset>
+
+    <div class="form-group">
+        <div class="col-sm-12 text-center">
+            <button type="submit" class="btn btn-primary buscar">@Botones.BtnBuscar</button>
+            <button type="button" class="btn btn-primary" onclick="helperjs.setGetUrl('@Url.Action("Index", "ContraReferencia")');">@Botones.BtnLimpiar</button>
+        </div>
+    </div>
+
+
+    //Resultado paginado
+    <div class="table-responsive">
+        @Html.Partial("_Grid")
+    </div>
+}
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+
+    });
+</script>

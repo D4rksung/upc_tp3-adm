@@ -172,6 +172,32 @@
     <Content Include="Resources\Bootstrap\js\bootstrap-datetimepicker.js" />
     <Content Include="Resources\Bootstrap\js\bootstrap-timepicker.js" />
     <Content Include="Resources\Bootstrap\js\bootstrap.respondIE.js" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\js\npm.js" />
+    <Content Include="Resources\Content\common\footer.html" />
+    <Content Include="Resources\Content\common\hader.html" />
+    <Content Include="Resources\Content\css\estilos.css" />
+    <Content Include="Resources\Content\img\966940.jpg" />
+    <Content Include="Resources\Content\img\edit.png" />
+    <Content Include="Resources\Content\img\external.png" />
+    <Content Include="Resources\Content\img\favicon.ico" />
+    <Content Include="Resources\Content\img\ic_delete.png" />
+    <Content Include="Resources\Content\img\intranet.png" />
+    <Content Include="Resources\Content\img\left.png" />
+    <Content Include="Resources\Content\img\logo.png" />
+    <Content Include="Resources\Content\img\logopetcenter.png" />
+    <Content Include="Resources\Content\img\orange-open-in-browser-16.png" />
+    <Content Include="Resources\Content\img\petcenter.png" />
+    <Content Include="Resources\Content\img\print.png" />
+    <Content Include="Resources\Content\img\progress2.gif" />
+    <Content Include="Resources\Content\img\right.png" />
+    <Content Include="Resources\Content\img\view.png" />
     <Content Include="Resources\Reporte\VisorReporte.aspx" />
     <Content Include="Resources\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Resources\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
@@ -190,10 +216,13 @@
     <Content Include="Resources\Sitio\css\views\view.file.css" />
     <Content Include="Resources\Sitio\css\views\view.grid.css" />
     <Content Include="Resources\Sitio\imgs\actividad16x16.png" />
+    <Content Include="Resources\Sitio\imgs\add-file-16.png" />
+    <Content Include="Resources\Sitio\imgs\add-file-32.png" />
     <Content Include="Resources\Sitio\imgs\add32x32.png" />
     <Content Include="Resources\Sitio\imgs\advertencia16x16.png" />
     <Content Include="Resources\Sitio\imgs\agregar32x32.png" />
     <Content Include="Resources\Sitio\imgs\alerta16x16.png" />
+    <Content Include="Resources\Sitio\imgs\arrow-94-32.png" />
     <Content Include="Resources\Sitio\imgs\asistencia.png" />
     <Content Include="Resources\Sitio\imgs\back32x32.png" />
     <Content Include="Resources\Sitio\imgs\bullet_red16x16.png" />
@@ -201,6 +230,7 @@
     <Content Include="Resources\Sitio\imgs\calendar32x32.png" />
     <Content Include="Resources\Sitio\imgs\cancel32x32.png" />
     <Content Include="Resources\Sitio\imgs\chk.png" />
+    <Content Include="Resources\Sitio\imgs\cmvl.jpg" />
     <Content Include="Resources\Sitio\imgs\conectar16x16.png" />
     <Content Include="Resources\Sitio\imgs\delete16x16.png" />
     <Content Include="Resources\Sitio\imgs\doc-app16x16.png" />
@@ -212,6 +242,7 @@
     <Content Include="Resources\Sitio\imgs\down16x16.png" />
     <Content Include="Resources\Sitio\imgs\edit16x16.png" />
     <Content Include="Resources\Sitio\imgs\edit32x32.png" />
+    <Content Include="Resources\Sitio\imgs\equifax.png" />
     <Content Include="Resources\Sitio\imgs\error16x16.png" />
     <Content Include="Resources\Sitio\imgs\excel32x32.png" />
     <Content Include="Resources\Sitio\imgs\info16x16.png" />
@@ -224,6 +255,7 @@
     <Content Include="Resources\Sitio\imgs\modificar16x16.png" />
     <Content Include="Resources\Sitio\imgs\navitor_separator.png" />
     <Content Include="Resources\Sitio\imgs\NoAutorizado.png" />
+    <Content Include="Resources\Sitio\imgs\ok-16.png" />
     <Content Include="Resources\Sitio\imgs\ok16x16.png" />
     <Content Include="Resources\Sitio\imgs\padlock-3-16.png" />
     <Content Include="Resources\Sitio\imgs\padlock-4-16.png" />
@@ -234,6 +266,7 @@
     <Content Include="Resources\Sitio\imgs\reporte16x16.png" />
     <Content Include="Resources\Sitio\imgs\save32x32.png" />
     <Content Include="Resources\Sitio\imgs\search32x32.png" />
+    <Content Include="Resources\Sitio\imgs\sunat.jpg" />
     <Content Include="Resources\Sitio\imgs\ui-icons_256x240.png" />
     <Content Include="Resources\Sitio\imgs\up16x16.png" />
     <Content Include="Resources\Sitio\imgs\ver16x16.png" />
@@ -254,9 +287,17 @@
     <Content Include="Resources\Sitio\js\views\helper.file.js" />
     <Content Include="Resources\Sitio\js\views\helper.grid.js" />
     <Content Include="Resources\Sitio\js\views\helper.js" />
+    <Content Include="Resources\Sitio\js\views\view.archivo.js" />
+    <Content Include="Resources\Sitio\js\views\view.atencion.js" />
     <Content Include="Resources\Sitio\js\views\view.buscador.js" />
     <Content Include="Resources\Sitio\js\views\view.buscador.base.js" />
+    <Content Include="Resources\Sitio\js\views\view.contrareferencia.js" />
+    <Content Include="Resources\Sitio\js\views\view.convenio.js" />
+    <Content Include="Resources\Sitio\js\views\view.evaluacion.js" />
+    <Content Include="Resources\Sitio\js\views\view.mascota.js" />
+    <Content Include="Resources\Sitio\js\views\view.referencia.js" />
     <Content Include="Resources\Sitio\js\views\view.solicitud.js" />
+    <Content Include="Index.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -267,8 +308,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Comun\BaseController.cs" />
+    <Compile Include="Controllers\Comun\Descuento\DescuentoController.cs" />
+    <Compile Include="Controllers\Comun\Mascota\MascotaController.cs" />
+    <Compile Include="Controllers\Comun\ReferenciaServicio\ReferenciaServicioController.cs" />
+    <Compile Include="Controllers\Comun\Servicio\ServicioController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
+    <Compile Include="Controllers\Registros\Atencion\AtencionController.cs" />
+    <Compile Include="Controllers\Registros\ContraReferencia\ContraReferenciaController.cs" />
+    <Compile Include="Controllers\Registros\Convenio\ConvenioController.cs" />
+    <Compile Include="Controllers\Registros\Evaluacion\EvaluacionController.cs" />
+    <Compile Include="Controllers\Registros\Liquidacion\LiquidacionController.cs" />
+    <Compile Include="Controllers\Registros\Referencia\ReferenciaController.cs" />
     <Compile Include="Controllers\Registros\Solicitud\SolicitudController.cs" />
+    <Compile Include="Controllers\Reportes\ReportesController.cs" />
+    <Compile Include="Controllers\Reportes\TestingController.cs" />
     <Compile Include="Helpers\Sesion\AdministradorSesion.cs" />
     <Compile Include="Helpers\Sesion\ReporteSesion.cs" />
     <Compile Include="Global.asax.cs">
@@ -284,10 +337,40 @@
     <Compile Include="Helpers\Mvc\HandleLogErrorAttribute.cs" />
     <Compile Include="Helpers\Mvc\MensajeMvc.cs" />
     <Compile Include="Helpers\Mvc\ViewEnginePersonalizado.cs" />
+    <Compile Include="Models\Comun\Buscador\BuscadorFiltroModel.cs" />
+    <Compile Include="Models\Comun\Buscador\BuscadorModel.cs" />
+    <Compile Include="Models\Comun\Buscador\BuscadorPaginadoModel.cs" />
+    <Compile Include="Models\Comun\Descuento\DescuentoEditorModelo.cs" />
     <Compile Include="Models\Comun\GridModelo.cs" />
     <Compile Include="Models\Comun\IMensajeModelo.cs" />
+    <Compile Include="Models\Comun\ReferenciaServicio\ReferenciaServicioEditorModelo.cs" />
+    <Compile Include="Models\Otros\Mascota\MascotaFiltroModelo.cs" />
+    <Compile Include="Models\Otros\Mascota\MascotaGridModelo.cs" />
+    <Compile Include="Models\Otros\Mascota\MascotaPaginadoModelo.cs" />
     <Compile Include="Models\Comun\MensajeModelo.cs" />
+    <Compile Include="Models\Comun\Servicio\ServicioEditorModelo.cs" />
+    <Compile Include="Models\Registros\Atencion\AtencionEditorModelo.cs" />
+    <Compile Include="Models\Registros\Atencion\AtencionFiltroModelo.cs" />
+    <Compile Include="Models\Registros\Atencion\AtencionGridModelo.cs" />
+    <Compile Include="Models\Registros\Atencion\AtencionPaginadoModelo.cs" />
+    <Compile Include="Models\Registros\ContraReferencia\ContraReferenciaEditorModelo.cs" />
+    <Compile Include="Models\Registros\ContraReferencia\ContraReferenciaFiltroModelo.cs" />
+    <Compile Include="Models\Registros\ContraReferencia\ContraReferenciaGridModelo.cs" />
+    <Compile Include="Models\Registros\ContraReferencia\ContraReferenciaPaginadoModelo.cs" />
+    <Compile Include="Models\Registros\Liquidacion\LiquidacionEditorModelo.cs" />
+    <Compile Include="Models\Registros\Liquidacion\LiquidacionFiltroModelo.cs" />
+    <Compile Include="Models\Registros\Liquidacion\LiquidacionGridModelo.cs" />
+    <Compile Include="Models\Registros\Liquidacion\LiquidacionPaginadoModelo.cs" />
+    <Compile Include="Models\Registros\Convenio\ConvenioEditorModelo.cs" />
+    <Compile Include="Models\Registros\Evaluacion\EvaluacionEditorModelo.cs" />
+    <Compile Include="Models\Registros\Evaluacion\EvaluacionFiltroModelo.cs" />
+    <Compile Include="Models\Registros\Evaluacion\EvaluacionGridModelo.cs" />
+    <Compile Include="Models\Registros\Evaluacion\EvaluacionPaginadoModelo.cs" />
+    <Compile Include="Models\Registros\Referencia\ReferenciaEditorModelo.cs" />
     <Compile Include="Models\Registros\Solicitud\SolicitudEditorModelo.cs" />
+    <Compile Include="Models\Registros\Solicitud\SolicitudFiltroModelo.cs" />
+    <Compile Include="Models\Registros\Solicitud\SolicitudGridModelo.cs" />
+    <Compile Include="Models\Registros\Solicitud\SolicitudPaginadoModelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Aplicacion.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -364,6 +447,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TipoListaSituacion.resx</DependentUpon>
     </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -379,6 +469,65 @@
     <None Include="Properties\PublishProfiles\Asistencia.pubxml" />
     <Content Include="Views\Comun\Inicio\_NoAutorizado.cshtml" />
     <Content Include="Views\Registros\Solicitud\_Registrar.cshtml" />
+    <Content Include="Views\Registros\Solicitud\_Index.cshtml" />
+    <Content Include="Views\Registros\Solicitud\_Grid.cshtml" />
+    <Content Include="Views\Registros\Solicitud\_Toolbar.cshtml" />
+    <Content Include="Views\Registros\Solicitud\_Modificar.cshtml" />
+    <Content Include="Views\Registros\Solicitud\_Mostrar.cshtml" />
+    <Content Include="Views\Registros\Solicitud\_Archivos.cshtml" />
+    <Content Include="Views\Registros\Solicitud\_ArchivosMostrar.cshtml" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Resources\Content\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Registros\Evaluacion\_Archivos.cshtml" />
+    <Content Include="Views\Registros\Evaluacion\_ArchivosMostrar.cshtml" />
+    <Content Include="Views\Registros\Evaluacion\_Grid.cshtml" />
+    <Content Include="Views\Registros\Evaluacion\_Index.cshtml" />
+    <Content Include="Views\Registros\Evaluacion\_Modificar.cshtml" />
+    <Content Include="Views\Registros\Evaluacion\_Mostrar.cshtml" />
+    <Content Include="Views\Registros\Evaluacion\_Registrar.cshtml" />
+    <Content Include="Views\Registros\Evaluacion\_Toolbar.cshtml" />
+    <Content Include="Views\Registros\Convenio\_Registrar.cshtml" />
+    <Content Include="Views\Registros\Convenio\_GridDetalle.cshtml" />
+    <Content Include="Views\Registros\Convenio\_GridServicio.cshtml" />
+    <Content Include="Views\Registros\Convenio\_GridDescuento.cshtml" />
+    <Content Include="Views\Comun\Servicio\_BuscadorIndex.cshtml" />
+    <Content Include="Views\Comun\Descuento\_BuscadorIndex.cshtml" />
+    <Content Include="Views\Registros\Solicitud\_Rechazar.cshtml" />
+    <Content Include="Views\Registros\Referencia\_Index.cshtml" />
+    <Content Include="Views\Registros\Referencia\_Registrar.cshtml" />
+    <Content Include="Views\Registros\Referencia\_DatosMascota.cshtml" />
+    <Content Include="Views\Registros\Referencia\_DatosReferencia.cshtml" />
+    <Content Include="Views\Registros\Referencia\_DatosAtencion.cshtml" />
+    <Content Include="Views\Comun\Mascota\_BuscadorIndex.cshtml" />
+    <Content Include="Views\Comun\Mascota\_BuscadorGrid.cshtml" />
+    <Content Include="Views\Comun\ReferenciaServicio\_BuscadorIndex.cshtml" />
+    <Content Include="Views\Registros\Liquidacion\_Index.cshtml" />
+    <Content Include="Views\Registros\Liquidacion\_Grid.cshtml" />
+    <Content Include="Views\Registros\Liquidacion\_Liquidar.cshtml" />
+    <Content Include="Views\Registros\Atencion\_Index.cshtml" />
+    <Content Include="Views\Registros\Atencion\_Grid.cshtml" />
+    <Content Include="Views\Registros\Atencion\_Servicios.cshtml" />
+    <Content Include="Views\Registros\Atencion\_Atencion.cshtml" />
+    <Content Include="Views\Registros\Atencion\_Registrar.cshtml" />
+    <Content Include="Views\Registros\Liquidacion\_Servicios.cshtml" />
+    <Content Include="Views\Registros\ContraReferencia\_Index.cshtml" />
+    <Content Include="Views\Registros\ContraReferencia\_Grid.cshtml" />
+    <Content Include="Views\Registros\ContraReferencia\_Registrar.cshtml" />
+    <Content Include="Views\Registros\ContraReferencia\_ContraReferencia.cshtml" />
+    <Content Include="Views\Registros\ContraReferencia\_Mostrar.cshtml" />
+    <Content Include="Views\Reportes\Testing\_Index.cshtml" />
+    <Content Include="Views\Reportes\Testing\_Index2.cshtml" />
+    <Content Include="Views\Reportes\Testing\_Index3.cshtml" />
+    <Content Include="Views\Reportes\_AtencionTotalMes.cshtml" />
+    <Content Include="Views\Reportes\_ValorizadoConvenio.cshtml" />
+    <Content Include="Views\Reportes\_ServicioReferencia.cshtml" />
+    <Content Include="Views\Reportes\_Reportes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

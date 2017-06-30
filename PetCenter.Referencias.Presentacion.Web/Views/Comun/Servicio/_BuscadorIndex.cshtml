@@ -1,0 +1,52 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@model PetCenter.Referencias.Presentacion.Web.Models.Comun.Servicio.ServicioEditorModelo
+@using (Html.BeginSecureForm("BuscadorIndex", "Servicio", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "formBuscadorServicio" }))
+{
+    <fieldset>
+        <legend class="text-muted h4">Seleccionar Servicio</legend>
+        <div class="form-group asistencia-group">
+            @Html.Label("Servicio: ", new { @class = "col-sm-2 control-label form-label text-left" })
+            <div class="col-sm-9">
+                @{
+                    var Servicios = new SelectList(@ViewBag.Servicios, "IdServicio", "NombreServicio");
+                }
+                @Html.DropDownListFor(m => m.ConvenioServicio.IdServicio, Servicios, "Seleccione", new { @class = "form-control", @required = "" })
+            </div>
+        </div>
+
+        <div class="form-group asistencia-group">
+            @Html.Label("Base: ", new { @class = "col-sm-2 control-label form-label text-left" })
+            <div class="col-sm-3">
+                @Html.TextBoxFor(m => m.ConvenioServicio.TarifaBase, new { @class = "form-control asistencia-requerido", @placeholder = "Tarifa Base", @disabled = "" })
+            </div>
+
+            @Html.Label("Tarifa Real: ", new { @class = "col-sm-3 control-label form-label text-left" })
+            <div class="col-sm-3">
+                @Html.TextBoxFor(m => m.ConvenioServicio.TarifaReal, new { @class = "form-control asistencia-requerido", @placeholder = "Dscto", @disabled = "" })
+            </div>
+
+        </div>
+
+        <div class="form-group asistencia-group">
+          
+        </div>
+
+        <div class="form-group asistencia-group">
+            @Html.Label("Dscto: ", new { @class = "col-sm-2 control-label form-label text-left" })
+            <div class="col-sm-3">
+                @Html.TextBoxFor(m => m.ConvenioServicio.FactorDcto, new { @class = "form-control asistencia-requerido", @placeholder = "Dscto", @required = "", @maxlenght = 3 })
+            </div>
+        </div>
+
+    </fieldset>
+                    }
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        conveniojs.iniciar();
+        conveniojs.validacionesBuscadorServicio();
+        conveniojs.seleccionaServicio();
+        conveniojs.ingresaDescuentoServicio();
+    });
+</script>

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.TituloMenu = "Atenciones por Mes";
+    Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
+}
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+<fieldset class="fieldset-filter">
+    <legend class="text-muted h5">Total Atenciones por Referencia valorizados</legend>
+    <div id="graficoValorizado" style="height: 250px;"></div>
+</fieldset>
+
+<script>
+
+    $(document).ready(function () {
+        $.get('@Url.Action("ObtenerTotalAtencionesPorMes")', function (result) {
+            Morris.Bar({
+                element: 'graficoValorizado',
+                data: result,
+                xkey: 'NombreMes',
+                ykeys: ['Total', 'Cantidad'],
+                labels: ['Total', 'Cantidad']
+            });
+        });
+    });
+
+
+</script>

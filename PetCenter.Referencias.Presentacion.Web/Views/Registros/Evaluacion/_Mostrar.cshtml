@@ -1,0 +1,220 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Evaluacion.EvaluacionEditorModelo
+@{
+    ViewBag.TituloMenu = "Evaluar Solicitud Convenio";
+    Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
+}
+
+@using (Html.BeginSecureForm("Registrar", "Evaluacion", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "formEvaluacion" }))
+{
+    @Html.HiddenFor(m => m.Solicitud.NroSolicitud);
+
+
+    //Mensajes
+    @Html.Partial("_Mensajes", Model)
+
+    <fieldset class="fieldset-filter-principal">
+
+        <fieldset class="fieldset-filter">
+            <legend> </legend>
+            <div class="form-group asistencia-group">
+                @Html.Label("Nro Solicitud: ", new { @class = "col-sm-2 control-label form-label" })
+                <div class="col-sm-3">
+                    @Html.TextBoxFor(m => m.Solicitud.NroSolicitudFormato, new { @class = "form-control", @disabled = "" })
+                </div>
+
+                @Html.Label("Fecha Solicitud: ", new { @class = "col-sm-2 control-label form-label" })
+                <div class="col-sm-3">
+                    @Html.TextBoxFor(m => m.Solicitud.FechaSolicitud, Model.Solicitud.FechaSolicitud.Value.ToString(Formatos.FechaCorta), new { @class = "form-control asistencia-fecha-corta", @disabled = "", @placerholder = "Fecha Solicitud" })
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="fieldset-filter">
+            <legend class="text-muted h5">Datos de clínica referente</legend>
+
+            <div class="form-group asistencia-group">
+                <div class="asistencia-group">
+                    @Html.Label("Nro de RUC: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Solicitud.NroRUC, new { @class = "form-control asistencia-requerido", @placeholder = "Nro RUC", @disabled = "", @maxlength = "11" })
+                    </div>
+                </div>
+
+                <div class="asistencia-group">
+                    @Html.Label("Razón Social: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-5">
+                        @Html.TextBoxFor(m => m.Solicitud.RazonSocial, new { @class = "form-control asistencia-requerido", @placeholder = "Razón Social", @disabled = "", @maxlength = "200" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group asistencia-group">
+                <div class="asistencia-group">
+                    @Html.Label("Telefóno: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Solicitud.Telefono, new { @class = "form-control asistencia-requerido", @disabled = "", @placeholder = "Telefóno", @maxlength = "20" })
+                    </div>
+                </div>
+
+                <div class="asistencia-group">
+                    @Html.Label("Dirección: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-5">
+                        @Html.TextBoxFor(m => m.Solicitud.Direccion, new { @class = "form-control asistencia-requerido", @placeholder = "Dirección", @disabled = "", @maxlength = "200" })
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="form-group asistencia-group">
+                <div class="asistencia-group">
+                    @Html.Label("Web: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Solicitud.Web, new { @class = "form-control asistencia-requerido", @disabled = "", @placeholder = "Web", @maxlength = "100" })
+                    </div>
+                </div>
+
+                <div class="asistencia-group">
+                    @Html.Label("Referencia: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-5">
+                        @Html.TextBoxFor(m => m.Solicitud.Referencia, new { @class = "form-control asistencia-requerido", @disabled = "", @placeholder = "Referencia", @maxlength = "200" })
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+
+        <fieldset class="fieldset-filter">
+            <legend class="text-muted h5">Datos del representante</legend>
+            <div class="form-group asistencia-group">
+                <div class="asistencia-group">
+                    @Html.Label("Tipo de Documento: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @{
+                            var TiposDocumento = new SelectList(@ViewBag.TiposDocumento, "Valor", "Valor");
+                        }
+                        @Html.DropDownListFor(m => m.Solicitud.TpoDocRep, TiposDocumento, "Seleccione", new { @class = "form-control", @disabled = "" })
+                    </div>
+                </div>
+
+                <div class="asistencia-group">
+                    @Html.Label("Nro de Documento: ", new { @class = "col-sm-4 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Solicitud.NroDocRep, new { @class = "form-control asistencia-requerido", @placeholder = "Nro Documento", @disabled = "", @maxlength = "15" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group asistencia-group">
+                <div class="asistencia-group">
+                    @Html.Label("Apellidos y Nombres: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-7">
+                        @Html.TextBoxFor(m => m.Solicitud.NombreRep, new { @class = "form-control asistencia-requerido", @placeholder = "Apellidos y Nombres", @disabled = "", @maxlength = "200" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group asistencia-group">
+                <div class="asistencia-group">
+                    @Html.Label("Email: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Solicitud.CorreoRep, new { @class = "form-control asistencia-requerido", @placeholder = "Email", @disabled = "", @maxlength = "100" })
+                    </div>
+                </div>
+
+                <div class="asistencia-group">
+                    @Html.Label("Teléfono: ", new { @class = "col-sm-4 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Solicitud.TelefonoRep, new { @class = "form-control asistencia-requerido", @disabled = "", @placeholder = "Teléfono", @maxlength = "20" })
+                    </div>
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        <fieldset class="fieldset-filter">
+            <legend class="text-muted h5">Datos de la garantía económica</legend>
+
+            <div class="form-group asistencia-group">
+                <div class="asistencia-group">
+                    @Html.Label("Banco: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-2">
+                        @{
+                            var Bancos = new SelectList(@ViewBag.Bancos, "IdBanco", "NomBanco");
+                        }
+                        @Html.DropDownListFor(m => m.Solicitud.IdBanco, Bancos, "Seleccione", new { @class = "form-control", @disabled = "" })
+                    </div>
+                </div>
+
+                <div class="asistencia-group">
+                    @Html.Label("Moneda: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-2">
+                        @{
+                            var Monedas = new SelectList(@ViewBag.Monedas, "IdMoneda", "DesMoneda");
+                        }
+                        @Html.DropDownListFor(m => m.Solicitud.IdMoneda, Monedas, "Seleccione", new { @class = "form-control", @disabled = "" })
+                    </div>
+                </div>
+
+                <div class="asistencia-group">
+                    @Html.Label("Monto: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(m => m.Solicitud.ImporteGarantia, new { @class = "form-control asistencia-requerido text-right", @placeholder = "Monto", @disabled = "", @maxlength = "10" })
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group asistencia-group">
+                <div class="asistencia-group">
+                    <div class="asistencia-group">
+                        @Html.Label("Fecha Vencimiento: ", new { @class = "col-sm-2 control-label form-label" })
+                        <div class="col-sm-2">
+                            @Html.TextBoxFor(m => m.Solicitud.FechaVencimientoG, 
+                           Model.Solicitud.FechaVencimientoG.HasValue? Model.Solicitud.FechaVencimientoG.Value.ToString(Formatos.FechaCorta) : "", 
+                           new { @class = "form-control asistencia-fecha-corta", @disabled = "", @placerholder = "Fecha Solicitud" })
+                        </div>
+                    </div>
+                    <div class="asistencia-group">
+                        @Html.Label("Nro Referencia: ", new { @class = "col-sm-2 control-label form-label" })
+                        <div class="col-sm-2">
+                            @Html.TextBoxFor(m => m.Solicitud.Nrogarantia, new { @class = "form-control asistencia-requerido", @placeholder = "Nro Referencia", @disabled = "", @maxlength = "20" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+
+        <div class="table-responsive">
+            @Html.Partial("_ArchivosMostrar")
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12 text-center">
+
+                @{
+                    if (Model.Solicitud.Estado == "1")
+                    {
+                        <button type="button" class="btn btn-primary" onclick="helperjs.setGetUrl('@Url.Action("Registrar", "Convenio", new { idSolicitud = Model.Solicitud.NroSolicitud })');">@Botones.BtnContinuar</button>
+                        <button type="button" id="btn-rechazar" class="btn btn-primary rechazar">@Botones.BtnRechazar</button>
+                    }
+                }
+
+                <button type="button" class="btn btn-primary" onclick="helperjs.setGetUrl('@Url.Action("Index", "Evaluacion")');">@Botones.BtnCancelar</button>
+               
+            </div>
+        </div>
+
+    </fieldset>
+                    }
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        evaluacionjs.rechazar();
+    });
+</script>
+

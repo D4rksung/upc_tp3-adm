@@ -3,6 +3,6 @@
     public class BancoVob
     {
         public int IdBanco { get; set; }
-        public string Descripcion { get; set; }
+        public string NomBanco { get; set; }
     }
 }

@@ -5,5 +5,9 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Solic
     public interface ISolicitudServicio
     {
         int Registrar(RegistrarSolicitudDto registro);
+        int Modificar(RegistrarSolicitudDto registro);
+        int Rechazar(RegistrarSolicitudDto registro);
+        RespuestaSolicitudDto Busqueda(BusquedaSolicitudDto solicitud);
+        SolicitudDto Buscar(int idSolicitud);
     }
 }

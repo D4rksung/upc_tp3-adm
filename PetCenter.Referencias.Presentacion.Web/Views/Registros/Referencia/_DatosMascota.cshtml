@@ -1,0 +1,60 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Referencia.ReferenciaEditorModelo
+
+
+<fieldset class="fieldset-filter">
+    <div class="form-group asistencia-group">
+        <div class="asistencia-group">
+            @Html.Label("Id: ", new { @class = "col-sm-2 control-label form-label" })
+            <div class="col-sm-8">
+                <div class="col-sm-4 input-group">
+                    @Html.TextBoxFor(m => m.Mascota.IdMascota, new { @class = "form-control asistencia-requerido", @placeholder = "Código", @required = "", @readonly = "readonly" })
+                    <span class="input-group-addon glyphicon glyphicon-search asistencia-point" id="buscar-items"
+                          onclick="referenciajs.abrePopup('Mascota_IdMascota', 'Mascota_NombreMascota', 'Mascota_NombreRaza', 'Mascota_NombreEspecie', 'Mascota_FechaNacimiento');"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group asistencia-group">
+        @Html.Label("Nombre: ", new { @class = "col-sm-2 control-label form-label" })
+        <div class="col-sm-3">
+            @Html.TextBoxFor(m => m.Mascota.NombreMascota, new { @class = "form-control asistencia-requerido", @placeholder = "Nombre", @readonly = "readonly" })
+        </div>
+    </div>
+
+    <div class="form-group asistencia-group">
+        @Html.Label("Raza: ", new { @class = "col-sm-2 control-label form-label" })
+        <div class="col-sm-3">
+            @Html.TextBoxFor(m => m.Mascota.NombreRaza, new { @class = "form-control asistencia-requerido", @placeholder = "Raza", @readonly = "readonly" })
+        </div>
+    </div>
+
+    <div class="form-group asistencia-group">
+        @Html.Label("Especie: ", new { @class = "col-sm-2 control-label form-label" })
+        <div class="col-sm-3">
+            @Html.TextBoxFor(m => m.Mascota.NombreEspecie, new { @class = "form-control asistencia-requerido", @placeholder = "Especie", @readonly = "readonly" })
+        </div>
+    </div>
+
+    <div class="form-group asistencia-group">
+        @Html.Label("Fecha Nacimiento: ", new { @class = "col-sm-2 control-label form-label" })
+        <div class="col-sm-3">
+            @Html.TextBoxFor(m => m.Mascota.FechaNacimiento, new { @class = "form-control asistencia-fecha-corta", @placeholder = "Fecha Nac.", @readonly = "readonly" })
+        </div>
+    </div>
+
+
+</fieldset>
+
+
+<br />
+<div class="asistencia-group">
+    <div class="col-sm-12 text-center">
+        @*<button type="button" id="btn-salir-1" class="btn btn-primary buscar">@Botones.BtnSalir</button>
+        <button type="button" id="btn-continuar-1" class="btn btn-primary buscar">@Botones.BtnContinuar</button>*@
+        @*<button type="button" class="btn btn-primary" onclick="helperjs.setGetUrl('@Url.Action("Index", "Evaluacion")');">@Botones.BtnLimpiar</button>*@
+    </div>
+</div>

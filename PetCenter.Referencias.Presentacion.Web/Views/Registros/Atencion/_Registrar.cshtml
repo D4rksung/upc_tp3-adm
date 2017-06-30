@@ -1,0 +1,116 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+
+@model PetCenter.Referencias.Presentacion.Web.Models.Registros.Atencion.AtencionEditorModelo
+
+@{
+    ViewBag.TituloMenu = "Gestionar Atención por Referencia";
+    Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
+}
+
+
+@using (Html.BeginSecureForm("Registrar", "Atencion", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "formAtencion" }))
+{
+    @Html.HiddenFor(m => m.Referencia.NroSolicitudRef)
+    @Html.HiddenFor(m => m.Referencia.NroConvenio)
+    @Html.HiddenFor(m => m.Referencia.IdMascota)
+    @Html.HiddenFor(m => m.Referencia.FechaSolicitudRef)
+
+    //Mensajes
+    @Html.Partial("_Mensajes", Model)
+    @Html.Partial("_MensajesTodos", Model)
+
+    <fieldset class="fieldset-filter-principal">
+        <br />
+        <fieldset class="fieldset-filter">
+            <legend class="text-muted h5">Datos de la Referencia</legend>
+
+            <div class="form-group asistencia-group">
+
+                <div class="asistencia-group">
+                    @Html.Label("Nro de Ref: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Referencia.NroSolicitudRefFormato, new { @class = "form-control asistencia-requerido", @disabled = "" })
+                    </div>
+                </div>
+
+                <div class="asistencia-group">
+                    @Html.Label("Fecha Solicitud: ", new { @class = "col-sm-3 control-label form-label" })
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(m => m.Referencia.FechaSolicitudRef,
+                   Model.Referencia.FechaSolicitudRef.Value.ToString(Formatos.FechaCorta),
+                   new { @class = "form-control asistencia-fecha-corta", @disabled = "" })
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="form-group asistencia-group">
+                <div class="asistencia-group">
+                    @Html.Label("Clínica referente: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.Referencia.RazonSocial, new { @class = "form-control asistencia-requerido", @placeholder = "Nro RUC", @disabled = "" })
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="fieldset-filter">
+            <legend class="text-muted h5">Datos de la Mascota</legend>
+
+            <div class="form-group asistencia-group">
+
+                <div class="asistencia-group">
+                    @Html.Label("Nombre: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Mascota.NombreMascota, new { @class = "form-control asistencia-requerido", @disabled = "" })
+                    </div>
+                </div>
+                <div class="asistencia-group">
+                    @Html.Label("Raza: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Mascota.NombreRaza, new { @class = "form-control asistencia-requerido", @disabled = "" })
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group asistencia-group">
+                <div class="asistencia-group">
+                    @Html.Label("Especie: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Mascota.NombreEspecie, new { @class = "form-control asistencia-requerido", @disabled = "" })
+                    </div>
+                </div>
+                <div class="asistencia-group">
+                    @Html.Label("Fecha Nacimiento: ", new { @class = "col-sm-2 control-label form-label" })
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(m => m.Mascota.FechaNacimiento,
+                   Model.Mascota.FechaNacimiento.Value.ToString(Formatos.FechaCorta),
+                   new { @class = "form-control asistencia-fecha-corta", @disabled = "" })
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="table-responsive" id="divServicios">
+                @Html.Partial("_Servicios")
+            </div>
+
+            <div class="table-responsive" id="divAtencion">
+                @Html.Partial("_Atencion")
+            </div>
+
+        </fieldset>
+
+    </fieldset>
+
+}
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        atencionjs.iniciar();
+        atencionjs.grabar();
+    });
+</script>

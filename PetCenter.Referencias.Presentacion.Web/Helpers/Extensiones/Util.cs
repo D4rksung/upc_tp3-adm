@@ -8,6 +8,8 @@ using PetCenter.Referencias.Presentacion.Web.Models.Comun;
 using System.Web;
 using System.Configuration;
 using PetCenter.Referencias.Dominio.Administracion.DTOs.General;
+using System.Net.Mail;
+using System.Linq;
 
 namespace PetCenter.Referencias.Presentacion.Web.Helpers.Extensiones
 {
@@ -283,7 +285,7 @@ namespace PetCenter.Referencias.Presentacion.Web.Helpers.Extensiones
         /// <returns></returns>
         public static string ObtenerActionName(HttpRequestBase request)
         {
-            // 
+
             var nombreActionName = "";
             if (ConfigurationManager.AppSettings["desarrollo"] == null)
             {
@@ -293,9 +295,86 @@ namespace PetCenter.Referencias.Presentacion.Web.Helpers.Extensiones
             {
                 return request.FilePath.Split('/')[2].ToString();
             }
-            return nombreActionName;
+            //return nombreActionName;
         }
 
         #endregion
+
+        #region ENVIO CORREO
+        public static void EnviarCorreo(string emailDestino, string asunto, string mensaje)
+        {
+            /*FLAG ENVIO DE CORREO*/
+            bool envioCorreo = ConfigurationManager.AppSettings["envioCorreo"] == "1" ? true : false;
+
+            /*-------------------------MENSAJE DE CORREO----------------------*/
+
+            //Creamos un nuevo Objeto de mensaje
+            MailMessage mmsg = new MailMessage();
+
+            //Direccion de correo electronico a la que queremos enviar el mensaje
+            mmsg.To.Add(emailDestino);
+
+            //Nota: La propiedad To es una colección que permite enviar el mensaje a más de un destinatario
+
+            //Asunto
+            mmsg.Subject = asunto;
+            mmsg.SubjectEncoding = System.Text.Encoding.UTF8;
+
+            ////Direccion de correo electronico que queremos que reciba una copia del mensaje
+            //mmsg.Bcc.Add("destinatariocopia@servidordominio.com"); //Opcional
+
+            //Cuerpo del Mensaje
+            mmsg.Body = mensaje;
+            mmsg.BodyEncoding = System.Text.Encoding.UTF8;
+            mmsg.IsBodyHtml = false; //Si no queremos que se envíe como HTML
+
+            //Correo electronico desde la que enviamos el mensaje
+            mmsg.From = new MailAddress(ConfigurationManager.AppSettings["from"]);
+
+
+            /*-------------------------CLIENTE DE CORREO----------------------*/
+
+            //Creamos un objeto de cliente de correo
+            SmtpClient cliente = new SmtpClient();
+
+            //Hay que crear las credenciales del correo emisor
+            cliente.Credentials =
+                new System.Net.NetworkCredential(ConfigurationManager.AppSettings["from"], ConfigurationManager.AppSettings["password"]);
+
+            //Lo siguiente es obligatorio si enviamos el mensaje desde Gmail
+            cliente.Port = 587;
+            cliente.EnableSsl = true;
+
+            //cliente.Host = "mail.servidordominio.com"; //Para Gmail "smtp.gmail.com";
+            cliente.Host = ConfigurationManager.AppSettings["host"];
+
+            /*-------------------------ENVIO DE CORREO----------------------*/
+
+            try
+            {
+                if (envioCorreo)
+                {
+                    //Enviamos el mensaje      
+                    cliente.Send(mmsg);
+                }
+            }
+            catch (SmtpException ex)
+            {
+                //Aquí gestionamos los errores al intentar enviar el correo
+            }
+
+
+        }
+        #endregion
+
+        public static string GenerarCodigo(int codigo)
+        {
+            var codigoGenerado = string.Empty;
+            var longitud = codigo.ToString().Length;
+            var ceros = string.Join("", Enumerable.Repeat('0', 5 - longitud));
+            codigoGenerado = ceros + codigo.ToString();
+            return codigoGenerado;
+        }
+
     }
 }

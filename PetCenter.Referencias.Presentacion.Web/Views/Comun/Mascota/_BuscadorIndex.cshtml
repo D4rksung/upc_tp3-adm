@@ -1,0 +1,47 @@
+﻿@using PetCenter.Referencias.Presentacion.Web.Resources
+@using PetCenter.Referencias.Presentacion.Web.Helpers.Html
+@using PetCenter.Referencias.Presentacion.Web.Models.Comun.Buscador
+@using PetCenter.Referencias.Dominio.Administracion.DTOs.Maestros.Mascota
+
+@model PetCenter.Referencias.Presentacion.Web.Models.Otros.Mascota.MascotaPaginadoModelo
+@using (Html.BeginSecureForm("BuscadorIndex", "Mascota", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "buscadorForm" }))
+{
+    //Campos ocultos
+    @Html.Hidden("buscador_entidad", "Mascota", new { @class = "noeliminar" })
+    @Html.Hidden("buscador_codMascota", null, new { @class = "noeliminar" })
+    @Html.Hidden("buscador_nombre", null, new { @class = "noeliminar" })
+    @Html.Hidden("buscador_especie", null, new { @class = "noeliminar" })
+    @Html.Hidden("buscador_raza", null, new { @class = "noeliminar" })
+    @Html.Hidden("buscador_fnac", null, new { @class = "noeliminar" })
+    @Html.HiddenFor(m=> m.Filtro.Mascota.IdCliente);
+
+    <fieldset>
+        <legend class="text-muted h5 h1">Búsqueda Mascota</legend>
+
+        <div class="form-group">
+            @Html.Label("Nombre: ", new { @class = "col-sm-2 control-label" })
+            <div class="col-sm-8">
+                @Html.TextBoxFor(m => m.Filtro.Mascota.NombreMascota, new { @class = "form-control", @maxlength = "50", @placeholder = "Nombre Mascota" })
+            </div>
+        </div>
+
+        <div class="form-group text-center">
+            <div class="col-sm-12">
+                <button class="btn btn-primary btn-sm" id="btn-buscador">@Botones.BtnBuscar</button>
+                <button class="btn btn-primary btn-sm" id="btn-limpiar">@Botones.BtnLimpiar</button>
+            </div>
+        </div>
+
+    </fieldset>
+
+    <div class="table-responsive" id="grid-buscador">
+         @Html.Partial("_BuscadorGrid", new BuscadorPaginadoModel<MascotaDto>())
+    </div>  
+
+}
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        mascotajs.iniciarPopup();
+    });
+</script>

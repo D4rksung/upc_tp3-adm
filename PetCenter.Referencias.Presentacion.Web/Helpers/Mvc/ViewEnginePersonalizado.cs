@@ -7,9 +7,10 @@ namespace PetCenter.Referencias.Presentacion.Web.Helpers.Mvc
         public ViewEnginePersonalizado()
         {
             var viewLocations = new[] { 
-            /** Controladores Vista**/            
+            /** Controladores Vista**/     
+            "~/Views/Index/{0}.cshtml",
             "~/Views/Comun/Inicio/{0}.cshtml",
-             "~/Views/Comun/{1}/{0}.cshtml",
+            "~/Views/Comun/{1}/{0}.cshtml",
             "~/Views/Comun/{0}.cshtml",
  
             /** Controladores Vista por módulo**/            
@@ -17,6 +18,8 @@ namespace PetCenter.Referencias.Presentacion.Web.Helpers.Mvc
             "~/Views/Maestros/{1}/{0}.cshtml",
             "~/Views/Configuraciones/{1}/{0}.cshtml",
             "~/Views/Registros/{1}/{0}.cshtml",
+            "~/Views/Reportes/{1}/{0}.cshtml",
+            "~/Views/Reportes/{0}.cshtml",
             };
 
             this.PartialViewLocationFormats = viewLocations;

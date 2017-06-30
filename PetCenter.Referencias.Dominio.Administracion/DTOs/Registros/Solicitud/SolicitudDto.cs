@@ -1,33 +1,73 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PetCenter.Referencias.Dominio.Administracion.DTOs.Registros.Solicitud
 {
     public class SolicitudDto
     {
-        public int IdSolicitud { get; set; }
-        public DateTime FechaSolicitud { get; set; }
-        public string NroRuc { get; set; }
+        public int NroSolicitud { get; set; }
+
+        public Nullable<System.DateTime> FechaSolicitud { get; set; }
+
+        public string Estado { get; set; }
+
+        public string NroRUC { get; set; }
+
         public string Direccion { get; set; }
-        public string Referencia { get; set; }
+
         public string RazonSocial { get; set; }
+
+        public string Referencia { get; set; }
+
         public string Telefono { get; set; }
+
         public string Web { get; set; }
-        public int IdTipoDocumento { get; set; }
-        public string DesTipoDocumento { get; set; }
-        public string NroDocumento { get; set; }
-        public string NombresCompletos { get; set; }
-        public string Email { get; set; }
+
+        public string TpoDocRep { get; set; }
+
+        public string NroDocRep { get; set; }
+
+        public string NombreRep { get; set; }
+
         public string TelefonoRep { get; set; }
-        public int IdBanco { get; set; }
-        public string DesBanco { get; set; }
-        public int IdMoneda { get; set; }
-        public string DesMoneda { get; set; }
-        public string Monto { get; set; }
-        public string NroReferencia { get; set; }
-        public DateTime FechaVencimiento { get; set; }
+
+        public string CorreoRep { get; set; }
+
+        public string Nrogarantia { get; set; }
+
+        public Nullable<System.DateTime> FechaVencimientoG { get; set; }
+
+        public Nullable<int> IdBanco { get; set; }
+
+        public Nullable<int> IdMoneda { get; set; }
+
+        public Nullable<decimal> ImporteGarantia { get; set; }
+
+        public string DocReciboTitulo { get; set; }
+
+        public byte[] DocReciboObjeto { get; set; }
+
+        public string DocColegiaturaTitulo { get; set; }
+
+        public byte[] DocColegiaturaObjeto { get; set; }
+
+        public string DocSunatTitulo { get; set; }
+
+        public byte[] DocSunatObjeto { get; set; }
+
+        public string DocLicenciaTitulo { get; set; }
+
+        public byte[] DocLicenciaObjeto { get; set; }
+
+        public string DocCentralTitulo { get; set; }
+
+        public byte[] DocCentralObjeto { get; set; }
+
+        public string DesEstado { get; set; }
+
+        public string NroSolicitudFormato { get; set; }
+
+
+        public System.DateTime FechaSolicitudInicio { get; set; }
+        public System.DateTime FechaSolicitudHasta { get; set; }
     }
 }

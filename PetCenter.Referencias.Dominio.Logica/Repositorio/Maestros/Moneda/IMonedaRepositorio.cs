@@ -5,7 +5,7 @@ using e = PetCenter.Referencias.Dominio.Logica.Entidades;
 
 namespace PetCenter.Referencias.Dominio.Logica.Repositorio.Maestros.Moneda
 {
-    public interface IMonedaRepositorio : IRepositorio<e.Moneda>
+    public interface IMonedaRepositorio : IRepositorio<e.GG_Moneda>
     {
         IEnumerable<MonedaVob> Listar();
     }
