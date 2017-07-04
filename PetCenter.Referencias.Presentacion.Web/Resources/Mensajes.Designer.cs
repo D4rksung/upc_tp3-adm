@@ -79,6 +79,15 @@ namespace PetCenter.Referencias.Presentacion.Web.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a El convenio ya no se encuentra vigente, tiene como fecha de vencimiento: {0}.
+        /// </summary>
+        public static string ConvenioFechaVencimientoExpirada {
+            get {
+                return ResourceManager.GetString("ConvenioFechaVencimientoExpirada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a No se encontró convenio..
         /// </summary>
         public static string ConvenioNoEncontrado {

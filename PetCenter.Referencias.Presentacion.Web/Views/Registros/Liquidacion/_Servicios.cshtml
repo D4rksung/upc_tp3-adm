@@ -37,7 +37,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="4" class="asistencia-column-righ">Descuento Comercial</td>
+                <td colspan="4" class="asistencia-column-righ"><strong>Descuento Comercial</strong></td>
                 <td class="asistencia-column-righ">@Model.Liquidacion.ValorDctoComercial</td>
             </tr>
             <tr>
@@ -45,14 +45,24 @@
                 <td class="asistencia-column-righ">@Model.Liquidacion.ValorNeto</td>
             </tr>
             <tr>
-                <td colspan="4" class="asistencia-column-righ">IGV</td>
-                <td class="asistencia-column-righ">@Model.Liquidacion.ValorImpuesto</td>
+                <td colspan="4" class="asistencia-column-righ"><strong>Valor Ajuste</strong></td>
+                <td class="asistencia-group asistencia-column-righ col-sm-1">
+                    @Html.TextBoxFor(m => m.Liquidacion.ValorAjuste, new { @class = "form-control asistencia-requerido text-right", @required = "" })
+                </td>
             </tr>
             <tr>
-                <td colspan="4" class="asistencia-column-righ">Valor Liquida</td>
+                <td colspan="4" class="asistencia-column-righ"><strong>IGV</strong></td>
+                <td class="asistencia-column-righ">
+                    <span id="Liquidacion.ValorImpuesto">
+                        @Model.Liquidacion.ValorImpuesto
+                    </span>                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" class="asistencia-column-righ"><strong>Valor Liquida</strong></td>
                 <td class="asistencia-column-righ">@Model.Liquidacion.ValorTotal</td>
             </tr>
         </tbody>
     </table>
-    
+
 </fieldset>

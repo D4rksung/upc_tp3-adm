@@ -2,7 +2,6 @@
 @using PetCenter.Referencias.Presentacion.Web.Helpers.Html
 @model PetCenter.Referencias.Presentacion.Web.Models.Registros.Liquidacion.LiquidacionEditorModelo
 
-
 @{
     ViewBag.TituloMenu = "Gestionar Liquidaciones por Convenio";
     Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
@@ -76,3 +75,10 @@
 }
 
 
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        liquidacionjs.iniciar();
+        liquidacionjs.validacion();
+        liquidacionjs.aplicaAjuste();
+    });
+</script>

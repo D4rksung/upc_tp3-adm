@@ -4,6 +4,7 @@
     <EntitySetMapping Name="GCP_Cliente">
       <EntityTypeMapping TypeName="BD_ReferenciaModel.GCP_Cliente">
         <MappingFragment StoreEntitySet="GCP_Cliente">
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
           <ScalarProperty Name="AutorizaUsoDatos" ColumnName="AutorizaUsoDatos" />
           <ScalarProperty Name="EmailCliente" ColumnName="EmailCliente" />
           <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
@@ -125,6 +126,7 @@
     <EntitySetMapping Name="GCR_Liquidaciones">
       <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_Liquidaciones">
         <MappingFragment StoreEntitySet="GCR_Liquidaciones">
+          <ScalarProperty Name="ValorAjuste" ColumnName="ValorAjuste" />
           <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
           <ScalarProperty Name="ValorImpuesto" ColumnName="ValorImpuesto" />
           <ScalarProperty Name="ValorNeto" ColumnName="ValorNeto" />

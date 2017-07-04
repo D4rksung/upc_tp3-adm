@@ -123,6 +123,9 @@
   <data name="ContraReferenciaRegistrada" xml:space="preserve">
     <value>Se generó el número de ContraReferencia: {0}</value>
   </data>
+  <data name="ConvenioFechaVencimientoExpirada" xml:space="preserve">
+    <value>El convenio ya no se encuentra vigente, tiene como fecha de vencimiento: {0}</value>
+  </data>
   <data name="ConvenioNoEncontrado" xml:space="preserve">
     <value>No se encontró convenio.</value>
   </data>

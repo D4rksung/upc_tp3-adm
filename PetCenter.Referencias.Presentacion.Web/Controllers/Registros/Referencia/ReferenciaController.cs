@@ -37,6 +37,17 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.Referenci
                 mensaje = MensajeMvc.MensajeAdvertencia(Mensajes.ConvenioNoEncontrado);
                 return RedirectToAction("Index", new { mensaje = mensaje });
             }
+            else
+            {
+                DateTime dt1 = DateTime.Parse(convenio.FechaVencimiento.Value.ToShortDateString());
+                DateTime dt2 = DateTime.Now;
+
+                if (dt2.Date > dt1.Date)
+                {
+                    mensaje = MensajeMvc.MensajeAdvertencia(string.Format(Mensajes.ConvenioFechaVencimientoExpirada, convenio.FechaVencimiento.Value.ToShortDateString()));
+                    return RedirectToAction("Index", new { mensaje = mensaje });
+                }
+            }
 
             //Construimos el modelo
             var modelo = new ReferenciaEditorModelo
@@ -70,8 +81,8 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.Referenci
                 var nroReferencia = Util.GenerarCodigo(resultado);
                 mensaje = MensajeMvc.MensajeSatisfactorio(Mensajes.ReferenciaRegistrada, nroReferencia);
             }
-                
-           // mensaje = MensajeMvc.MensajeSatisfactorio(Mensajes.ReferenciaRegistrada, resultado);
+
+            // mensaje = MensajeMvc.MensajeSatisfactorio(Mensajes.ReferenciaRegistrada, resultado);
             return RedirectToAction("Index", new { mensaje = mensaje });
         }
 

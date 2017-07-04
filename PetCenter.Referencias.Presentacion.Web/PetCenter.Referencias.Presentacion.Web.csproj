@@ -294,6 +294,7 @@
     <Content Include="Resources\Sitio\js\views\view.contrareferencia.js" />
     <Content Include="Resources\Sitio\js\views\view.convenio.js" />
     <Content Include="Resources\Sitio\js\views\view.evaluacion.js" />
+    <Content Include="Resources\Sitio\js\views\view.liquidacion.js" />
     <Content Include="Resources\Sitio\js\views\view.mascota.js" />
     <Content Include="Resources\Sitio\js\views\view.referencia.js" />
     <Content Include="Resources\Sitio\js\views\view.solicitud.js" />

@@ -30,6 +30,8 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
     
         public string AutorizaUsoDatos { get; set; }
     
+        public string Direccion { get; set; }
+    
     
         public virtual GCP_PersonaJuridica GCP_PersonaJuridica { get; set; }
         public virtual ICollection<GCP_Mascota> GCP_Mascota { get; set; }

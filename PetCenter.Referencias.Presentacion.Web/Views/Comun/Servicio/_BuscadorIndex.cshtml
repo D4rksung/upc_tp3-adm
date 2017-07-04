@@ -6,8 +6,8 @@
     <fieldset>
         <legend class="text-muted h4">Seleccionar Servicio</legend>
         <div class="form-group asistencia-group">
-            @Html.Label("Servicio: ", new { @class = "col-sm-2 control-label form-label text-left" })
-            <div class="col-sm-9">
+            @Html.Label("Servicio: ", new { @class = "col-sm-3 control-label form-label text-left" })
+            <div class="col-sm-8">
                 @{
                     var Servicios = new SelectList(@ViewBag.Servicios, "IdServicio", "NombreServicio");
                 }
@@ -16,29 +16,25 @@
         </div>
 
         <div class="form-group asistencia-group">
-            @Html.Label("Base: ", new { @class = "col-sm-2 control-label form-label text-left" })
+            @Html.Label("Tarifa Base: ", new { @class = "col-sm-3 control-label form-label text-left" })
             <div class="col-sm-3">
                 @Html.TextBoxFor(m => m.ConvenioServicio.TarifaBase, new { @class = "form-control asistencia-requerido", @placeholder = "Tarifa Base", @disabled = "" })
             </div>
-
-            @Html.Label("Tarifa Real: ", new { @class = "col-sm-3 control-label form-label text-left" })
-            <div class="col-sm-3">
-                @Html.TextBoxFor(m => m.ConvenioServicio.TarifaReal, new { @class = "form-control asistencia-requerido", @placeholder = "Dscto", @disabled = "" })
-            </div>
-
         </div>
 
         <div class="form-group asistencia-group">
-          
-        </div>
-
-        <div class="form-group asistencia-group">
-            @Html.Label("Dscto: ", new { @class = "col-sm-2 control-label form-label text-left" })
+            @Html.Label("%dscto: ", new { @class = "col-sm-3 control-label form-label text-left" })
             <div class="col-sm-3">
                 @Html.TextBoxFor(m => m.ConvenioServicio.FactorDcto, new { @class = "form-control asistencia-requerido", @placeholder = "Dscto", @required = "", @maxlenght = 3 })
             </div>
         </div>
 
+        <div class="form-group asistencia-group">
+            @Html.Label("Tarifa Real: ", new { @class = "col-sm-3 control-label form-label text-left" })
+            <div class="col-sm-3">
+                @Html.TextBoxFor(m => m.ConvenioServicio.TarifaReal, new { @class = "form-control asistencia-requerido", @placeholder = "Dscto", @disabled = "" })
+            </div>
+        </div>
     </fieldset>
                     }
 

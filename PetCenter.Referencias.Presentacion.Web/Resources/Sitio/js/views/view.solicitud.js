@@ -121,7 +121,28 @@
     grabar: function () {
 
         $('#Guardar').on('click', function () {
+
             if (!$(solicitudjs.formSolicitud).valid()) return false;
+
+            //validamos la obligatoriedad de 3 archivos.
+            contador = 0;
+            var nombreArchivors = $("#tabla-archivos tr").eq(0).find("input[id=nombreArchivors]").val();
+            var nombreArchivoccv = $("#tabla-archivos tr").eq(1).find("input[id=nombreArchivoccv]").val();
+            var nombreArchivorsu = $("#tabla-archivos tr").eq(2).find("input[id=nombreArchivorsu]").val();
+            var nombreArchivolf = $("#tabla-archivos tr").eq(3).find("input[id=nombreArchivolf]").val();
+            var nombreArchivorcr = $("#tabla-archivos tr").eq(4).find("input[id=nombreArchivorcr]").val();
+
+            if (nombreArchivors != "") contador++;
+            if (nombreArchivoccv != "") contador++;
+            if (nombreArchivorsu != "") contador++;
+            if (nombreArchivolf != "") contador++;
+            if (nombreArchivorcr != "") contador++;
+
+            if (contador < 3) {
+                helperjs.mostrarMensajes.warning('Ingrese como mínimo 3 archivos adjuntos.');
+                return false;
+            }
+            
             var data = $(solicitudjs.formSolicitud).serializeArray();
 
             var request = {
@@ -154,12 +175,17 @@
             var tipoDocumento = $(this).val();
             var nroDocumento = $("#Solicitud_NroDocRep");
             nroDocumento.val('');
+
             if (tipoDocumento == 'RUC') {
                 nroDocumento.attr('maxlength', '11');
+                sitiojs.ValidarSoloNumeros(nroDocumento);
             } else if (tipoDocumento == 'DNI') {
                 nroDocumento.attr('maxlength', '8');
+                sitiojs.ValidarSoloNumeros(nroDocumento);
             } else if (tipoDocumento == 'CEX') {
+                $(nroDocumento).unbind();
                 nroDocumento.attr('maxlength', '9');
+                sitiojs.ValidarSoloAlfanumericos(nroDocumento);
             } else {
                 nroDocumento.attr('maxlength', '15');
             }

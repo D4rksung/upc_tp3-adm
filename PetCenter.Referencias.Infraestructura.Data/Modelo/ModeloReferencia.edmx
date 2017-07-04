@@ -13,6 +13,7 @@
           <Property Name="NombreCliente" Type="varchar" MaxLength="200" />
           <Property Name="EmailCliente" Type="varchar" MaxLength="50" />
           <Property Name="AutorizaUsoDatos" Type="char" MaxLength="1" />
+          <Property Name="Direccion" Type="varchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="GCP_Especie">
           <Key>
@@ -49,7 +50,7 @@
           </Key>
           <Property Name="IdCliente" Type="int" Nullable="false" />
           <Property Name="TpoDoc" Type="char" MaxLength="3" />
-          <Property Name="NroDoc" Type="char" MaxLength="3" />
+          <Property Name="NroDoc" Type="varchar" MaxLength="25" />
           <Property Name="ApePat" Type="varchar" MaxLength="100" />
           <Property Name="ApeMat" Type="varchar" MaxLength="100" />
           <Property Name="Nombres" Type="varchar" MaxLength="100" />
@@ -143,6 +144,7 @@
           <Property Name="ValorNeto" Type="decimal" Precision="12" Scale="2" />
           <Property Name="ValorImpuesto" Type="decimal" Precision="12" Scale="2" />
           <Property Name="ValorTotal" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="ValorAjuste" Type="decimal" Precision="12" Scale="2" />
         </EntityType>
         <EntityType Name="GCR_RepresentanteClinica">
           <Key>
@@ -795,6 +797,7 @@
           <NavigationProperty Name="GCP_PersonaNatural" Relationship="BD_ReferenciaModel.FK_GCP_PersonaNatural_GCP_Cliente" FromRole="GCP_Cliente" ToRole="GCP_PersonaNatural" />
           <NavigationProperty Name="GCR_Convenio" Relationship="BD_ReferenciaModel.FK_GCR_Convenio_GCP_Cliente" FromRole="GCP_Cliente" ToRole="GCR_Convenio" />
           <NavigationProperty Name="GCR_Liquidaciones" Relationship="BD_ReferenciaModel.FK_GCR_Liquidaciones_GCP_Cliente" FromRole="GCP_Cliente" ToRole="GCR_Liquidaciones" />
+          <Property Name="Direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="GCP_Especie">
           <Key>
@@ -837,7 +840,7 @@
           </Key>
           <Property Name="IdCliente" Type="Int32" Nullable="false" />
           <Property Name="TpoDoc" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
-          <Property Name="NroDoc" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="NroDoc" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="ApePat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ApeMat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Nombres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -935,6 +938,7 @@
           <Property Name="ValorTotal" Type="Decimal" Precision="12" Scale="2" />
           <NavigationProperty Name="GCP_Cliente" Relationship="BD_ReferenciaModel.FK_GCR_Liquidaciones_GCP_Cliente" FromRole="GCR_Liquidaciones" ToRole="GCP_Cliente" />
           <NavigationProperty Name="GCR_Atenciones" Relationship="BD_ReferenciaModel.FK_GCR_Atenciones_GCR_Liquidaciones" FromRole="GCR_Liquidaciones" ToRole="GCR_Atenciones" />
+          <Property Name="ValorAjuste" Type="Decimal" Precision="12" Scale="2" />
         </EntityType>
         <EntityType Name="GCR_RepresentanteClinica">
           <Key>
@@ -1380,6 +1384,7 @@
           <EntitySetMapping Name="GCP_Cliente">
             <EntityTypeMapping TypeName="BD_ReferenciaModel.GCP_Cliente">
               <MappingFragment StoreEntitySet="GCP_Cliente">
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
                 <ScalarProperty Name="AutorizaUsoDatos" ColumnName="AutorizaUsoDatos" />
                 <ScalarProperty Name="EmailCliente" ColumnName="EmailCliente" />
                 <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
@@ -1501,6 +1506,7 @@
           <EntitySetMapping Name="GCR_Liquidaciones">
             <EntityTypeMapping TypeName="BD_ReferenciaModel.GCR_Liquidaciones">
               <MappingFragment StoreEntitySet="GCR_Liquidaciones">
+                <ScalarProperty Name="ValorAjuste" ColumnName="ValorAjuste" />
                 <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
                 <ScalarProperty Name="ValorImpuesto" ColumnName="ValorImpuesto" />
                 <ScalarProperty Name="ValorNeto" ColumnName="ValorNeto" />
