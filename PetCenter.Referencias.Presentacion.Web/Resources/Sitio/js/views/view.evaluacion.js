@@ -11,7 +11,7 @@
         $("#Solicitud_Telefono").numeric(false);
         $("#Solicitud_TelefonoRep").numeric(false);
         $("#Solicitud_Monto").numeric('.');
-       
+
     },
 
     validaciones: function () {
@@ -171,6 +171,33 @@
             helperjs.ajaxSend(request);
 
 
+        });
+    },
+
+    validacionBuscar: function () {
+        $(this.formEvaluacion).validacionAsistencia({
+            rules: {
+                'Filtro.Solicitud.FechaSolicitudInicio': {
+                    required: true,
+                    date: true
+                },
+                'Filtro.Solicitud.FechaSolicitudHasta': {
+                    required: true,
+                    date: true,
+                    dateMayorIgual: 'Filtro_Solicitud_FechaSolicitudInicio'
+                }
+            },
+            messages: {
+                'Filtro.Solicitud.FechaSolicitudInicio': {
+                    required: 'Ingrese Fecha Inicio',
+                    date: 'Fecha Inicio incorrecta'
+                },
+                'Filtro.Solicitud.FechaSolicitudHasta': {
+                    required: 'Ingrese Fecha Hasta',
+                    date: 'Fecha Hasta incorrecta',
+                    dateMayorIgual: "La fecha de inicio no puede ser mayor que la fecha hasta"
+                }
+            }
         });
     }
 }

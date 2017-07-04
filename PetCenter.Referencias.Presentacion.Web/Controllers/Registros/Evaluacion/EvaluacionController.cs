@@ -404,7 +404,7 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.Evaluacio
 
                 if (SolicitudPaginado.Filtro.Solicitud.FechaSolicitudHasta.ToShortDateString() == "1/01/0001")
                 {
-                    SolicitudPaginado.Filtro.Solicitud.FechaSolicitudHasta = DateTime.Now;
+                    SolicitudPaginado.Filtro.Solicitud.FechaSolicitudHasta = DateTime.Now.AddDays(-30);
                 }
             }
 

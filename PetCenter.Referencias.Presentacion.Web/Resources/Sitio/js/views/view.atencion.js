@@ -83,5 +83,32 @@
 
         //});
 
+    },
+
+    validacionBuscar: function () {
+        $(this.formAtencion).validacionAsistencia({
+            rules: {
+                'Filtro.Referencia.FechaSolicitudInicio': {
+                    required: true,
+                    date: true
+                },
+                'Filtro.Referencia.FechaSolicitudFin': {
+                    required: true,
+                    date: true,
+                    dateMayorIgual: 'Filtro_Referencia_FechaSolicitudInicio'
+                }
+            },
+            messages: {
+                'Filtro.Referencia.FechaSolicitudInicio': {
+                    required: 'Ingrese Fecha Inicio',
+                    date: 'Fecha Inicio incorrecta'
+                },
+                'Filtro.Referencia.FechaSolicitudFin': {
+                    required: 'Ingrese Fecha Fin',
+                    date: 'Fecha Hasta incorrecta',
+                    dateMayorIgual: "La fecha de inicio no puede ser mayor que la fecha fin"
+                }
+            }
+        });
     }
 };

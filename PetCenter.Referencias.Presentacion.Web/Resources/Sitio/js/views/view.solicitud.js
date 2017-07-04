@@ -118,20 +118,23 @@
         });
     },
 
-    grabarSolicitud: function () {
+    grabar: function () {
 
-        //if (!$(solicitudjs.formSolicitud).valid()) return false;
+        $('#Guardar').on('click', function () {
+            if (!$(solicitudjs.formSolicitud).valid()) return false;
+            var data = $(solicitudjs.formSolicitud).serializeArray();
 
-        //var url = "";
-        //var data = $(solicitudjs.formSolicitud).serializeArray();
-        //var request = {
-        //    titulo: "Guardar Solicitud",
-        //    mensaje: "¿Está seguro de guardar la solicitud?",
-        //    url: url,
-        //    data: data
-        //};
+            var request = {
+                titulo: "Guardar Solicitud",
+                mensaje: "¿Está seguro de grabar los datos?",
+                url: "Registrar",
+                data: data
+            };
 
-        //helperjs.confirmar(request);
+            helperjs.confirmar(request);
+
+        });
+
     },
 
     ocultar: function () {

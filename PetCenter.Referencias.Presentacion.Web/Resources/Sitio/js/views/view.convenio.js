@@ -112,9 +112,9 @@
                     numeroMayorCero: true,
                     noEspeciales: sitiojs.caracter_restringido_numero,
                 },
-                'Convenio.Observacion': {
-                    required: true,
-                }
+                //'Convenio.Observacion': {
+                //    required: true,
+                //}
             },
             messages: {
                 'Convenio.FechaConvenio': {
@@ -124,13 +124,13 @@
                     required: 'Seleccione Fecha Vencimiento',
                 },
                 'Convenio.ImporteConvenio': {
-                    required: 'Ingrese Linea de Crédito',
+                    required: 'Ingrese Línea de Crédito',
                     numeroMayorCero: 'Ingrese mayor a 0',
                     noEspeciales: 'No ingrese caracteres especiales',
                 },
-                'Convenio.Observacion': {
-                    required: 'Ingrese Observación',
-                }
+                //'Convenio.Observacion': {
+                //    required: 'Ingrese Observación',
+                //}
             }
         });
     },
@@ -283,6 +283,9 @@
 
     grabar: function () {
         $("#Guardar").on("click", function () {
+
+            if (!$(conveniojs.formConvenio).valid()) return false;
+
             //Se ingresa al menos un servicio
             var rowCount = $('#tab-servicios tbody > tr').length;
             if (rowCount == 0) {

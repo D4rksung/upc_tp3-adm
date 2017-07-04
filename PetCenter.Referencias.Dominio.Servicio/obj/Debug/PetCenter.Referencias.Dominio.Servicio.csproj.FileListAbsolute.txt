@@ -117,3 +117,27 @@ D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Dominio.Servicio\bi
 D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Dominio.Servicio\obj\Debug\PetCenter.Referencias.Dominio.Servicio.csprojResolveAssemblyReference.cache
 D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Dominio.Servicio\obj\Debug\PetCenter.Referencias.Dominio.Servicio.dll
 D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Dominio.Servicio\obj\Debug\PetCenter.Referencias.Dominio.Servicio.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Dominio.Servicio.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Dominio.Servicio.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Dominio.Administracion.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Inyeccion.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\AutoMapper.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Transversal.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Infraestructura.Data.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\EntityFramework.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Dominio.Administracion.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Dominio.Logica.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Inyeccion.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\AutoMapper.xml
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Transversal.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\PetCenter.Referencias.Infraestructura.Data.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\bin\Debug\EntityFramework.xml
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\obj\Debug\PetCenter.Referencias.Dominio.Servicio.csprojResolveAssemblyReference.cache
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\obj\Debug\PetCenter.Referencias.Dominio.Servicio.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Dominio.Servicio\obj\Debug\PetCenter.Referencias.Dominio.Servicio.pdb

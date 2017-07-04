@@ -186,7 +186,8 @@
         <div class="asistencia-group">
             <div class="form-group">
                 <div class="col-sm-12 text-center">
-                    <button class="btn btn-primary" type="submit" id="Guardar">@Botones.BtnGuardar</button>
+                    @*<button class="btn btn-primary" type="submit" id="Guardar">@Botones.BtnGuardar</button>*@
+                    <button class="btn btn-primary" type="button" id="Guardar">@Botones.BtnGuardar</button>
                     <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("Portal", "Solicitud")'">@Botones.BtnCancelar</button>
                 </div>
             </div>
@@ -201,5 +202,6 @@
     $(document).ready(function () {
         solicitudjs.iniciar();
         solicitudjs.setearMaxLength();
+        solicitudjs.grabar();
     });
 </script>

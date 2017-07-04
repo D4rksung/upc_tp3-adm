@@ -8,6 +8,7 @@
 
         $("#Convenio_NroConvenio").numeric(false);
         $("#ReferenciaConvenioServicio_Cantidad").numeric(false);
+
     },
 
     validacionesBuscarConvenio: function () {
@@ -87,7 +88,7 @@
                         var nroConvenio = $('#Convenio_NroConvenio').val();
                         var valorBruto = parseFloat(cantidad) * parseFloat(base);
                         var valorNeto = ((100 - parseFloat(dscto)) / 100) * valorBruto;
-                      
+
                         $("#tab-refServicios tbody > tr").each(function () {
                             var tr = $(this);
                             var idServicio = tr.find("td > input.tmp-idservicio").get(0).value;
@@ -247,6 +248,27 @@
             var rowCount = $('#tab-refServicios tbody > tr').length;
             if (rowCount == 0) {
                 helperjs.mostrarMensajes.warning('Registre al menos un servicio.');
+                return false;
+            }
+
+            //valida anamnesis
+            var anamnesis = $('#Referencia_Anamnesis').val().trim();
+            if (anamnesis == '') {
+                helperjs.mostrarMensajes.warning('Ingrese Anamnesis.');
+                return false;
+            }
+
+            //valida diagnostico
+            var diagnostico = $('#Referencia_Diagnostico').val().trim();
+            if (diagnostico == '') {
+                helperjs.mostrarMensajes.warning('Ingrese Diagnóstico.');
+                return false;
+            }
+
+            //valida nombre  del personal que refiere
+            var personalRefiere = $('#Referencia_NombreRefiere').val().trim();
+            if (personalRefiere == '') {
+                helperjs.mostrarMensajes.warning('Ingrese Personal que refiere.');
                 return false;
             }
 

@@ -99,7 +99,6 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.Solicitud
         //[HttpPost]
         public ActionResult Registrar(RegistrarSolicitudDto modelo)
         {
-
             string mensaje = string.Empty;
 
             var fileStreamrs = TempData["fileStreamrs"] as HttpPostedFileBase;
