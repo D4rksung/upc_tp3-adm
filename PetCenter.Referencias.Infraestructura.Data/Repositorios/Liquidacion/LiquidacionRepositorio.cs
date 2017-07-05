@@ -37,5 +37,27 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Liquidacion
             return consulta.AsEnumerable();
         }
 
+        public LiquidacionVob Buscar(int nroLiquidacion)
+        {
+            var set = ObtenerSet<IModeloReferenciaUnidadDeTrabajo>(this);
+            var consulta = (from liq in set.GCR_Liquidaciones
+                            where liq.NroLiquidacion == nroLiquidacion
+                            select new LiquidacionVob
+                            {
+                                NroLiquidacion = liq.NroLiquidacion,
+                                Anio = liq.Anio,
+                                Mes = liq.Mes,
+                                IdCliente = liq.IdCliente,
+                                FechaLiquidacion = liq.FechaLiquidacion,
+                                ValorBruto = liq.ValorBruto,
+                                ValorDctoComercial = liq.ValorDctoComercial,
+                                ValorNeto = liq.ValorNeto,
+                                ValorAjuste = liq.ValorAjuste,
+                                ValorImpuesto = liq.ValorImpuesto,
+                                ValorTotal = liq.ValorTotal
+                            });
+            return consulta.FirstOrDefault();
+        }
+
     }
 }

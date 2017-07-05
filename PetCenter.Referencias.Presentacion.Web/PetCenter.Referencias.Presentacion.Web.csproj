@@ -529,6 +529,7 @@
     <Content Include="Views\Reportes\_ValorizadoConvenio.cshtml" />
     <Content Include="Views\Reportes\_ServicioReferencia.cshtml" />
     <Content Include="Views\Reportes\_Reportes.cshtml" />
+    <Content Include="Views\Registros\Liquidacion\_ServiciosMostrar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

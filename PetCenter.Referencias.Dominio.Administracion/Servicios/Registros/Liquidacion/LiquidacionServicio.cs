@@ -79,6 +79,13 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Liqui
                     liquidacion.IdCliente = editor.Atencion.IdCliente;
                     liquidacion.FechaLiquidacion = DateTime.Now;
 
+                    // var _calcNeto = parseFloat(neto.text().trim()) + parseFloat(valorAjuste);
+                    var _calcNeto = Convert.ToDecimal(liquidacion.ValorNeto + liquidacion.ValorAjuste);
+                    var _calcIgv = Convert.ToDecimal(_calcNeto) * Convert.ToDecimal(0.18);
+                    liquidacion.ValorImpuesto = _calcIgv;
+                    var _calcTotal = Convert.ToDecimal(_calcIgv) + Convert.ToDecimal(liquidacion.ValorNeto);
+                    liquidacion.ValorTotal = _calcTotal;
+
                     _liquidacionRepositorio.Agregar(liquidacion);
 
                     //Confirmando
@@ -113,6 +120,11 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Liqui
         public IEnumerable<LiquidacionTotalConvenioDto> ObtenerTotalPorConvenio()
         {
             return _liquidacionRepositorio.ObtenerTotalPorConvenio().ProyectarComoLista<LiquidacionTotalConvenioDto>();
+        }
+
+        public LiquidacionDto Buscar(int nroLiquidacion)
+        {
+            return _liquidacionRepositorio.Buscar(nroLiquidacion).ProyectarComo<LiquidacionDto>();
         }
     }
 }
