@@ -8,5 +8,6 @@ namespace PetCenter.Referencias.Dominio.Logica.Repositorio.Registros
     public interface ILiquidacionRepositorio : IRepositorio<GCR_Liquidaciones>
     {
         IEnumerable<LiquidacionTotalConvenioVob> ObtenerTotalPorConvenio();
+        LiquidacionVob Buscar(int nroLiquidacion);
     }
 }

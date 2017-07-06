@@ -37,7 +37,7 @@
                 <a class="icon-Asistencia16-acc-liquidar" title="Liquidar" href="@Url.Action("Detalle","Liquidacion",new{idCliente=item.IdCliente, idReferencia = item.NroSolicitudRef})" />
            }
            else {
-                <a class="icon-Asistencia16-acc-view" title="Ver" href="@Url.Action("Detalle","Liquidacion",new{idCliente=item.IdCliente, idReferencia = item.NroSolicitudRef})" />
+                <a class="icon-Asistencia16-acc-view" title="Ver" href="@Url.Action("Detalle","Liquidacion",new{idCliente=item.IdCliente, idReferencia = item.NroSolicitudRef, nroLiquidacion = item.NroLiquidacion})" />
            }
         }
                             </text>)

@@ -10,4 +10,7 @@ C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Log\bin\Debug\PetCenter.Referencia
 C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Log\bin\Debug\PetCenter.Referencias.Log.pdb
 C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Log\obj\Debug\PetCenter.Referencias.Log.dll
 C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Log\obj\Debug\PetCenter.Referencias.Log.pdb
-C:\Jherrera\upc_tp3-adm\PetCenter.Referencias.Log\obj\Debug\PetCenter.Referencias.Log.csprojResolveAssemblyReference.cache
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Log\bin\Debug\PetCenter.Referencias.Log.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Log\bin\Debug\PetCenter.Referencias.Log.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Log\obj\Debug\PetCenter.Referencias.Log.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Log\obj\Debug\PetCenter.Referencias.Log.pdb

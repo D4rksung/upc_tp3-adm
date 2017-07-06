@@ -297,8 +297,8 @@ var sitiojs = {
 
         $.validator.addMethod("horaMayorIgual", function (value, element, dependenceId) {
             if (dependenceId != "") {
-                var hora1 = value.substr(0,5);
-                var hora2 = $.trim($('#' + dependenceId).val().substr(0,5));
+                var hora1 = value.substr(0, 5);
+                var hora2 = $.trim($('#' + dependenceId).val().substr(0, 5));
                 if (hora2 == "" || hora2 == null) return true;
 
                 if (hora1 == undefined) return false;
@@ -368,7 +368,7 @@ var sitiojs = {
 
         });
         $.validator.addMethod("cantidad11Caracteres", function (value, element) {
-           // debugger;
+            // debugger;
             var cantidad = value;
             if (cantidad.length < 11)
                 return false
@@ -399,13 +399,13 @@ var sitiojs = {
         //});
     },
 
-    inicioBandeja: function () {        
+    inicioBandeja: function () {
         var url = helperjs.urlBase + "Inicio/Index";
         $.ajax({
             type: 'POST',
             url: url,
             data: {
-                
+
             }
         }).done(function (response) {
             if (response.url != "") {
@@ -414,7 +414,7 @@ var sitiojs = {
             else {
                 window.close();
             }
-        });        
+        });
     },
 
     validacionCaracter: function (e) {
@@ -537,6 +537,18 @@ var sitiojs = {
         });
     },
 
+    ValidarSoloAlfanumericos: function (input) {
+        $(input).keypress(function (e) {            
+            var regex = new RegExp("^[a-zA-Z0-9]+$");
+            var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+            if (regex.test(str)) {
+                return true;
+            }
+            e.preventDefault();
+            return false;
+        });
+    },
+
     validarHoraIgual: function (horaA, horaB) {
         if (horaB != "") {
 
@@ -566,15 +578,15 @@ var sitiojs = {
         }
         return false;
     },
-      
-    
+
+
     validarHoraMayorIgual: function (horaA, horaB) {
         if (horaB != "") {
 
             //obteniendo meridianos
             var mer1 = horaA.substr(horaA.length - 2);
             var mer2 = horaB.substr(horaB.length - 2);
-            
+
             var hora1 = horaA.substr(0, 5);
             var hora2 = horaB.substr(0, 5);
             if (hora2 == "" || hora2 == null) return true;
@@ -595,7 +607,7 @@ var sitiojs = {
 
             if (mer1 == mer2) {
                 if (parseInt(date1) > parseInt(date2)) return true
-            }else
+            } else
                 return true;
 
         }
@@ -622,12 +634,12 @@ var sitiojs = {
             if (hora2.length > 5) return false;
 
             if (hora1.length <= 2) hora1 = parseInt(hora1) + ":00";
-           
+
             if (mer1 == 'PM' || (mer1 == 'AM' && parseInt(hora1.toString().split(':')[0]) == 12)) {
                 var horas = parseInt(hora1.toString().split(':')[0]) + 12;
                 hora1 = horas.toString().concat(":" + hora1.toString().split(':')[1]);
             }
-            
+
             var date1 = helperjs.hora(hora1);
 
 
@@ -637,7 +649,7 @@ var sitiojs = {
                 var horas = parseInt(hora2.toString().split(':')[0]) + 12;
                 hora2 = horas.toString().concat(":" + hora2.toString().split(':')[1]);
             }
-            
+
             var date2 = helperjs.hora(hora2);
 
             if (mer2 == "PM" && mer1 == "AM") {
@@ -645,7 +657,7 @@ var sitiojs = {
                 if (Math.abs(dif2) <= parseInt(intervalo * 100))
                     return true;
             } else {
-                
+
                 if (mer1 == "AM" && parseInt(hora1.toString().split(':')[0]) == 12) {
                     var dif3 = parseInt(date1) - parseInt(date2) - 1200;
                     if (dif3 <= parseInt(intervalo * 100) && dif3 > 0)
@@ -656,11 +668,11 @@ var sitiojs = {
                         return true;
                 }
             }
-            
+
         }
         return false;
     },
 
-   
+
 
 };

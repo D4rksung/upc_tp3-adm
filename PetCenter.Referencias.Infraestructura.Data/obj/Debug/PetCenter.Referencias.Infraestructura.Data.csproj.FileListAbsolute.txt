@@ -92,3 +92,24 @@ D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Infraestructura.Dat
 D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.csproj.GenerateResource.Cache
 D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.dll
 D:\UPC\TP3-Junio-2017\Codigo 3\Fuentes\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.dll.config
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Infraestructura.Data.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Dominio.Logica.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Transversal.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\AutoMapper.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Dominio.Logica.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\PetCenter.Referencias.Transversal.pdb
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.xml
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\AutoMapper.xml
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\es\EntityFramework.resources.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.csprojResolveAssemblyReference.cache
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.Recursos.Operadores.resources
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.Recursos.MensajesData.resources
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.csproj.GenerateResource.Cache
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.dll
+C:\Desarrollo\upc_tp3-adm\upc_tp3-adm\PetCenter.Referencias.Infraestructura.Data\obj\Debug\PetCenter.Referencias.Infraestructura.Data.pdb

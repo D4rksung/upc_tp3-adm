@@ -43,34 +43,25 @@
             <tr>
                 <td colspan="4" class="asistencia-column-righ"></td>
                 <td class="asistencia-column-righ">
-                    <span id="ValorNeto">
-                        @Model.Liquidacion.ValorNeto
-                    </span>
-                    @*<input type="hidden" id="Editor.Liquidacion.ValorNeto" name="Editor.Liquidacion.ValorNeto" class="tmp-valorneto" />*@
+                    @Model.Liquidacion.ValorNeto
                 </td>
             </tr>
             <tr>
                 <td colspan="4" class="asistencia-column-righ"><strong>Valor Ajuste</strong></td>
                 <td class="asistencia-group asistencia-column-righ col-sm-1">
-                    @Html.TextBoxFor(m => m.Liquidacion.ValorAjuste, new { @class = "form-control asistencia-requerido text-right", @required = "" })
+                    @Model.Liquidacion.ValorAjuste
                 </td>
             </tr>
             <tr>
                 <td colspan="4" class="asistencia-column-righ"><strong>IGV</strong></td>
                 <td class="asistencia-column-righ">
-                    <span id="ValorImpuesto">
-                        @Model.Liquidacion.ValorImpuesto
-                    </span>
-                    @*<input type="hidden" id="Editor.Liquidacion.ValorImpuesto" name="Editor.Liquidacion.ValorImpuesto" class="tmp-valorimpuesto" />*@
+                    @Model.Liquidacion.ValorImpuesto
                 </td>
             </tr>
             <tr>
                 <td colspan="4" class="asistencia-column-righ"><strong>Valor Liquida</strong></td>
                 <td class="asistencia-column-righ">
-                    <span id="ValorTotal">
-                        @Model.Liquidacion.ValorTotal
-                    </span>
-                    <input type="hidden" id="@Model.Liquidacion.ValorTotal" name="@Model.Liquidacion.ValorTotal" class="tmp-valortotal" />
+                    @Model.Liquidacion.ValorTotal
                 </td>
             </tr>
         </tbody>

@@ -4,8 +4,6 @@
 
 @model PetCenter.Referencias.Presentacion.Web.Models.Registros.Evaluacion.EvaluacionPaginadoModelo
 @{
-    //ViewBag.TituloSeccion = "Registro de convenios de referencia";
-    //ViewBag.TituloMenu = "Evaluar Solicitud de Convenio";
     ViewBag.TituloMenu = "Evaluar Solicitud Convenio";
     Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
 }
@@ -18,9 +16,9 @@
 
     <fieldset class="fieldset-filter">
         <legend class="text-muted h5">Búsqueda</legend>
-        <div class="asistencia-right asistencia-point">
+        <div class="asistencia-left asistencia-point">
 
-            <div class="form-group">
+            <div class="form-group asistencia-group">
                 @Html.Label("Nro de Ruc: ", new { @class = "col-sm-2 control-label" })
                 <div class="col-sm-3">
                     @Html.TextBoxFor(m => m.Filtro.Solicitud.NroRUC, new { @class = "form-control" })
@@ -30,18 +28,19 @@
                     @Html.TextBoxFor(m => m.Filtro.Solicitud.RazonSocial, new { @class = "form-control" })
                 </div>
             </div>
-            <div class="form-group">
+
+            <div class="form-group asistencia-group">
                 @Html.Label("Fecha Inicio: ", new { @class = "col-sm-2 control-label" })
                 <div class="col-sm-3">
                     @Html.TextBoxFor(m => m.Filtro.Solicitud.FechaSolicitudInicio,
-                   Model.Filtro.Solicitud.FechaSolicitudInicio == null ? string.Empty : Model.Filtro.Solicitud.FechaSolicitudInicio.ToString(Formatos.FechaCorta)
-                   , new { @class = "form-control asistencia-fecha-corta" })
+                       Model.Filtro.Solicitud.FechaSolicitudInicio == null ? string.Empty : Model.Filtro.Solicitud.FechaSolicitudInicio.ToString(Formatos.FechaCorta)
+                       , new { @class = "form-control asistencia-fecha-corta", @required = "" })
                 </div>
                 @Html.Label("Fecha Fin: ", new { @class = "col-sm-2 control-label" })
                 <div class="col-sm-5">
                     @Html.TextBoxFor(m => m.Filtro.Solicitud.FechaSolicitudHasta,
-                   Model.Filtro.Solicitud.FechaSolicitudHasta == null ? string.Empty : Model.Filtro.Solicitud.FechaSolicitudHasta.ToString(Formatos.FechaCorta)
-                   , new { @class = "form-control asistencia-fecha-corta" })
+                       Model.Filtro.Solicitud.FechaSolicitudHasta == null ? string.Empty : Model.Filtro.Solicitud.FechaSolicitudHasta.ToString(Formatos.FechaCorta)
+                       , new { @class = "form-control asistencia-fecha-corta", @required = "" })
                 </div>
             </div>
 
@@ -63,6 +62,6 @@
 
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
-
+        evaluacionjs.validacionBuscar()
     });
 </script>

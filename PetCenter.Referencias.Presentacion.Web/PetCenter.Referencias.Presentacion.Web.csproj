@@ -294,6 +294,7 @@
     <Content Include="Resources\Sitio\js\views\view.contrareferencia.js" />
     <Content Include="Resources\Sitio\js\views\view.convenio.js" />
     <Content Include="Resources\Sitio\js\views\view.evaluacion.js" />
+    <Content Include="Resources\Sitio\js\views\view.liquidacion.js" />
     <Content Include="Resources\Sitio\js\views\view.mascota.js" />
     <Content Include="Resources\Sitio\js\views\view.referencia.js" />
     <Content Include="Resources\Sitio\js\views\view.solicitud.js" />
@@ -528,6 +529,7 @@
     <Content Include="Views\Reportes\_ValorizadoConvenio.cshtml" />
     <Content Include="Views\Reportes\_ServicioReferencia.cshtml" />
     <Content Include="Views\Reportes\_Reportes.cshtml" />
+    <Content Include="Views\Registros\Liquidacion\_ServiciosMostrar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

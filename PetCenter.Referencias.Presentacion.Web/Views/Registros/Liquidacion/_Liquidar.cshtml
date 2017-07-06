@@ -2,7 +2,6 @@
 @using PetCenter.Referencias.Presentacion.Web.Helpers.Html
 @model PetCenter.Referencias.Presentacion.Web.Models.Registros.Liquidacion.LiquidacionEditorModelo
 
-
 @{
     ViewBag.TituloMenu = "Gestionar Liquidaciones por Convenio";
     Layout = "~/Views/Comun/Inicio/_Estructura.cshtml";
@@ -10,6 +9,10 @@
 
 @using (Html.BeginSecureForm("Registrar", "Liquidacion", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "formLiquidacion" }))
 {
+
+    //Mensajes
+    @Html.Partial("_Mensajes", Model)
+    @Html.Partial("_MensajesTodos", Model)
 
     @Html.HiddenFor(m => m.Atencion.Mes)
     @Html.HiddenFor(m => m.Atencion.Anio)
@@ -64,11 +67,21 @@
         </div>
 
         .
+        @{
+            if (Model.Atencion.NroLiquidacion == 0)
+            {
+                <div class="table-responsive">
+                    @Html.Partial("_Servicios")
+                </div>
+            }
+            else
+            {
+                @Html.Partial("_ServiciosMostrar")
+            }
+        }
 
-        <div class="table-responsive">
-            @Html.Partial("_Servicios")
 
-        </div>
+      
 
 
     </fieldset>
@@ -76,3 +89,11 @@
 }
 
 
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        liquidacionjs.iniciar();
+        liquidacionjs.validacion();
+        liquidacionjs.aplicaAjuste();
+        liquidacionjs.guardar();
+    });
+</script>

@@ -65,12 +65,20 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.Liquidaci
         #endregion
 
         #region DETALLE
-        public ActionResult Detalle(int idCliente, int idReferencia)
+        public ActionResult Detalle(int idCliente, int idReferencia, int? nroLiquidacion = null)
         {
 
             var atencion = _registrosServicio.AtencionServicio.BuscarPorClienteReferencia(idCliente, idReferencia);
             var detalle = _registrosServicio.AtencionServicio.ListarPorClienteReferencia(idCliente, idReferencia);
-            var liquidacion = _registrosServicio.LiquidacionServicio.Calcular(detalle);
+            var liquidacion = new LiquidacionDto();
+            if (nroLiquidacion.HasValue)
+            {
+                liquidacion = _registrosServicio.LiquidacionServicio.Buscar(nroLiquidacion.Value);
+            }
+            else
+            {
+                liquidacion = _registrosServicio.LiquidacionServicio.Calcular(detalle);
+            }
 
             var modelo = new LiquidacionEditorModelo
             {
@@ -87,22 +95,23 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.Liquidaci
         [HttpPost]
         public ActionResult Registrar(LiquidacionEditorModelo editor)
         {
+
             string mensaje = string.Empty;
 
             var modelo = new RegistrarLiquidacionDto
             {
-               Atencion = editor.Atencion,
-               Liquidacion = editor.Liquidacion
+                Atencion = editor.Atencion,
+                Liquidacion = editor.Liquidacion
             };
 
             var resultado = _registrosServicio.LiquidacionServicio.Registrar(modelo);
             if (resultado == -1)
                 mensaje = MensajeMvc.MensajePeligro(Mensajes.ErrorGenerico, Util.ObtenerControllerName(Request), Util.ObtenerActionName(Request));
             else
-            {                
+            {
                 mensaje = MensajeMvc.MensajeSatisfactorio(Mensajes.LiquidacionRegistrada, resultado);
             }
-            
+
             return RedirectToAction("Index", new { mensaje = mensaje });
         }
         #endregion

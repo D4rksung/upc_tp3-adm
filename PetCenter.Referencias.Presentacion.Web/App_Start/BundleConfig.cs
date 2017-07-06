@@ -50,7 +50,8 @@ namespace PetCenter.Referencias.Presentacion.Web.App_Start
                           "~/Resources/Sitio/js/views/view.referencia.js",
                           "~/Resources/Sitio/js/views/view.mascota.js",
                           "~/Resources/Sitio/js/views/view.atencion.js",
-                          "~/Resources/Sitio/js/views/view.contrareferencia.js"
+                          "~/Resources/Sitio/js/views/view.contrareferencia.js",
+                          "~/Resources/Sitio/js/views/view.liquidacion.js"
                           ));
 
             bundles.Add(new StyleImagePathBundle("~/css/bootstrap").Include(

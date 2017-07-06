@@ -8,6 +8,7 @@
     <Property Name="NombreCliente" Type="varchar" MaxLength="200" />
     <Property Name="EmailCliente" Type="varchar" MaxLength="50" />
     <Property Name="AutorizaUsoDatos" Type="char" MaxLength="1" />
+    <Property Name="Direccion" Type="varchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="GCP_Especie">
     <Key>
@@ -44,7 +45,7 @@
     </Key>
     <Property Name="IdCliente" Type="int" Nullable="false" />
     <Property Name="TpoDoc" Type="char" MaxLength="3" />
-    <Property Name="NroDoc" Type="char" MaxLength="3" />
+    <Property Name="NroDoc" Type="varchar" MaxLength="25" />
     <Property Name="ApePat" Type="varchar" MaxLength="100" />
     <Property Name="ApeMat" Type="varchar" MaxLength="100" />
     <Property Name="Nombres" Type="varchar" MaxLength="100" />
@@ -138,6 +139,7 @@
     <Property Name="ValorNeto" Type="decimal" Precision="12" Scale="2" />
     <Property Name="ValorImpuesto" Type="decimal" Precision="12" Scale="2" />
     <Property Name="ValorTotal" Type="decimal" Precision="12" Scale="2" />
+    <Property Name="ValorAjuste" Type="decimal" Precision="12" Scale="2" />
   </EntityType>
   <EntityType Name="GCR_RepresentanteClinica">
     <Key>

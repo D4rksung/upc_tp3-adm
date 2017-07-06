@@ -27,5 +27,7 @@ namespace PetCenter.Referencias.Dominio.Logica.VOBs.Registros.Liquidacion
         public Nullable<decimal> ValorImpuesto { get; set; }
 
         public Nullable<decimal> ValorTotal { get; set; }
+
+        public Nullable<decimal> ValorAjuste { get; set; }
     }
 }

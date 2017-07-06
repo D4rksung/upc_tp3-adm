@@ -9,5 +9,6 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Liqui
         LiquidacionDto Calcular(IEnumerable<AtencionDto> listaAtencion);
         int Registrar(RegistrarLiquidacionDto editor);
         IEnumerable<LiquidacionTotalConvenioDto> ObtenerTotalPorConvenio();
+        LiquidacionDto Buscar(int nroLiquidacion);
     }
 }
