@@ -14,6 +14,10 @@
 
     },
 
+    validarFiltros: function () {
+        $("#Filtro_Solicitud_NroRUC").numeric(false);
+    },
+
     validaciones: function () {
 
         $(this.formEvaluacion).validacionAsistencia({

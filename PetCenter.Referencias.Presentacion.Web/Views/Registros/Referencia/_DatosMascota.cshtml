@@ -42,7 +42,7 @@
     <div class="form-group asistencia-group">
         @Html.Label("Fecha Nacimiento: ", new { @class = "col-sm-2 control-label form-label" })
         <div class="col-sm-3">
-            @Html.TextBoxFor(m => m.Mascota.FechaNacimiento, new { @class = "form-control asistencia-fecha-corta", @placeholder = "Fecha Nac.", @readonly = "readonly" })
+            @Html.TextBoxFor(m => m.Mascota.FechaNacimiento, new { @class = "form-control asistencia-fecha-corta", @placeholder = "Fecha Nac.", @disabled = "" })
         </div>
     </div>
 

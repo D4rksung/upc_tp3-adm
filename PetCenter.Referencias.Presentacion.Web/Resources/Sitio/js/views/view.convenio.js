@@ -13,9 +13,6 @@
         $("#ConvenioDescuento_FactorDcto").numeric(false);
 
         $("#Convenio_ImporteConvenio").numeric('.');
-
-        // $("#Guardar").on("click", conveniojs.grabar);
-
     },
 
     validacionesBuscadorServicio: function () {
@@ -29,7 +26,7 @@
                     required: true,
                     numeroMayorCero: true,
                     noEspeciales: sitiojs.caracter_restringido_numero,
-                    //numeroMenorQue: 'Cien'
+                    numeroMenorQue: 'Cien'
                 },
             },
             messages: {
@@ -40,7 +37,7 @@
                     required: 'Ingrese Descuento',
                     numeroMayorCero: 'Ingrese mayor a 0',
                     noEspeciales: 'No ingrese caracteres especiales',
-                    //numeroMenorQue: '% de asistencia debe ser menor a cien.',
+                    numeroMenorQue: '% de asistencia debe ser menor a cien.',
                 },
             }
         });
@@ -57,19 +54,19 @@
                     required: true,
                     numeroMayorCero: true,
                     noEspeciales: sitiojs.caracter_restringido_numero,
-                    //numeroMenorQue: 'Cien'
+                    numeroMenorQue: 'ConvenioDescuento_Maximo'
                 },
                 'ConvenioDescuento.Maximo': {
                     required: true,
                     numeroMayorCero: true,
                     noEspeciales: sitiojs.caracter_restringido_numero,
-                    //numeroMenorQue: 'Cien'
+                   // numeroMayorQue: 'ConvenioDescuento_Minimo'
                 },
                 'ConvenioDescuento.FactorDcto': {
                     required: true,
                     numeroMayorCero: true,
                     noEspeciales: sitiojs.caracter_restringido_numero,
-                    //numeroMenorQue: 'Cien'
+                    numeroMenorQue: 'Cien'
                 }
             },
             messages: {
@@ -80,19 +77,19 @@
                     required: 'Ingrese Mínimo',
                     numeroMayorCero: 'Ingrese mayor a 0',
                     noEspeciales: 'No ingrese caracteres especiales',
-                    //numeroMenorQue: '% de asistencia debe ser menor a cien.',
+                    numeroMenorQue: 'Valor menor al máximo.',
                 },
                 'ConvenioDescuento.Maximo': {
                     required: 'Ingrese Máximo',
                     numeroMayorCero: 'Ingrese mayor a 0',
                     noEspeciales: 'No ingrese caracteres especiales',
-                    //numeroMenorQue: '% de asistencia debe ser menor a cien.',
+                   // numeroMayorQue: 'Valor mayor al mínimo.',
                 },
                 'ConvenioDescuento.FactorDcto': {
                     required: 'Ingrese Porcentaje',
                     numeroMayorCero: 'Ingrese mayor a 0',
                     noEspeciales: 'No ingrese caracteres especiales',
-                    //numeroMenorQue: '% de asistencia debe ser menor a cien.',
+                    numeroMenorQue: '% de asistencia debe ser menor a cien.',
                 }
             }
         });
@@ -285,6 +282,24 @@
         $("#Guardar").on("click", function () {
 
             if (!$(conveniojs.formConvenio).valid()) return false;
+
+            var fechaSolicitud = $('#Solicitud_FechaSolicitud').val().substring(0, 10);
+            var fechaConvenio = $('#Convenio_FechaConvenio').val();
+            var fechaVencimiento = $('#Convenio_FechaVencimiento').val();
+
+            var _fechaSolicitud = helperjs.fecha_conver(fechaSolicitud);
+            var _fechaConvenio = helperjs.fecha_conver(fechaConvenio);
+            var _fechaVencimiento = helperjs.fecha_conver(fechaVencimiento);
+
+            if (_fechaConvenio < _fechaSolicitud) {
+                helperjs.mostrarMensajes.warning('La fecha Convenio no puede ser menor a la fecha Solicitud.');
+                return false;
+            }
+
+            if (_fechaVencimiento < _fechaConvenio) {
+                helperjs.mostrarMensajes.warning('La fecha Vencimiento no puede ser menor a la fecha Convenio.');
+                return false;
+            }
 
             //Se ingresa al menos un servicio
             var rowCount = $('#tab-servicios tbody > tr').length;

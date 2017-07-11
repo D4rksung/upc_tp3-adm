@@ -49,21 +49,9 @@
                     noEspeciales: sitiojs.caracter_restringido_correo,
                     email: true
                 },
-                //'Solicitud.IdBanco': {
-                //    required: true
-                //},
-                //'Solicitud.IdMoneda': {
-                //    required: true
-                //},
-                //'Solicitud.ImporteGarantia': {
-                //    required: true,
-                //    numeroMayorCero: true
-                //},
                 //'Solicitud.FechaVencimientoG': {
-                //    required: true
-                //},
-                //'Solicitud.Nrogarantia': {
-                //    required: true
+                //    date: true,
+                //    dateMenor: 'Solicitud_FechaActual'
                 //}
             },
             messages: {
@@ -98,21 +86,9 @@
                     noEspeciales: 'No ingrese caracteres especiales',
                     email: 'Correo electrónico incorrecto'
                 },
-                //'Solicitud.IdBanco': {
-                //    required: 'Ingrese Banco'
-                //},
-                //'Solicitud.IdMoneda': {
-                //    required: 'Ingrese Moneda'
-                //},
-                //'Solicitud.ImporteGarantia': {
-                //    required: 'Ingrese Monto',
-                //    numeroMayorCero: 'Monto tiene que ser mayor que cero'
-                //},
                 //'Solicitud.FechaVencimientoG': {
-                //    required: 'Ingrese Fecha de Vencimiento'
-                //},
-                //'Solicitud.Nrogarantia': {
-                //    required: 'Ingrese Nro de Referencia'
+                //    date: "El formato de fecha no es el correcto",
+                //    dateMenor: "La fecha de Vencimiento no puede ser menor a la fecha actual"
                 //}
             }
         });
@@ -123,6 +99,17 @@
         $('#Guardar').on('click', function () {
 
             if (!$(solicitudjs.formSolicitud).valid()) return false;
+
+            //validamos la fecha de vencimiento
+            var fechaActual = $('#Solicitud_FechaActual').val().substring(0, 10);
+            var fechaVencimiento = $('#Solicitud_FechaVencimientoG').val();
+            var date2 = helperjs.fecha_conver(fechaActual);
+            var date1 = helperjs.fecha_conver(fechaVencimiento);
+
+            if (date1 < date2) {
+                helperjs.mostrarMensajes.warning('La fecha de Vencimiento no puede ser menor a la fecha actual.');
+                return false;
+            }
 
             //validamos la obligatoriedad de 3 archivos.
             contador = 0;
@@ -142,7 +129,7 @@
                 helperjs.mostrarMensajes.warning('Ingrese como mínimo 3 archivos adjuntos.');
                 return false;
             }
-            
+
             var data = $(solicitudjs.formSolicitud).serializeArray();
 
             var request = {

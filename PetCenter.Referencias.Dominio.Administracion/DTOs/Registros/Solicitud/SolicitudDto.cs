@@ -69,5 +69,6 @@ namespace PetCenter.Referencias.Dominio.Administracion.DTOs.Registros.Solicitud
 
         public System.DateTime FechaSolicitudInicio { get; set; }
         public System.DateTime FechaSolicitudHasta { get; set; }
+        public DateTime FechaActual { get; set; }
     }
 }

@@ -22,6 +22,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Servicio
         {
             var set = ObtenerSet<IModeloReferenciaUnidadDeTrabajo>(this);
             var consulta = (from b in set.GG_Servicio
+                            where b.idArea == 1
                             select new ServicioVob
                             {
                                 IdServicio = b.idServicio,

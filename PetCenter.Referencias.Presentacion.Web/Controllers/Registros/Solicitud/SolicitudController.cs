@@ -69,7 +69,7 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.Solicitud
 
             var modelo = new SolicitudEditorModelo
             {
-                Solicitud = new SolicitudDto() { FechaSolicitud = DateTime.Now, FechaVencimientoG = DateTime.Now }
+                Solicitud = new SolicitudDto() { FechaSolicitud = DateTime.Now, FechaVencimientoG = DateTime.Now, FechaActual = DateTime.Now}
             };
 
             ViewBag.TiposDocumento = _maestrosServicio.GeneralServicio.TipoDocumentoListar();

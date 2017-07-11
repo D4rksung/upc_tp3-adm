@@ -13,7 +13,7 @@
     @Html.Hidden("buscador_especie", null, new { @class = "noeliminar" })
     @Html.Hidden("buscador_raza", null, new { @class = "noeliminar" })
     @Html.Hidden("buscador_fnac", null, new { @class = "noeliminar" })
-    @Html.HiddenFor(m=> m.Filtro.Mascota.IdCliente);
+    @Html.HiddenFor(m=> m.Filtro.Mascota.IdCliente, new { @class = "noeliminar" });
 
     <fieldset>
         <legend class="text-muted h5 h1">Búsqueda Mascota</legend>

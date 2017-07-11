@@ -12,6 +12,8 @@
     @Html.Partial("_Mensajes", Model)
     @Html.Partial("_MensajesTodos", Model)
 
+    @Html.HiddenFor(m=> m.Solicitud.FechaActual)
+
     <fieldset class="fieldset-filter-principal">
         
         <br />

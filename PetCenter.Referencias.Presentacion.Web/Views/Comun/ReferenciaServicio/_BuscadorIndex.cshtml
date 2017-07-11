@@ -44,14 +44,14 @@
         <div class="form-group asistencia-group">
             @Html.Label("Cantidad: ", new { @class = "col-sm-2 control-label form-label text-left" })
             <div class="col-sm-3">
-                @Html.TextBoxFor(m => m.ReferenciaConvenioServicio.Cantidad, new { @class = "form-control asistencia-requerido text-right", @placeholder = "Cantidad", @required = "", @maxlenght = 3 })
+                @Html.TextBoxFor(m => m.ReferenciaConvenioServicio.Cantidad, new { @class = "form-control asistencia-requerido text-right", @placeholder = "Cantidad", @required = "", @maxlength = 3 })
             </div>
         </div>
 
         <div class="form-group asistencia-group">
             @Html.Label("Observaciones: ", new { @class = "col-sm-2 control-label form-label text-left" })
             <div class="col-sm-9">
-                @Html.TextAreaFor(m => m.ReferenciaConvenioServicio.Observaciones, new { @class = "form-control asistencia-requerido", @placeholder = "Observaciones", @required = "", @maxlenght = 200 })
+                @Html.TextAreaFor(m => m.ReferenciaConvenioServicio.Observaciones, new { @class = "form-control asistencia-requerido", @placeholder = "Observaciones", @required = "", @maxlength = 200 })
             </div>
         </div>
 

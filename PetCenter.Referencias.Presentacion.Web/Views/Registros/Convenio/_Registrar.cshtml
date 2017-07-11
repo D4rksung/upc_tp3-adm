@@ -11,6 +11,8 @@
 
     @Html.HiddenFor(m => m.Solicitud.NroSolicitud)
     @Html.HiddenFor(m => m.Solicitud.CorreoRep);
+    @Html.HiddenFor(m => m.Solicitud.FechaSolicitud);
+    @Html.Hidden("Cien", "100")
 
     //Mensajes
     @Html.Partial("_Mensajes", Model)
@@ -66,7 +68,7 @@
                 <div class="form-group asistencia-group">
                     @Html.Label("Observación: ", new { @class = "col-sm-2 control-label form-label" })
                     <div class="col-sm-9">
-                        @Html.TextBoxFor(m => m.Convenio.Observacion, new { @class = "form-control asistencia-requerido", @placeholder = "Observación", @maxlenght = 100 })
+                        @Html.TextBoxFor(m => m.Convenio.Observacion, new { @class = "form-control asistencia-requerido", @placeholder = "Observación", @maxlength = 100 })
                     </div>
                 </div>
             </div>

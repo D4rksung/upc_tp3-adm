@@ -26,13 +26,13 @@
         <div class="form-group asistencia-group">
             @Html.Label("Descripción: ", new { @class = "col-sm-2 control-label form-label text-left" })
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.ConvenioDescuento.Descripcion, new { @class = "form-control asistencia-requerido", @placeholder = "Descripción", @required = "", @maxlenght = 50 })
+                @Html.TextBoxFor(m => m.ConvenioDescuento.Descripcion, new { @class = "form-control asistencia-requerido", @placeholder = "Descripción", @required = "", @maxlength = 50 })
             </div>
         </div>
         <div class="form-group asistencia-group">
             @Html.Label("Dscto: ", new { @class = "col-sm-2 control-label form-label text-left" })
             <div class="col-sm-3">
-                @Html.TextBoxFor(m => m.ConvenioDescuento.FactorDcto, new { @class = "form-control asistencia-requerido", @placeholder = "Porcentaje", @required = "", @maxlenght = 3 })
+                @Html.TextBoxFor(m => m.ConvenioDescuento.FactorDcto, new { @class = "form-control asistencia-requerido", @placeholder = "Porcentaje", @required = "", @maxlength = 3 })
             </div>
 
         </div>

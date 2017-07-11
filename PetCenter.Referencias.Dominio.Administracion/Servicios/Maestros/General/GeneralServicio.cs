@@ -8,7 +8,7 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Maestros.Genera
         public IEnumerable<ElementoDto> TipoDocumentoListar()
         {
             var lista = new List<ElementoDto>();
-            lista.Add(new ElementoDto { Texto = "RUC", Valor = "RUC" });
+            //lista.Add(new ElementoDto { Texto = "RUC", Valor = "RUC" });
             lista.Add(new ElementoDto { Texto = "DNI", Valor = "DNI" });
             lista.Add(new ElementoDto { Texto = "CEX", Valor = "CEX" });
 
