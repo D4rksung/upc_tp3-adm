@@ -24,20 +24,30 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
     
         public int IdCliente { get; set; }
     
+        public string CodigoCliente { get; set; }
+    
         public string NombreCliente { get; set; }
     
-        public string EmailCliente { get; set; }
+        public string ApellidoCliente { get; set; }
     
-        public string AutorizaUsoDatos { get; set; }
+        public string NumeroDocumento { get; set; }
     
         public string Direccion { get; set; }
     
+        public string Telefono { get; set; }
     
-        public virtual GCP_PersonaJuridica GCP_PersonaJuridica { get; set; }
+        public Nullable<System.DateTime> FechaNacimiento { get; set; }
+    
+        public string Email { get; set; }
+    
+        public string TipoDocumento { get; set; }
+    
+    
         public virtual ICollection<GCP_Mascota> GCP_Mascota { get; set; }
         public virtual GCP_PersonaNatural GCP_PersonaNatural { get; set; }
         public virtual ICollection<GCR_Convenio> GCR_Convenio { get; set; }
         public virtual ICollection<GCR_Liquidaciones> GCR_Liquidaciones { get; set; }
+        public virtual GCP_PersonaJuridica GCP_PersonaJuridica { get; set; }
         public override string NombreEntidad { get { return "GCP_Cliente"; } }
     }
     

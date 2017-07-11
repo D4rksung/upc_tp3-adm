@@ -27,7 +27,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.ReferenciaConv
                             {
                                 NroSolicitudRef = sol.NroSolicitudRef,
                                 IdServicio = sol.IdServicio,
-                                NombreServicio = sol.GCR_ConvenioServicio.GG_Servicio.NombreServicio,
+                                NombreServicio = sol.GCR_ConvenioServicio.GG_Servicio.nombre,
                                 NroConvenio = sol.NroConvenio,
                                 Cantidad = sol.Cantidad,
                                 Observaciones = sol.Observaciones,

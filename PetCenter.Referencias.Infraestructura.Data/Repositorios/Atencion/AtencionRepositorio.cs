@@ -88,7 +88,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Atencion
                                 IdAtencion = ate.IdAtencion,
                                 NroSolicitudRef = ate.NroSolicitudRef,
                                 IdServicio = ate.IdServicio,
-                                NombreServicio = ate.GCR_SolicitudRef_Servicio.GCR_ConvenioServicio.GG_Servicio.NombreServicio,
+                                NombreServicio = ate.GCR_SolicitudRef_Servicio.GCR_ConvenioServicio.GG_Servicio.nombre,
                                 NroConvenio = ate.NroConvenio,
                                 Cantidad = ate.Cantidad,
                                 TarifaBase = ate.TarifaBase,
@@ -144,7 +144,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Atencion
                                 IdAtencion = ate.IdAtencion,
                                 NroSolicitudRef = ate.NroSolicitudRef,
                                 IdServicio = ate.IdServicio,
-                                NombreServicio = ate.GCR_SolicitudRef_Servicio.GCR_ConvenioServicio.GG_Servicio.NombreServicio,
+                                NombreServicio = ate.GCR_SolicitudRef_Servicio.GCR_ConvenioServicio.GG_Servicio.nombre,
                                 NroConvenio = ate.NroConvenio,
                                 Cantidad = ate.Cantidad,
                                 TarifaBase = ate.TarifaBase,
@@ -188,7 +188,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Atencion
                             let g = new
                             {
                                 IdServicio = ate.IdServicio,
-                                NombreServicio = ate.GCR_SolicitudRef_Servicio.GCR_ConvenioServicio.GG_Servicio.NombreServicio
+                                NombreServicio = ate.GCR_SolicitudRef_Servicio.GCR_ConvenioServicio.GG_Servicio.nombre
                             }
                             group ate by g into p
                             select new ServiciosPorAtencionVob

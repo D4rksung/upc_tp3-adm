@@ -12,8 +12,8 @@ namespace PetCenter.Referencias.Dominio.Logica.VOBs.Registros.Cliente
 
         public string NombreCliente { get; set; }
 
-        public string EmailCliente { get; set; }
+        public string Email { get; set; }
 
-        public string AutorizaUsoDatos { get; set; }
+        //public string AutorizaUsoDatos { get; set; }
     }
 }

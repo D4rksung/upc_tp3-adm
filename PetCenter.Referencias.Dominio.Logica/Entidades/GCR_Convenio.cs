@@ -19,7 +19,7 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
         {
             this.GCR_ConvenioServicio = new HashSet<GCR_ConvenioServicio>();
             this.GCR_SolicitudRef = new HashSet<GCR_SolicitudRef>();
-            this.GRC_ConvenioDescuento = new HashSet<GRC_ConvenioDescuento>();
+            this.GCR_ConvenioDescuento = new HashSet<GCR_ConvenioDescuento>();
         }
     
         public int NroConvenio { get; set; }
@@ -39,11 +39,11 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
         public string Estado { get; set; }
     
     
-        public virtual GCP_Cliente GCP_Cliente { get; set; }
         public virtual GCR_Solicitud_Convenio GCR_Solicitud_Convenio { get; set; }
         public virtual ICollection<GCR_ConvenioServicio> GCR_ConvenioServicio { get; set; }
         public virtual ICollection<GCR_SolicitudRef> GCR_SolicitudRef { get; set; }
-        public virtual ICollection<GRC_ConvenioDescuento> GRC_ConvenioDescuento { get; set; }
+        public virtual ICollection<GCR_ConvenioDescuento> GCR_ConvenioDescuento { get; set; }
+        public virtual GCP_Cliente GCP_Cliente { get; set; }
         public override string NombreEntidad { get { return "GCR_Convenio"; } }
     }
     

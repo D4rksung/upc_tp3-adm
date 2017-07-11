@@ -20,9 +20,9 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
             this.GCP_Mascota = new HashSet<GCP_Mascota>();
         }
     
-        public int IdRaza { get; set; }
+        public int CodigoRaza { get; set; }
     
-        public int IdEspecie { get; set; }
+        public int CodigoEspecie { get; set; }
     
         public string NombreRaza { get; set; }
     

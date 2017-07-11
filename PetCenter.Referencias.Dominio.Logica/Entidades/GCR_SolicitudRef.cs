@@ -17,8 +17,8 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
     {
         public GCR_SolicitudRef()
         {
-            this.GCR_SolicitudRef_Servicio = new HashSet<GCR_SolicitudRef_Servicio>();
             this.GCR_ContraReferencia = new HashSet<GCR_ContraReferencia>();
+            this.GCR_SolicitudRef_Servicio = new HashSet<GCR_SolicitudRef_Servicio>();
         }
     
         public int NroSolicitudRef { get; set; }
@@ -45,9 +45,9 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
     
     
         public virtual GCP_Mascota GCP_Mascota { get; set; }
-        public virtual GCR_Convenio GCR_Convenio { get; set; }
-        public virtual ICollection<GCR_SolicitudRef_Servicio> GCR_SolicitudRef_Servicio { get; set; }
         public virtual ICollection<GCR_ContraReferencia> GCR_ContraReferencia { get; set; }
+        public virtual ICollection<GCR_SolicitudRef_Servicio> GCR_SolicitudRef_Servicio { get; set; }
+        public virtual GCR_Convenio GCR_Convenio { get; set; }
         public override string NombreEntidad { get { return "GCR_SolicitudRef"; } }
     }
     

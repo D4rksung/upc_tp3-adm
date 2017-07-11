@@ -24,9 +24,9 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Servicio
             var consulta = (from b in set.GG_Servicio
                             select new ServicioVob
                             {
-                                IdServicio = b.IdServicio,
-                                NombreServicio = b.NombreServicio,
-                                DescripcionServicio = b.DescripcionServicio,
+                                IdServicio = b.idServicio,
+                                NombreServicio = b.nombre,
+                                DescripcionServicio = b.descripcion,
                                 TarifaBase = b.TarifaBase,
                                 Estado = b.Estado
                             });
@@ -37,12 +37,12 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Servicio
         {
             var set = ObtenerSet<IModeloReferenciaUnidadDeTrabajo>(this);
             var consulta = (from b in set.GG_Servicio
-                            where b.IdServicio == idServicio
+                            where b.idServicio == idServicio
                             select new ServicioVob
                             {
-                                IdServicio = b.IdServicio,
-                                NombreServicio = b.NombreServicio,
-                                DescripcionServicio = b.DescripcionServicio,
+                                IdServicio = b.idServicio,
+                                NombreServicio = b.nombre,
+                                DescripcionServicio = b.descripcion,
                                 TarifaBase = b.TarifaBase,
                                 Estado = b.Estado
                             });

@@ -35,7 +35,7 @@ namespace PetCenter.Referencias.Dominio.Administracion.Mapeo
             CreateMap<ConvenioVob, GCR_Convenio>().ReverseMap();
             //CreateMap<ConvenioDto, Convenio>().ReverseMap();
             CreateMap<ConvenioDto, GCR_Convenio>()
-                .ForMember(t => t.GRC_ConvenioDescuento, f => f.MapFrom(c => c.ListaConvenioDescuento))
+                .ForMember(t => t.GCR_ConvenioDescuento, f => f.MapFrom(c => c.ListaConvenioDescuento))
                 .ForMember(t => t.GCR_ConvenioServicio, f => f.MapFrom(c => c.ListaConvenioServicio))
                 .ForMember(t => t.FechaConvenio, f => f.MapFrom(c => c.FechaConvenio))
                 .ForMember(t => t.NroSolicitud, f => f.MapFrom(c => c.NroSolicitud))
@@ -46,7 +46,7 @@ namespace PetCenter.Referencias.Dominio.Administracion.Mapeo
                 ;
 
             CreateMap<GCR_Convenio, ConvenioDto>()
-               .ForMember(t => t.ListaConvenioDescuento, f => f.MapFrom(c => c.GRC_ConvenioDescuento))
+               .ForMember(t => t.ListaConvenioDescuento, f => f.MapFrom(c => c.GCR_ConvenioDescuento))
                .ForMember(t => t.ListaConvenioServicio, f => f.MapFrom(c => c.GCR_ConvenioServicio))
                 .ForMember(t => t.FechaConvenio, f => f.MapFrom(c => c.FechaConvenio))
                 .ForMember(t => t.NroSolicitud, f => f.MapFrom(c => c.NroSolicitud))
@@ -61,8 +61,8 @@ namespace PetCenter.Referencias.Dominio.Administracion.Mapeo
             CreateMap<ConvenioServicioDto, GCR_ConvenioServicio>().ReverseMap();
 
             CreateMap<ConvenioDescuentoVob, ConvenioDescuentoDto>().ReverseMap();
-            CreateMap<ConvenioDescuentoVob, GRC_ConvenioDescuento>().ReverseMap();
-            CreateMap<ConvenioDescuentoDto, GRC_ConvenioDescuento>().ReverseMap();
+            CreateMap<ConvenioDescuentoVob, GCR_ConvenioDescuento>().ReverseMap();
+            CreateMap<ConvenioDescuentoDto, GCR_ConvenioDescuento>().ReverseMap();
 
             CreateMap<ReferenciaConvenioServicioVob, ReferenciaConvenioServicioDto>().ReverseMap();
             CreateMap<ReferenciaConvenioServicioVob, GCR_SolicitudRef_Servicio>().ReverseMap();

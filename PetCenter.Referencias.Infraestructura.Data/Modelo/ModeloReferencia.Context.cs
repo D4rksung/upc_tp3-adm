@@ -42,27 +42,27 @@ namespace PetCenter.Referencias.Infraestructura.Data.Modelo
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<GCP_Cliente> GCP_Cliente { get; set; }
         public DbSet<GCP_Especie> GCP_Especie { get; set; }
         public DbSet<GCP_Mascota> GCP_Mascota { get; set; }
-        public DbSet<GCP_PersonaJuridica> GCP_PersonaJuridica { get; set; }
         public DbSet<GCP_PersonaNatural> GCP_PersonaNatural { get; set; }
         public DbSet<GCP_Raza> GCP_Raza { get; set; }
         public DbSet<GCR_Atenciones> GCR_Atenciones { get; set; }
-        public DbSet<GCR_Convenio> GCR_Convenio { get; set; }
-        public DbSet<GCR_ConvenioServicio> GCR_ConvenioServicio { get; set; }
+        public DbSet<GCR_ContraReferencia> GCR_ContraReferencia { get; set; }
         public DbSet<GCR_DocumentoRechazo> GCR_DocumentoRechazo { get; set; }
         public DbSet<GCR_Liquidaciones> GCR_Liquidaciones { get; set; }
-        public DbSet<GCR_RepresentanteClinica> GCR_RepresentanteClinica { get; set; }
         public DbSet<GCR_Solicitud_Convenio> GCR_Solicitud_Convenio { get; set; }
         public DbSet<GCR_SolicitudRef> GCR_SolicitudRef { get; set; }
         public DbSet<GCR_SolicitudRef_Servicio> GCR_SolicitudRef_Servicio { get; set; }
+        public DbSet<GCR_Veterinario> GCR_Veterinario { get; set; }
         public DbSet<GG_Banco> GG_Banco { get; set; }
         public DbSet<GG_Moneda> GG_Moneda { get; set; }
+        public DbSet<GCR_RepresentanteClinica> GCR_RepresentanteClinica { get; set; }
+        public DbSet<GCR_Convenio> GCR_Convenio { get; set; }
+        public DbSet<GCR_ConvenioDescuento> GCR_ConvenioDescuento { get; set; }
+        public DbSet<GCR_ConvenioServicio> GCR_ConvenioServicio { get; set; }
         public DbSet<GG_Servicio> GG_Servicio { get; set; }
-        public DbSet<GRC_ConvenioDescuento> GRC_ConvenioDescuento { get; set; }
-        public DbSet<GCR_ContraReferencia> GCR_ContraReferencia { get; set; }
-        public DbSet<GCR_Veterinario> GCR_Veterinario { get; set; }
+        public DbSet<GCP_Cliente> GCP_Cliente { get; set; }
+        public DbSet<GCP_PersonaJuridica> GCP_PersonaJuridica { get; set; }
     
         public IEnumerable<TEntidad> ExecuteStoreQuery<TEntidad>(string sqlQuery, params object[] parameters)
         {

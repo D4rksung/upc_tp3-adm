@@ -101,6 +101,9 @@
     <Compile Include="Entidades\GCR_Convenio.cs">
       <DependentUpon>ModeloReferencias.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\GCR_ConvenioDescuento.cs">
+      <DependentUpon>ModeloReferencias.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\GCR_ConvenioServicio.cs">
       <DependentUpon>ModeloReferencias.tt</DependentUpon>
     </Compile>
@@ -132,9 +135,6 @@
       <DependentUpon>ModeloReferencias.tt</DependentUpon>
     </Compile>
     <Compile Include="Entidades\GG_Servicio.cs">
-      <DependentUpon>ModeloReferencias.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entidades\GRC_ConvenioDescuento.cs">
       <DependentUpon>ModeloReferencias.tt</DependentUpon>
     </Compile>
     <Compile Include="Entidades\ModeloReferencias.cs">

@@ -15,17 +15,10 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
     
     public partial class GG_Moneda : EntidadBase
     {
-        public GG_Moneda()
-        {
-            this.GCR_Solicitud_Convenio = new HashSet<GCR_Solicitud_Convenio>();
-        }
-    
         public int IdMoneda { get; set; }
     
         public string DesMoneda { get; set; }
     
-    
-        public virtual ICollection<GCR_Solicitud_Convenio> GCR_Solicitud_Convenio { get; set; }
         public override string NombreEntidad { get { return "GG_Moneda"; } }
     }
     

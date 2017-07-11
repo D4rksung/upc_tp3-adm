@@ -13,7 +13,7 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
     using System.Collections.Generic;
     using PetCenter.Referencias.Dominio.Logica.Base;
     
-    public partial class GRC_ConvenioDescuento : EntidadBase
+    public partial class GCR_ConvenioDescuento : EntidadBase
     {
         public int NroConvenio { get; set; }
     
@@ -29,7 +29,7 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
     
     
         public virtual GCR_Convenio GCR_Convenio { get; set; }
-        public override string NombreEntidad { get { return "GRC_ConvenioDescuento"; } }
+        public override string NombreEntidad { get { return "GCR_ConvenioDescuento"; } }
     }
     
 }

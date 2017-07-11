@@ -40,8 +40,8 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
     
     
         public virtual ICollection<GCR_Atenciones> GCR_Atenciones { get; set; }
-        public virtual GCR_ConvenioServicio GCR_ConvenioServicio { get; set; }
         public virtual GCR_SolicitudRef GCR_SolicitudRef { get; set; }
+        public virtual GCR_ConvenioServicio GCR_ConvenioServicio { get; set; }
         public override string NombreEntidad { get { return "GCR_SolicitudRef_Servicio"; } }
     }
     

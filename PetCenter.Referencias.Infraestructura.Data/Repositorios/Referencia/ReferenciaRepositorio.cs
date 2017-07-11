@@ -76,8 +76,8 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Referencia
             var consulta = (from sol in set.GCR_SolicitudRef
                             let g = new
                             {
-                                IdEspecie = sol.GCP_Mascota.IdEspecie,
-                                NombreEspecie = sol.GCP_Mascota.GCP_Raza.GCP_Especie.NombreEspecie
+                                IdEspecie = sol.GCP_Mascota.GCP_Raza.CodigoEspecie,
+                                NombreEspecie = sol.GCP_Mascota.GCP_Raza.GCP_Especie.DescripcionEspecie
                             }
                             group sol by g into p
                             select new EspeciesCantidadVob
@@ -92,10 +92,10 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Referencia
         {
             var set = ObtenerSet<IModeloReferenciaUnidadDeTrabajo>(this);
             var consulta = (from sol in set.GCR_SolicitudRef
-                            where sol.GCP_Mascota.GCP_Raza.GCP_Especie.IdEspecie == idEspecie
+                            where sol.GCP_Mascota.GCP_Raza.GCP_Especie.CodigoEspecie == idEspecie
                             let g = new
                             {
-                                IdRaza = sol.GCP_Mascota.GCP_Raza.IdRaza,
+                                IdRaza = sol.GCP_Mascota.GCP_Raza.CodigoRaza,
                                 NombreRaza = sol.GCP_Mascota.GCP_Raza.NombreRaza
                             }
                             group sol by g into p

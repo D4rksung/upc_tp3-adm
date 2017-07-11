@@ -20,11 +20,13 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
             this.GCR_ConvenioServicio = new HashSet<GCR_ConvenioServicio>();
         }
     
-        public int IdServicio { get; set; }
+        public int idServicio { get; set; }
     
-        public string NombreServicio { get; set; }
+        public string nombre { get; set; }
     
-        public string DescripcionServicio { get; set; }
+        public string descripcion { get; set; }
+    
+        public Nullable<int> idArea { get; set; }
     
         public Nullable<decimal> TarifaBase { get; set; }
     

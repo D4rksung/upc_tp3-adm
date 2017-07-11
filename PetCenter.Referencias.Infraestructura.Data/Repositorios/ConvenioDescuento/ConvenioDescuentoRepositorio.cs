@@ -11,7 +11,7 @@ using e = PetCenter.Referencias.Dominio.Logica.Entidades;
 
 namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.ConvenioDescuento
 {
-    public class ConvenioDescuentoRepositorio : Repositorio<e.GRC_ConvenioDescuento>, IConvenioDescuentoRepositorio
+    public class ConvenioDescuentoRepositorio : Repositorio<e.GCR_ConvenioDescuento>, IConvenioDescuentoRepositorio
     {
         #region CONSTRUCTOR
         /// <summary>
@@ -24,7 +24,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.ConvenioDescue
         public IEnumerable<ConvenioDescuentoVob> Listar(int idConvenio)
         {
             var set = ObtenerSet<IModeloReferenciaUnidadDeTrabajo>(this);
-            var consulta = (from cd in set.GRC_ConvenioDescuento
+            var consulta = (from cd in set.GCR_ConvenioDescuento
                             where cd.NroConvenio == idConvenio
                             select new ConvenioDescuentoVob
                             {

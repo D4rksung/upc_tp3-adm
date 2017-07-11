@@ -34,8 +34,8 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
     
     
         public virtual GCR_Convenio GCR_Convenio { get; set; }
-        public virtual GG_Servicio GG_Servicio { get; set; }
         public virtual ICollection<GCR_SolicitudRef_Servicio> GCR_SolicitudRef_Servicio { get; set; }
+        public virtual GG_Servicio GG_Servicio { get; set; }
         public override string NombreEntidad { get { return "GCR_ConvenioServicio"; } }
     }
     

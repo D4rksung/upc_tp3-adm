@@ -43,8 +43,8 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
         public Nullable<decimal> ValorAjuste { get; set; }
     
     
-        public virtual GCP_Cliente GCP_Cliente { get; set; }
         public virtual ICollection<GCR_Atenciones> GCR_Atenciones { get; set; }
+        public virtual GCP_Cliente GCP_Cliente { get; set; }
         public override string NombreEntidad { get { return "GCR_Liquidaciones"; } }
     }
     

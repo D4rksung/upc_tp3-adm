@@ -15,17 +15,10 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
     
     public partial class GG_Banco : EntidadBase
     {
-        public GG_Banco()
-        {
-            this.GCR_Solicitud_Convenio = new HashSet<GCR_Solicitud_Convenio>();
-        }
-    
         public int IdBanco { get; set; }
     
         public string NomBanco { get; set; }
     
-    
-        public virtual ICollection<GCR_Solicitud_Convenio> GCR_Solicitud_Convenio { get; set; }
         public override string NombreEntidad { get { return "GG_Banco"; } }
     }
     

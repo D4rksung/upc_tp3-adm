@@ -30,8 +30,37 @@ namespace PetCenter.Referencias.Dominio.Administracion.Mapeo
             //CreateMap<TipoDocumentoDto, TipoDocumento>().ReverseMap();
 
             CreateMap<ServicioVob, ServicioDto>().ReverseMap();
-            CreateMap<ServicioVob, GG_Servicio>().ReverseMap();
-            CreateMap<ServicioDto, GG_Servicio>().ReverseMap();
+            //CreateMap<ServicioVob, GG_Servicio>().ReverseMap();
+            //CreateMap<ServicioDto, GG_Servicio>().ReverseMap();
+
+            CreateMap<ServicioVob, GG_Servicio>()
+                .ForMember(t => t.idServicio, f => f.MapFrom(c => c.IdServicio))
+                .ForMember(t => t.nombre, f => f.MapFrom(c => c.NombreServicio))
+                .ForMember(t => t.descripcion, f => f.MapFrom(c => c.DescripcionServicio))
+                .ForMember(t => t.TarifaBase, f => f.MapFrom(c => c.TarifaBase))
+                .ForMember(t => t.Estado, f => f.MapFrom(c => c.Estado))
+                ;
+            CreateMap<GG_Servicio, ServicioVob>()
+              .ForMember(t => t.IdServicio, f => f.MapFrom(c => c.idServicio))
+              .ForMember(t => t.NombreServicio, f => f.MapFrom(c => c.nombre))
+              .ForMember(t => t.DescripcionServicio, f => f.MapFrom(c => c.descripcion))
+              .ForMember(t => t.TarifaBase, f => f.MapFrom(c => c.TarifaBase))
+              .ForMember(t => t.Estado, f => f.MapFrom(c => c.Estado))
+              ;
+            CreateMap<ServicioDto, GG_Servicio>()
+               .ForMember(t => t.idServicio, f => f.MapFrom(c => c.IdServicio))
+               .ForMember(t => t.nombre, f => f.MapFrom(c => c.NombreServicio))
+               .ForMember(t => t.descripcion, f => f.MapFrom(c => c.DescripcionServicio))
+               .ForMember(t => t.TarifaBase, f => f.MapFrom(c => c.TarifaBase))
+               .ForMember(t => t.Estado, f => f.MapFrom(c => c.Estado))
+               ;
+            CreateMap<GG_Servicio, ServicioDto>()
+            .ForMember(t => t.IdServicio, f => f.MapFrom(c => c.idServicio))
+            .ForMember(t => t.NombreServicio, f => f.MapFrom(c => c.nombre))
+            .ForMember(t => t.DescripcionServicio, f => f.MapFrom(c => c.descripcion))
+            .ForMember(t => t.TarifaBase, f => f.MapFrom(c => c.TarifaBase))
+            .ForMember(t => t.Estado, f => f.MapFrom(c => c.Estado))
+            ;
 
             CreateMap<MascotaVob, MascotaDto>().ReverseMap();
             CreateMap<MascotaVob, GCP_Mascota>().ReverseMap();

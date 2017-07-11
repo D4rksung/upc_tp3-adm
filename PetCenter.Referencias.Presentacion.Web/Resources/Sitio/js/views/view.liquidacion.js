@@ -4,7 +4,7 @@
 
     iniciar: function () {
 
-        sitiojs.ValidarSoloNumerosConGuion($("#Liquidacion_ValorAjuste"));
+        sitiojs.ValidarSoloNumerosConGuion($("#Liquidacion_ValorAjuste"));        
         $("#Liquidacion_ValorAjuste").val(0);
     },
 

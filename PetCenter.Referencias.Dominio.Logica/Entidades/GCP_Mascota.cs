@@ -22,26 +22,28 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
     
         public int IdMascota { get; set; }
     
-        public Nullable<int> IdRaza { get; set; }
-    
-        public Nullable<int> IdEspecie { get; set; }
-    
-        public Nullable<int> IdCliente { get; set; }
+        public string CodigoMascota { get; set; }
     
         public string NombreMascota { get; set; }
     
+        public string Genero { get; set; }
+    
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
     
-        public string Tamaño { get; set; }
+        public Nullable<int> IdCliente { get; set; }
     
-        public string Genero { get; set; }
+        public Nullable<int> idTamaño { get; set; }
+    
+        public Nullable<int> CodigoRaza { get; set; }
+    
+        public string Foto { get; set; }
     
         public Nullable<decimal> Peso { get; set; }
     
     
-        public virtual GCP_Cliente GCP_Cliente { get; set; }
         public virtual GCP_Raza GCP_Raza { get; set; }
         public virtual ICollection<GCR_SolicitudRef> GCR_SolicitudRef { get; set; }
+        public virtual GCP_Cliente GCP_Cliente { get; set; }
         public override string NombreEntidad { get { return "GCP_Mascota"; } }
     }
     

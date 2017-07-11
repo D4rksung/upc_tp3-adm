@@ -524,15 +524,17 @@ var sitiojs = {
     },
 
     ValidarSoloNumerosConGuion: function (input) {
-        $(input).keypress(function (e) {
-            var verified = (e.which == 8 || e.which == undefined || e.which == 0) ? null : String.fromCharCode(e.which).match(/[^-0-9]/);
+        $(input).keypress(function (e) {            
+            var verified = (e.which == 8 || e.which == undefined || e.which == 0) ? null : String.fromCharCode(e.which).match(/^(-)\d{2}(\.d\{1})$/);
             if (verified) { e.preventDefault(); }
         });
     },
 
     ValidarSoloNumeros: function (input) {
         $(input).keypress(function (e) {
-            var verified = (e.which == 8 || e.which == undefined || e.which == 0) ? null : String.fromCharCode(e.which).match(/[^0-9]/);
+            var verified = (e.which == 8 || e.which == undefined || e.which == 0 || e.which == 46) ? null : String.fromCharCode(e.which).match(/[^0-9]/);
+            //
+            //var verified = (e.which == 8 || e.which == undefined || e.which == 0) ? null : String.fromCharCode(e.which).match(/^-?\d{2}(\.\d+)?$/);
             if (verified) { e.preventDefault(); }
         });
     },

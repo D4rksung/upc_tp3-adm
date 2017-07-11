@@ -29,7 +29,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Mascota
                             {
                                 IdMascota = b.IdMascota,
                                 NombreMascota = b.NombreMascota,
-                                NombreEspecie = b.GCP_Raza.GCP_Especie.NombreEspecie,
+                                NombreEspecie = b.GCP_Raza.GCP_Especie.DescripcionEspecie,
                                 NombreRaza = b.GCP_Raza.NombreRaza,
                                 FechaNacimiento = b.FechaNacimiento,
                                 IdCliente = b.IdCliente
@@ -45,7 +45,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Mascota
                             {
                                 IdMascota = b.IdMascota,
                                 NombreMascota = b.NombreMascota,
-                                NombreEspecie = b.GCP_Raza.GCP_Especie.NombreEspecie,
+                                NombreEspecie = b.GCP_Raza.GCP_Especie.DescripcionEspecie,
                                 NombreRaza = b.GCP_Raza.NombreRaza,
                                 FechaNacimiento = b.FechaNacimiento,
                                 IdCliente = b.IdCliente
@@ -62,7 +62,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Mascota
                             {
                                 IdMascota = b.IdMascota,
                                 NombreMascota = b.NombreMascota,
-                                NombreEspecie = b.GCP_Raza.GCP_Especie.NombreEspecie,
+                                NombreEspecie = b.GCP_Raza.GCP_Especie.DescripcionEspecie,
                                 NombreRaza = b.GCP_Raza.NombreRaza,
                                 FechaNacimiento = b.FechaNacimiento,
                                 IdCliente = b.IdCliente

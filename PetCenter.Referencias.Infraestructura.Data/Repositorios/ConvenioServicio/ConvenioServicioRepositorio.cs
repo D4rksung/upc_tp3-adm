@@ -31,7 +31,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.ConvenioServic
                                 FactorDcto = m.FactorDcto,
                                 TarifaReal = m.TarifaReal,
                                 Estado = m.Estado,
-                                NombreServicio = m.GG_Servicio.NombreServicio
+                                NombreServicio = m.GG_Servicio.nombre
                             });
             return consulta.AsEnumerable();
         }
@@ -49,7 +49,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.ConvenioServic
                                 FactorDcto = m.FactorDcto,
                                 TarifaReal = m.TarifaReal,
                                 Estado = m.Estado,
-                                NombreServicio = m.GG_Servicio.NombreServicio
+                                NombreServicio = m.GG_Servicio.nombre
                             });
             return consulta.FirstOrDefault();
         }

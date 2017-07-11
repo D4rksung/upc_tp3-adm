@@ -20,9 +20,9 @@ namespace PetCenter.Referencias.Dominio.Logica.Entidades
             this.GCP_Raza = new HashSet<GCP_Raza>();
         }
     
-        public int IdEspecie { get; set; }
+        public int CodigoEspecie { get; set; }
     
-        public string NombreEspecie { get; set; }
+        public string DescripcionEspecie { get; set; }
     
     
         public virtual ICollection<GCP_Raza> GCP_Raza { get; set; }

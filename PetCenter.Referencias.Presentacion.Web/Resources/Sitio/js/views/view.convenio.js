@@ -5,12 +5,12 @@
     formConvenio: "#formConvenio",
 
     iniciar: function () {
-        $("#ConvenioServicio_Descuento").numeric(false);
+        $("#ConvenioServicio_FactorDcto").numeric(false);
         $("#ConvenioServicio_Base").numeric(false);
 
         $("#ConvenioDescuento_Minimo").numeric(false);
         $("#ConvenioDescuento_Maximo").numeric(false);
-        $("#ConvenioDescuento_Porcentaje").numeric(false);
+        $("#ConvenioDescuento_FactorDcto").numeric(false);
 
         $("#Convenio_ImporteConvenio").numeric('.');
 

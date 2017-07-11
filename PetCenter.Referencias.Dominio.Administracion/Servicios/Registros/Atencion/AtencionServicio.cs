@@ -87,12 +87,12 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Atenc
                 var servicio = editor.Servicio.ProyectarComo<GG_Servicio>();
                 var referencia = editor.Referencia.ProyectarComo<GCR_SolicitudRef>();
                 var referenciaConvenioServicio = _referenciaConvenioRepositorio.EntidadParaVer(
-                    new ReferenciaConvenioServicioIdsCriterio(referencia.NroSolicitudRef, servicio.IdServicio, referencia.NroConvenio.Value));
+                    new ReferenciaConvenioServicioIdsCriterio(referencia.NroSolicitudRef, servicio.idServicio, referencia.NroConvenio.Value));
 
                 using (var scope = new TransactionScope(TransactionScopeOption.Required, TransactionHelper.OptionsDefaults()))
                 {
                     atencion.NroSolicitudRef = referencia.NroSolicitudRef;
-                    atencion.IdServicio = servicio.IdServicio;
+                    atencion.IdServicio = servicio.idServicio;
                     atencion.NroConvenio = referencia.NroConvenio;
                     atencion.Cantidad = referenciaConvenioServicio.Cantidad;
                     atencion.TarifaBase = referenciaConvenioServicio.TarifaBase;

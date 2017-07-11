@@ -5,7 +5,7 @@ using e = PetCenter.Referencias.Dominio.Logica.Entidades;
 
 namespace PetCenter.Referencias.Dominio.Logica.Repositorio.Registros
 {
-    public interface IConvenioDescuentoRepositorio : IRepositorio<e.GRC_ConvenioDescuento>
+    public interface IConvenioDescuentoRepositorio : IRepositorio<e.GCR_ConvenioDescuento>
     {
         IEnumerable<ConvenioDescuentoVob> Listar(int idConvenio);
     }
