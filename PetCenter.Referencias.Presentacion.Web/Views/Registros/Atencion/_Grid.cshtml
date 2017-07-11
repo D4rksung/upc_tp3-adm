@@ -21,7 +21,7 @@
                     tableStyle: "table table-striped table-bordered table-condensed asistencia-table-grid",
                     columns: new[]
                     {
-                            grid.Column("NroSolicitudRef", "Nro Ref.", style:"asistencia-column-center"),
+                            grid.Column("NroSolicitudRefFormato", "Nro Ref.", style:"asistencia-column-center"),
                             grid.Column("FechaSolicitudRef", "Fecha Solicitud", format: p=> p.FechaSolicitudRef.ToShortDateString()),
                             grid.Column("NroRuc", "RUC", style:"asistencia-column-left"),
                             grid.Column("RazonSocial", "Razón Social", style:"asistencia-column-left"),

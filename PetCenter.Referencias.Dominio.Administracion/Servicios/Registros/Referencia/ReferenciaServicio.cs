@@ -116,6 +116,51 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Refer
                 return null;
             }
         }
+
+        public RespuestaReferenciaDto BusquedaContra(BusquedaReferenciaDto solicitud)
+        {
+            try
+            {
+                var paginar = solicitud.CriterioPaginar;
+                var listaPaginada = new PaginadoVob<ReferenciaVob>
+                {
+                    Elementos = new List<ReferenciaVob>(),
+                    TotalElementos = 0
+                };
+
+                if (solicitud.TablaFilter != null)
+                {
+                    //Obteniendo resultado de la Busqueda
+                    var entidaVob = solicitud.TablaFilter.ProyectarComo<ReferenciaVob>();
+                    var criterio = new ReferenciaBuscadorCriterio(entidaVob);
+                    var pagina = solicitud.CriterioPaginar.Pagina;
+                    var tamanio = solicitud.CriterioPaginar.Tamanio;
+                    var orden = solicitud.CriterioPaginar.Orden;
+                    var ordenDir = solicitud.CriterioPaginar.OrdenDir;
+                    listaPaginada = _referenciaRepositorio.PaginadoContra(criterio, pagina, tamanio, orden, ordenDir);
+                }
+
+                //Obtenemos el resultado
+                var resultado = new RespuestaReferenciaDto
+                {
+                    lista = listaPaginada.Elementos.ProyectarComoLista<ReferenciaDto>(),
+                    TotalElementos = listaPaginada.TotalElementos
+                };
+
+                resultado.lista.ToList().ForEach(x =>
+                {
+                    x.ContraReferida = _contraReferenciaRepositorio.BuscarPorRefencia(x.NroSolicitudRef) == null ? false : true;
+                    x.NroSolicitudRefFormato = StringExtensions.GenerarCodigo(x.NroSolicitudRef);
+                });
+
+                return resultado;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public ReferenciaDto Buscar(int idReferencia)
         {
             var referencia = _referenciaRepositorio.Buscar(idReferencia).ProyectarComo<ReferenciaDto>();

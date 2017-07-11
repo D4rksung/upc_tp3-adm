@@ -2,6 +2,7 @@
 using PetCenter.Referencias.Dominio.Logica.Entidades;
 using PetCenter.Referencias.Dominio.Logica.Repositorio.Registros;
 using PetCenter.Referencias.Dominio.Logica.VOBs.General;
+using PetCenter.Referencias.Dominio.Logica.VOBs.Registros.Atencion;
 using PetCenter.Referencias.Dominio.Logica.VOBs.Registros.Referencia;
 using PetCenter.Referencias.Infraestructura.Data.Base;
 using PetCenter.Referencias.Infraestructura.Data.UnidadDeTrabajo;
@@ -41,7 +42,48 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Referencia
                                 RazonSocial = sol.GCR_Convenio.GCP_Cliente.GCP_PersonaJuridica.RazonSocial,
                                 NombreMascota = sol.GCP_Mascota.NombreMascota
                             });
+
             return ListarPorCriterio(consulta, criterio, indicePagina, tamanioPagina, orden, ordenDir);//El ordern y la direccion puede ir como parametros si en el presentación se ordenan 
+        }
+
+        public PaginadoVob<ReferenciaVob> PaginadoContra(ICriterio<ReferenciaVob> criterio, int indicePagina, int tamanioPagina, string orden, string ordenDir)
+        {
+            var set = ObtenerSet<IModeloReferenciaUnidadDeTrabajo>(this);
+
+            var consultaReferencia = (from sol in set.GCR_SolicitudRef
+                                      select new ReferenciaVob
+                                      {
+                                          NroSolicitudRef = sol.NroSolicitudRef,
+                                          NroConvenio = sol.NroConvenio,
+                                          IdMascota = sol.IdMascota,
+                                          FechaSolicitudRef = sol.FechaSolicitudRef,
+                                          Diagnostico = sol.Diagnostico,
+                                          FechaTraslado = sol.FechaTraslado,
+                                          Estado = sol.Estado,
+                                          Anamnesis = sol.Anamnesis,
+                                          ExamenFisico = sol.ExamenFisico,
+                                          ExamenAuxiliar = sol.ExamenAuxiliar,
+                                          NombreRefiere = sol.NombreRefiere,
+                                          NroRuc = sol.GCR_Convenio.GCP_Cliente.GCP_PersonaJuridica.RUC,
+                                          RazonSocial = sol.GCR_Convenio.GCP_Cliente.GCP_PersonaJuridica.RazonSocial,
+                                          NombreMascota = sol.GCP_Mascota.NombreMascota
+                                      });
+
+
+            var consulta = new List<ReferenciaVob>();
+            set.GCR_SolicitudRef.ToList().ForEach(x =>
+            {
+                var totalAtenciones = set.GCR_Atenciones.Where(p => p.NroSolicitudRef == x.NroSolicitudRef).ToList().Count();
+                var totalSolRefServicio = set.GCR_SolicitudRef_Servicio.Where(p => p.NroSolicitudRef == x.NroSolicitudRef).ToList().Count();
+
+                if (totalSolRefServicio == totalAtenciones)
+                {
+                    var encontro = consultaReferencia.Where(p => p.NroSolicitudRef == x.NroSolicitudRef).FirstOrDefault();
+                    consulta.Add(encontro);
+                }
+            });
+
+            return ListarPorCriterio(consulta.AsQueryable(), criterio, indicePagina, tamanioPagina, orden, ordenDir);//El ordern y la direccion puede ir como parametros si en el presentación se ordenan 
         }
 
         public ReferenciaVob Buscar(int idReferencia)
@@ -106,7 +148,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Referencia
                             });
             return consulta.AsEnumerable();
 
-        }      
+        }
 
     }
 }

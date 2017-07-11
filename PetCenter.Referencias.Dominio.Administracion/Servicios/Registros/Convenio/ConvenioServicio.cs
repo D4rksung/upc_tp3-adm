@@ -8,7 +8,6 @@ using System;
 using System.Linq;
 using System.Transactions;
 using PetCenter.Referencias.Dominio.Logica.Entidades;
-using PetCenter.Referencias.Dominio.Logica.Criterios.Maestros.Cliente;
 
 namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Convenio
 {
@@ -55,10 +54,11 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Conve
 
                 convenio.ProcesaAgregar(solicitud.NroSolicitud);
                 GCP_Cliente cl = new GCP_Cliente();
-                GCP_PersonaJuridica pj = new GCP_PersonaJuridica();
-
+                GCP_PersonaJuridica pj = new GCP_PersonaJuridica();                
+               
                 using (var scope = new TransactionScope(TransactionScopeOption.Required, TransactionHelper.OptionsDefaults()))
                 {
+
                     if (personaJuridica == null)
                     {
                         //Se crea el cliente
@@ -71,62 +71,16 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Conve
                         cl.Telefono = "";
                         cl.FechaNacimiento = Convert.ToDateTime("01/01/1901");
                         cl.TipoDocumento = "";
+                      
+                        cl.GCP_PersonaJuridica = new GCP_PersonaJuridica();
+                        cl.GCP_PersonaJuridica.RUC = solicitud.NroRUC;
+                        cl.GCP_PersonaJuridica.RazonSocial = solicitud.RazonSocial;
+
                         _clienteRepositorio.Agregar(cl);
 
-                        unidadDeTrabajo.Confirmar();
                     }
 
-                    scope.Complete();
-                }
-
-                using (var scope = new TransactionScope(TransactionScopeOption.Required, TransactionHelper.OptionsDefaults()))
-                {
-                    if (personaJuridica == null)
-                    {
-                        pj.IdCliente = cl.IdCliente;
-                        pj.RUC = solicitud.NroRUC;
-                        pj.RazonSocial = solicitud.RazonSocial;
-                        _personaJuridicaRepositorio.Agregar(pj);
-
-                        unidadDeTrabajo.Confirmar();
-                    }
-                    scope.Complete();
-                }
-
-                using (var scope = new TransactionScope(TransactionScopeOption.Required, TransactionHelper.OptionsDefaults()))
-                {
-
-                    //if (personaJuridica == null)
-                    //{
-                    //    //Se crea el cliente
-                    //    cl.NombreCliente = solicitud.NombreRep;
-                    //    cl.Email = solicitud.CorreoRep;
-                    //    cl.CodigoCliente = "";
-                    //    cl.ApellidoCliente = "";
-                    //    cl.NumeroDocumento = "";
-                    //    cl.Direccion = "";
-                    //    cl.Telefono = "";
-                    //    cl.FechaNacimiento = Convert.ToDateTime("01/01/1901");
-                    //    cl.TipoDocumento = "";
-                    //    _clienteRepositorio.Agregar(cl);
-
-                    //    //unidadDeTrabajo.Confirmar();
-
-                    //   // pj.IdCliente = cl.IdCliente;
-                    //    pj.RUC = solicitud.NroRUC;
-                    //    pj.RazonSocial = solicitud.RazonSocial;
-                    //    _personaJuridicaRepositorio.Agregar(pj);
-
-                    //}
-
-                    //unidadDeTrabajo.Confirmar();
-
-
-                    //pj.IdCliente = cl.IdCliente;
-                    //pj.RUC = solicitud.NroRUC;
-                    //pj.RazonSocial = solicitud.RazonSocial;
-                    //_personaJuridicaRepositorio.Agregar(pj);
-
+                    unidadDeTrabajo.Confirmar();
 
                     convenio.GCR_ConvenioServicio.ToList().ForEach(x =>
                     {

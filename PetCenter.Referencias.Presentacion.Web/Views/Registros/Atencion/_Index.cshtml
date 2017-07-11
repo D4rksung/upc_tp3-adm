@@ -24,7 +24,7 @@
 
                 @Html.Label("Ruc: ", new { @class = "col-sm-1 control-label" })
                 <div class="col-sm-2">
-                    @Html.TextBoxFor(m => m.Filtro.Referencia.NroRuc, new { @class = "form-control" })
+                    @Html.TextBoxFor(m => m.Filtro.Referencia.NroRuc, new { @class = "form-control", @maxlength = 11 })
                 </div>
 
                 @Html.Label("Razón Social: ", new { @class = "col-sm-2 control-label" })
@@ -68,5 +68,6 @@
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
         atencionjs.validacionBuscar();
+        atencionjs.validacionFiltros();
     });
 </script>

@@ -11,10 +11,13 @@
         $(this.formContraReferencia).validacionAsistencia({
             rules: {
                 'ContraReferencia.FechaEntrega': {
-                    required: true
+                    required: true,
+                    date: true
                 },
                 'ContraReferencia.FechaCierre': {
-                    required: true
+                    required: true,
+                    date: true,
+                    dateMayorIgual: 'ContraReferencia_FechaEntrega'
                 },
                 'ContraReferencia.Observaciones': {
                     required: true
@@ -28,10 +31,13 @@
             },
             messages: {                
                 'ContraReferencia.FechaEntrega': {
-                    required: 'Ingrese Fecha Ingreso',                                        
+                    required: 'Ingrese Fecha Ingreso',
+                    date: 'Fecha Inicio incorrecta'
                 },
                 'ContraReferencia.FechaCierre': {
                     required: 'Ingrese Fecha Salida',
+                    date: 'Fecha Inicio incorrecta',
+                    dateMayorIgual: "La fecha de Ingreso no puede ser mayor que la fecha Salida"
                 },
                 'ContraReferencia.Observaciones': {
                     required: 'Ingrese Diagnóstico de Egreso',
@@ -71,6 +77,11 @@
                 }
             }
         });
-    }
+    },
+
+    validacionFiltros: function () {
+        $('#Filtro_Referencia_NroRuc').numeric(false);
+        $('#Filtro_Referencia_NroSolicitudRef').numeric(false);
+    },
 
 };

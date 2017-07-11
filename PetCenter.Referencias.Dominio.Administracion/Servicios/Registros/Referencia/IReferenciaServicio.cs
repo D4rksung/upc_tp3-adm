@@ -11,6 +11,6 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Refer
         ReferenciaDto Buscar(int idReferencia);
         IEnumerable<EspeciesCantidadDto> ObtenerEspecies();
         IEnumerable<RazasCantidadDto> ObtenerRaza(int idEspecie);
-
+        RespuestaReferenciaDto BusquedaContra(BusquedaReferenciaDto solicitud);
     }
 }

@@ -61,6 +61,15 @@ namespace PetCenter.Referencias.Presentacion.Web.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Aceptar.
+        /// </summary>
+        public static string BtnAceptar {
+            get {
+                return ResourceManager.GetString("BtnAceptar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Agregar.
         /// </summary>
         public static string BtnAgregar {

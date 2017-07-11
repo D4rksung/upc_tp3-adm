@@ -9,14 +9,12 @@ using PetCenter.Referencias.Presentacion.Web.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.ContraReferencia
 {
     public class ContraReferenciaController : BaseController
     {
-
         #region BANDEJA
 
         public ActionResult Index(int page = 1,
@@ -39,7 +37,7 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.ContraRef
                 var referencia = ConstruirContraReferencia(page, sort, sortDir, tablaPaginado);
 
                 //Invocamos al servicio            
-                var respuesta = _registrosServicio.ReferenciaServicio.Busqueda(referencia);
+                var respuesta = _registrosServicio.ReferenciaServicio.BusquedaContra(referencia);
 
                 //construimos modelo
                 var model = ConstruirModeloPaginado(page, respuesta, tablaPaginado.Filtro);
@@ -61,7 +59,6 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.ContraRef
         }
 
         #endregion
-
 
         #region DETALLE
         public ActionResult Detalle(int idReferencia, string mensaje = null)
@@ -90,11 +87,10 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.ContraRef
         }
         #endregion
 
-
         #region REGISTRAR
         [HttpPost]
         public ActionResult Registrar(ContraReferenciaEditorModelo model)
-        {
+        {            
             string mensaje = string.Empty;           
 
             var editor = new RegistrarContraReferenciaDto
@@ -111,7 +107,8 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.ContraRef
                 mensaje = MensajeMvc.MensajePeligro(Mensajes.ErrorGenerico, Util.ObtenerControllerName(Request), Util.ObtenerActionName(Request));
             else
             {
-                mensaje = MensajeMvc.MensajeSatisfactorio(Mensajes.ContraReferenciaRegistrada, resultado);
+                var nroContraReferencia = Util.GenerarCodigo(resultado);
+                mensaje = MensajeMvc.MensajeSatisfactorio(Mensajes.ContraReferenciaRegistrada, nroContraReferencia);
             }
 
             return RedirectToAction("Index", new { mensaje = mensaje });

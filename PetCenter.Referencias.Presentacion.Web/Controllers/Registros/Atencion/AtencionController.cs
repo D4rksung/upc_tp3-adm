@@ -87,7 +87,7 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.Atencion
         #region REGISTRAR
         //[HttpPost]
         public ActionResult Registrar(AtencionEditorModelo model)
-        {
+        {            
             string mensaje = string.Empty;
 
             var fileStreamrs = TempData["fileStreamrs"] as HttpPostedFileBase;
@@ -224,7 +224,9 @@ namespace PetCenter.Referencias.Presentacion.Web.Controllers.Registros.Atencion
         {
             var resultado = _registrosServicio.AtencionServicio.BuscarPorRefServConv(idReferencia, idServicio, idConvenio);
             if (resultado == null) resultado = new AtencionDto();
-            return Json(resultado, JsonRequestBehavior.AllowGet);
+            var json = Json(resultado, JsonRequestBehavior.AllowGet);
+            json.MaxJsonLength = 500000000;
+            return json;
         }
         #endregion  
     }

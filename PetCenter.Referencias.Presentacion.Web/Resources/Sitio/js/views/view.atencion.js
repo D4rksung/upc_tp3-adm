@@ -20,7 +20,8 @@
             $('#main-filers').hide();
 
             var idReferencia = $('#Referencia_NroSolicitudRef').val();
-            var idConvenio = $('#Referencia_NroConvenio').val();
+            var idConvenio = $('#Referencia_NroConvenio').val();            
+            $("#Atencion_Resultado").prop('disabled', true);
 
             $.ajax({
                 url: helperjs.urlBase + "Atencion/ObtenerAtencion",
@@ -46,11 +47,12 @@
                             var _ruta = "archivojs.descargaArchivo('/Atencion/Descarga?idReferencia=" + idReferencia + "&idServicio=" + idServicio + "&idConvenio=" + idConvenio + "','#formAtencion')"
                             $('#archivoResultado').attr('onclick', _ruta + '; return false;');
                         }
-                    }
+                    }                   
                     conveniojs.calculaTarifaReal();
                 }
             });
         } else {
+            $('#Atencion_Resultado').prop('disabled', false);
             $('#Guardar').show();
         }
     },
@@ -72,17 +74,21 @@
 
     grabar: function () {
 
-        //$("#Guardar").on("click", function () {
+        $('#Guardar').on('click', function () {
+            if (!$(atencionjs.formAtencion).valid()) return false;
 
-        //    if (!$(atencionjs.formAtencion).valid()) return false;
+            var data = $(atencionjs.formAtencion).serializeArray();
 
-        //    var url = $(atencionjs.formAtencion).attr('action');
-        //    var atencionForm = $(atencionjs.formConvenio).serializeArray();
-        //    helperjs.setPostUrl(url, atencionForm);
-        //    return false;
+            var request = {
+                titulo: "Guardar Atención por Referencia",
+                mensaje: "¿Está seguro de grabar los datos?",
+                url: "Registrar",
+                data: data
+            };
 
-        //});
+            helperjs.confirmar(request);
 
+        });
     },
 
     validacionBuscar: function () {
@@ -110,5 +116,20 @@
                 }
             }
         });
+    },
+
+    validacionFiltros: function () {
+        $('#Filtro_Referencia_NroRuc').numeric(false);
+        $('#Filtro_Referencia_NroSolicitudRef').numeric(false);
+    },
+
+    cancelar: function () {
+        $("#btnCancelar").on("click", function () {
+            $('#Atencion_Resultado').val('');
+            $('#archivoResultado').text('');
+            $('#divServicios').show();
+            $('#divAtencion').hide();
+        });
+
     }
 };
