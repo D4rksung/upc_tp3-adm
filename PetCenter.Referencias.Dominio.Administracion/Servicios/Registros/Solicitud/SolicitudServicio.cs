@@ -1,4 +1,6 @@
 ﻿using PetCenter.Referencias.Dominio.Administracion.Base;
+using PetCenter.Referencias.Dominio.Administracion.DTOs.Registros.Convenio;
+using PetCenter.Referencias.Dominio.Administracion.DTOs.Registros.DocumentoRechazo;
 using PetCenter.Referencias.Dominio.Administracion.DTOs.Registros.Solicitud;
 using PetCenter.Referencias.Dominio.Logica.Criterios.Maestros.PersonaJuridica;
 using PetCenter.Referencias.Dominio.Logica.Criterios.Registros.Solicitud;
@@ -25,6 +27,7 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Solic
         private readonly ISolicitudRepositorio _solicitudRepositorio;
         private readonly IDocumentoRechazoRepositorio _documentoRechazoRepositorio;
         private readonly IPersonaJuridicaRepositorio _personaJuridicaRepositorio;
+        private readonly IConvenioRepositorio _convenioRepositorio;
 
         #endregion
 
@@ -35,11 +38,13 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Solic
         /// <param name="cargoRepositorio"></param>
         public SolicitudServicio(ISolicitudRepositorio solicitudRepositorio,
             IDocumentoRechazoRepositorio documentoRechazoRepositorio,
-            IPersonaJuridicaRepositorio personaJuridicaRepositorio)
+            IPersonaJuridicaRepositorio personaJuridicaRepositorio,
+            IConvenioRepositorio convenioRepositorio)
         {
             _solicitudRepositorio = solicitudRepositorio;
             _documentoRechazoRepositorio = documentoRechazoRepositorio;
             _personaJuridicaRepositorio = personaJuridicaRepositorio;
+            _convenioRepositorio = convenioRepositorio;
         }
 
         #endregion
@@ -181,6 +186,21 @@ namespace PetCenter.Referencias.Dominio.Administracion.Servicios.Registros.Solic
             {
                 var solicitud = _solicitudRepositorio.Buscar(idSolicitud).ProyectarComo<SolicitudDto>();
                 solicitud.NroSolicitudFormato = StringExtensions.GenerarCodigo(solicitud.NroSolicitud);
+
+                var convenio = _convenioRepositorio.BuscarPorSolicitud(solicitud.NroSolicitud).ProyectarComo<ConvenioDto>();
+                if (convenio != null)
+                {
+                    solicitud.NroConvenio = convenio.NroConvenio;
+                    solicitud.NroConvenioFormato = StringExtensions.GenerarCodigo(solicitud.NroConvenio);
+                }
+
+                var documentoRechazo = _documentoRechazoRepositorio.BuscarPorSolicitud(solicitud.NroSolicitud).ProyectarComo<DocumentoRechazoDto>();
+                if (documentoRechazo != null)
+                {
+                    solicitud.NroDocumentoRechazo = documentoRechazo.NroDocumento;
+                    solicitud.NroDocumentoRechazoFormato = StringExtensions.GenerarCodigo(solicitud.NroDocumentoRechazo);
+                }
+
                 return solicitud;
             }
             catch (Exception)

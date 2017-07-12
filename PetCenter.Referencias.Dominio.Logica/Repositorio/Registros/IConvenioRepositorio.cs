@@ -7,5 +7,6 @@ namespace PetCenter.Referencias.Dominio.Logica.Repositorio.Registros
     public interface IConvenioRepositorio : IRepositorio<e.GCR_Convenio>
     {
         ConvenioVob Buscar(int idConvenio);
+        ConvenioVob BuscarPorSolicitud(int idSolicitud);
     }
 }

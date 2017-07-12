@@ -97,7 +97,7 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Solicitud
                                             sol.Estado == "2" ? "Aceptado" :
                                             sol.Estado == "3" ? "Rechazado" :
                                             sol.Estado == "4" ? "Activado" :
-                                            sol.Estado == "0" ? "Anulado" : "",
+                                            sol.Estado == "0" ? "Anulado" : "",                                
                                 //NroSolicitudFormato = StringExtensions.GenerarCodigo(sol.NroSolicitud)
                             });
             return consulta.FirstOrDefault();

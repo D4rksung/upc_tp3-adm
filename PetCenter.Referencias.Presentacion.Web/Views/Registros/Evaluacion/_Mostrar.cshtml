@@ -18,6 +18,29 @@
 
         <fieldset class="fieldset-filter">
             <legend> </legend>
+
+            @{
+                if (Model.Solicitud.Estado == "2")
+                {
+                    <div class="form-group asistencia-group">
+                        @Html.Label("Nro Convenio: ", new { @class = "col-sm-2 control-label form-label" })
+                        <div class="col-sm-3">
+                            @Html.TextBoxFor(m => m.Solicitud.NroConvenioFormato, new { @class = "form-control", @disabled = "" })
+                        </div>
+                    </div>
+
+                }
+                else if (Model.Solicitud.Estado == "3")
+                {
+                    <div class="form-group asistencia-group">
+                        @Html.Label("Nro Rechazo: ", new { @class = "col-sm-2 control-label form-label" })
+                        <div class="col-sm-3">
+                            @Html.TextBoxFor(m => m.Solicitud.NroDocumentoRechazoFormato, new { @class = "form-control", @disabled = "" })
+                        </div>
+                    </div>
+                }
+            }
+           
             <div class="form-group asistencia-group">
                 @Html.Label("Nro Solicitud: ", new { @class = "col-sm-2 control-label form-label" })
                 <div class="col-sm-3">
@@ -25,9 +48,10 @@
                 </div>
 
                 @Html.Label("Fecha Solicitud: ", new { @class = "col-sm-2 control-label form-label" })
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     @Html.TextBoxFor(m => m.Solicitud.FechaSolicitud, Model.Solicitud.FechaSolicitud.Value.ToString(Formatos.FechaCorta), new { @class = "form-control asistencia-fecha-corta", @disabled = "", @placerholder = "Fecha Solicitud" })
                 </div>
+
             </div>
         </fieldset>
 
@@ -173,8 +197,8 @@
                     <div class="asistencia-group">
                         @Html.Label("Fecha Vencimiento: ", new { @class = "col-sm-2 control-label form-label" })
                         <div class="col-sm-2">
-                            @Html.TextBoxFor(m => m.Solicitud.FechaVencimientoG, 
-                           Model.Solicitud.FechaVencimientoG.HasValue? Model.Solicitud.FechaVencimientoG.Value.ToString(Formatos.FechaCorta) : "", 
+                            @Html.TextBoxFor(m => m.Solicitud.FechaVencimientoG,
+                           Model.Solicitud.FechaVencimientoG.HasValue ? Model.Solicitud.FechaVencimientoG.Value.ToString(Formatos.FechaCorta) : "",
                            new { @class = "form-control asistencia-fecha-corta", @disabled = "", @placerholder = "Fecha Solicitud" })
                         </div>
                     </div>
@@ -205,7 +229,7 @@
                 }
 
                 <button type="button" class="btn btn-primary" onclick="helperjs.setGetUrl('@Url.Action("Index", "Evaluacion")');">@Botones.BtnCancelar</button>
-               
+
             </div>
         </div>
 

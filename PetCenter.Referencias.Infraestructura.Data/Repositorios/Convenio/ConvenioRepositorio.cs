@@ -34,5 +34,22 @@ namespace PetCenter.Referencias.Infraestructura.Data.Repositorios.Convenio
                             });
             return consulta.FirstOrDefault();
         }
+
+        public ConvenioVob BuscarPorSolicitud(int idSolicitud) {
+            var set = ObtenerSet<IModeloReferenciaUnidadDeTrabajo>(this);
+            var consulta = (from m in set.GCR_Convenio
+                            where m.NroSolicitud == idSolicitud
+                            select new ConvenioVob
+                            {
+                                NroConvenio = m.NroConvenio,
+                                NroSolicitud = m.NroSolicitud.Value,
+                                FechaConvenio = m.FechaConvenio.Value,
+                                FechaVencimiento = m.FechaVencimiento.Value,
+                                NroRuc = m.GCR_Solicitud_Convenio.NroRUC,
+                                RazonSocial = m.GCR_Solicitud_Convenio.RazonSocial,
+                                IdCliente = m.IdCliente
+                            });
+            return consulta.FirstOrDefault();
+        }
     }
 }

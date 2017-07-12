@@ -28,9 +28,17 @@
                             grid.Column("NombreRep", "Representante Legal", style:"asistencia-column-left"),
                             grid.Column("DesEstado", "Estado", style:"asistencia-column-left"),
                             grid.Column("", "Opciones",@<text>
-        <a class="icon-Asistencia16-acc-view" title="Ver" href="@Url.Action("Ver","Evaluacion",new{idSolicitud=item.NroSolicitud})" />
-        @*<a class="icon-Asistencia16-acc-edit" title="Modificar" href="@Url.Action("Editar","Evaluacion",new{idSolicitud=item.NroSolicitud})" />*@
-        @*<a class="icon-Asistencia16-acc-delete" title="Eliminar" onclick="areajs.eliminar('@Url.Action("Eliminar", "Area",new {CodCia = item.CodCia, CodArea=item.CodArea })')" />*@
+
+
+    @{
+        if(item.Estado == "1") {
+            <a class="icon-Asistencia16-acc-liquidar" title="Evaluar" href="@Url.Action("Ver","Evaluacion",new{idSolicitud=item.NroSolicitud})" />
+        }
+        else {
+            <a class="icon-Asistencia16-acc-view" title="Ver" href="@Url.Action("Ver","Evaluacion",new{idSolicitud=item.NroSolicitud})" />            
+        }
+    }
+
                             </text>)
                 })
     <div class="text-center">

@@ -70,5 +70,11 @@ namespace PetCenter.Referencias.Dominio.Administracion.DTOs.Registros.Solicitud
         public System.DateTime FechaSolicitudInicio { get; set; }
         public System.DateTime FechaSolicitudHasta { get; set; }
         public DateTime FechaActual { get; set; }
+
+        public int NroDocumentoRechazo { get; set; }
+        public int NroConvenio { get; set; }
+        public string NroDocumentoRechazoFormato { get; set; }
+        public string NroConvenioFormato { get; set; }
+
     }
 }

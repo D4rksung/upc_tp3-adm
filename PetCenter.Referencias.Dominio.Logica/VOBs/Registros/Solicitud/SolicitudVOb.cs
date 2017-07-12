@@ -70,5 +70,10 @@ namespace PetCenter.Referencias.Dominio.Logica.VOBs.Registros.Solicitud
 
         public string NroSolicitudFormato { get; set; }
 
+        public int NroDocumentoRechazo { get; set; }
+        public int NroConvenio { get; set; }
+        public string NroDocumentoRechazoFormato { get; set; }
+        public string NroConvenioFormato { get; set; }
+
     }
 }
